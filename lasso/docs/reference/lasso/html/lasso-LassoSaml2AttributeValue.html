@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: LassoSaml2AttributeValue</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="xml-samlv2.html" title="Objects from SAML 2.0 schemas">
+<link rel="prev" href="lasso-LassoSaml2AttributeStatement.html" title="LassoSaml2AttributeStatement">
+<link rel="next" href="lasso-LassoSaml2Attribute.html" title="LassoSaml2Attribute">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-LassoSaml2AttributeValue.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="xml-samlv2.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="lasso-LassoSaml2AttributeStatement.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-LassoSaml2Attribute.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-LassoSaml2AttributeValue"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-LassoSaml2AttributeValue.top_of_page"></a>LassoSaml2AttributeValue</span></h2>
+<p>LassoSaml2AttributeValue — value of an attribute in a SAML 2.0 assertion</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-LassoSaml2AttributeValue.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody><tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoSaml2AttributeValue.html#LassoSaml2AttributeValue" title="struct LassoSaml2AttributeValue"><span class="returnvalue">LassoSaml2AttributeValue</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSaml2AttributeValue.html#lasso-saml2-attribute-value-new" title="lasso_saml2_attribute_value_new ()">lasso_saml2_attribute_value_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSaml2AttributeValue.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="lasso-LassoSaml2AttributeValue.html#LassoSaml2AttributeValue" title="struct LassoSaml2AttributeValue">LassoSaml2AttributeValue</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSaml2AttributeValue.description"></a><h2>Description</h2>
+<div class="figure">
+<a name="id-1.3.6.7.5.2"></a><p class="title"><b>Figure 48. Schema fragment from saml-schema-assertion-2.0.xsd)</b></p>
+<div class="figure-contents"><pre class="programlisting">
+
+&lt;element name="AttributeValue" type="anyType" nillable="true"/&gt;
+
+</pre></div>
+</div>
+<br class="figure-break"><p>This object support a special of specifying its content. If the <em class="structfield"><code>any</code></em>
+attribute is <code class="literal">NULL</code>, then you can attach an <span class="type">xmlNode</span> using
+<a class="link" href="lasso-node.html#lasso-node-set-original-xmlnode" title="lasso_node_set_original_xmlnode ()"><code class="function">lasso_node_set_original_xmlnode()</code></a> and it will be used to generate the content of the serialized</p>
+<span class="type">xmlNode</span> for this object. The content (attributes, childrent and namespaces) of the
+<p>node will be copied to the result node created by a call to <a class="link" href="lasso-node.html#lasso-node-get-xmlNode" title="lasso_node_get_xmlNode ()"><code class="function">lasso_node_get_xmlNode()</code></a>.</p>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSaml2AttributeValue.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lasso-saml2-attribute-value-new"></a><h3>lasso_saml2_attribute_value_new ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoSaml2AttributeValue.html#LassoSaml2AttributeValue" title="struct LassoSaml2AttributeValue"><span class="returnvalue">LassoSaml2AttributeValue</span></a> *
+lasso_saml2_attribute_value_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSaml2AttributeValue.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="LassoSaml2AttributeValue"></a><h3>struct LassoSaml2AttributeValue</h3>
+<pre class="programlisting">struct LassoSaml2AttributeValue {
+	LassoNode parent;
+
+	GList *any; /* of LassoNode */
+};
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSaml2AttributeValue.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="lasso-LassoSaml2Attribute.html#LassoSaml2Attribute" title="struct LassoSaml2Attribute"><span class="type">LassoSaml2Attribute</span></a>, <a class="link" href="lasso-LassoSaml2AttributeStatement.html#LassoSaml2AttributeStatement" title="struct LassoSaml2AttributeStatement"><span class="type">LassoSaml2AttributeStatement</span></a>, <a class="link" href="lasso-LassoSaml2Assertion.html#LassoSaml2Assertion" title="struct LassoSaml2Assertion"><span class="type">LassoSaml2Assertion</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

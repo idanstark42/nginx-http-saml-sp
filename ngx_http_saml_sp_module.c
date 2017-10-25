@@ -8,6 +8,8 @@
 #include <ngx_core.h>
 #include <ngx_http.h>
 
+#include <lasso.h>
+
 static ngx_int_t ngx_http_auth_request_init(ngx_conf_t *cf);
 static char *ngx_http_saml_sp_handler(ngx_conf_t *cf, ngx_command_t *cmd,
     void *conf);

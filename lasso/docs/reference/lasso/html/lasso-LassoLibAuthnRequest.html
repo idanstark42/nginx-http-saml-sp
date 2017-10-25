@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: LassoLibAuthnRequest</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="xml-idff.html" title="Objects from ID-FF 1.2 schemas">
+<link rel="prev" href="lasso-LassoLibAuthnRequestEnvelope.html" title="LassoLibAuthnRequestEnvelope">
+<link rel="next" href="lasso-LassoLibAuthnResponseEnvelope.html" title="LassoLibAuthnResponseEnvelope">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-LassoLibAuthnRequest.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="xml-idff.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="lasso-LassoLibAuthnRequestEnvelope.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-LassoLibAuthnResponseEnvelope.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-LassoLibAuthnRequest"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-LassoLibAuthnRequest.top_of_page"></a>LassoLibAuthnRequest</span></h2>
+<p>LassoLibAuthnRequest — &lt;lib:AuthnRequest&gt;</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-LassoLibAuthnRequest.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody><tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoLibAuthnRequest.html#LassoLibAuthnRequest" title="struct LassoLibAuthnRequest"><span class="returnvalue">LassoLibAuthnRequest</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLibAuthnRequest.html#lasso-lib-authn-request-new" title="lasso_lib_authn_request_new ()">lasso_lib_authn_request_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoLibAuthnRequest.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="lasso-LassoLibAuthnRequest.html#LassoLibAuthnRequest" title="struct LassoLibAuthnRequest">LassoLibAuthnRequest</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoLibAuthnRequest.description"></a><h2>Description</h2>
+<p>Authentication requests are sent from a service provider to an identity
+provider.</p>
+<div class="blockquote"><blockquote class="blockquote">
+The lib:AuthnRequest is defined as an extension of samlp:RequestAbstractType.
+The RequestID attribute in samlp:RequestAbstractType has uniqueness
+requirements placed on it by [SAMLCore11], which require it to have the
+properties of a nonce.
+</blockquote></div>
+<div class="figure">
+<a name="id-1.3.4.7.5.4"></a><p class="title"><b>Figure 5. Schema fragment for lib:AuthnRequest</b></p>
+<div class="figure-contents"><pre class="programlisting">
+&lt;xs:element name="AuthnRequest" type="AuthnRequestType" /&gt;
+&lt;xs:complexType name="AuthnRequestType"&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension base="samlp:RequestAbstractType"&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element ref="Extension" minOccurs="0" maxOccurs="unbounded"/&gt;
+        &lt;xs:element ref="ProviderID"/&gt;
+        &lt;xs:element ref="AffiliationID" minOccurs="0"/&gt;
+        &lt;xs:element ref="NameIDPolicy" minOccurs="0"/&gt;
+        &lt;xs:element name="ForceAuthn" type="xs:boolean" minOccurs="0"/&gt;
+        &lt;xs:element name="IsPassive" type="xs:boolean "minOccurs="0"/&gt;
+        &lt;xs:element ref="ProtocolProfile" minOccurs="0"/&gt;
+        &lt;xs:element name="AssertionConsumerServiceID" type="xs:string" minOccurs="0"/&gt;
+        &lt;xs:element ref="RequestAuthnContext" minOccurs="0"/&gt;
+        &lt;xs:element ref="RelayState" minOccurs="0"/&gt;
+        &lt;xs:element ref="Scoping" minOccurs="0 "/&gt;
+      &lt;/xs:sequence&gt;
+      &lt;xs:attribute ref="consent" use="optional"/&gt;
+    &lt;/xs:extension&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+
+&lt;xs:element name="ProviderID" type="md:entityIDType"/&gt;
+&lt;xs:element name="AffiliationID" type="md:entityIDType"/&gt;
+
+&lt;xs:element name="NameIDPolicy" type="NameIDPolicyType"/&gt;
+&lt;xs:simpleType name="NameIDPolicyType"&gt;
+  &lt;xs:restriction base="xs:string"&gt;
+    &lt;xs:enumeration value="none"/&gt;
+    &lt;xs:enumeration value="onetime"/&gt;
+    &lt;xs:enumeration value="federated"/&gt;
+    &lt;xs:enumeration value="any"/ &gt;
+  &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+
+&lt;xs:element name="ProtocolProfile" type="xs:anyURI"/&gt;
+&lt;xs:element name="RelayState" type="xs:string"/&gt;
+</pre></div>
+</div>
+<br class="figure-break">
+</div>
+<div class="refsect1">
+<a name="lasso-LassoLibAuthnRequest.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lasso-lib-authn-request-new"></a><h3>lasso_lib_authn_request_new ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoLibAuthnRequest.html#LassoLibAuthnRequest" title="struct LassoLibAuthnRequest"><span class="returnvalue">LassoLibAuthnRequest</span></a> *
+lasso_lib_authn_request_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="lasso-LassoLibAuthnRequest.html#LassoLibAuthnRequest" title="struct LassoLibAuthnRequest"><span class="type">LassoLibAuthnRequest</span></a> object.</p>
+<div class="refsect3">
+<a name="id-1.3.4.7.6.2.5"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="lasso-LassoLibAuthnRequest.html#LassoLibAuthnRequest" title="struct LassoLibAuthnRequest"><span class="type">LassoLibAuthnRequest</span></a> object</p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoLibAuthnRequest.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="LassoLibAuthnRequest"></a><h3>struct LassoLibAuthnRequest</h3>
+<pre class="programlisting">struct LassoLibAuthnRequest {
+	LassoSamlpRequestAbstract parent;
+
+	/* &lt;xs:element ref="Extension" minOccurs="0" maxOccurs="unbounded"/&gt; */
+	GList *Extension; /* of xmlNode* */
+	/* &lt;xs:element ref="ProviderID"/&gt; */
+	char *ProviderID;
+	/* &lt;xs:element ref="AffiliationID" minOccurs="0"/&gt; */
+	char *AffiliationID;
+	/* &lt;xs:element ref="NameIDPolicy" minOccurs="0"/&gt; */
+	char *NameIDPolicy;
+	/* &lt;xs:element name="ForceAuthn" type="xs:boolean" minOccurs="0"/&gt; */
+	gboolean ForceAuthn;
+	/* &lt;xs:element name="IsPassive" type="xs:boolean "minOccurs="0"/&gt; */
+	gboolean IsPassive;
+	/* &lt;xs:element ref="ProtocolProfile" minOccurs="0"/&gt; */
+	char *ProtocolProfile;
+	/* &lt;xs:element name="AssertionConsumerServiceID" type="xs:string" minOccurs="0"/&gt; */
+	char *AssertionConsumerServiceID;
+	/* &lt;xs:element ref="RequestAuthnContext" minOccurs="0"/&gt; */
+	LassoLibRequestAuthnContext *RequestAuthnContext;
+	/* &lt;xs:element ref="RelayState" minOccurs="0"/&gt; */
+	char *RelayState;
+	/* &lt;xs:element ref="Scoping" minOccurs="0 "/&gt; */
+	LassoLibScoping *Scoping;
+	/* &lt;xs:attribute ref="consent" use="optional"/&gt; */
+	char *consent;
+};
+</pre>
+<p><em class="parameter"><code>ProviderID</code></em>
+ isthe service provider identifier, this field will often be
+filled with <a class="link" href="lasso-LassoLogin.html#lasso-login-init-authn-request" title="lasso_login_init_authn_request ()"><code class="function">lasso_login_init_authn_request()</code></a></p>
+<p><em class="parameter"><code>nameIDPolicy</code></em>
+ tells the identity provider about the policy to use for
+federation; it must be one of <a class="link" href="lasso-Strings-for-ID-FF-1.2.html#LASSO-LIB-NAMEID-POLICY-TYPE-NONE:CAPS" title="LASSO_LIB_NAMEID_POLICY_TYPE_NONE"><span class="type">LASSO_LIB_NAMEID_POLICY_TYPE_NONE</span></a>,
+<a class="link" href="lasso-Strings-for-ID-FF-1.2.html#LASSO-LIB-NAMEID-POLICY-TYPE-ONE-TIME:CAPS" title="LASSO_LIB_NAMEID_POLICY_TYPE_ONE_TIME"><span class="type">LASSO_LIB_NAMEID_POLICY_TYPE_ONE_TIME</span></a>,
+<a class="link" href="lasso-Strings-for-ID-FF-1.2.html#LASSO-LIB-NAMEID-POLICY-TYPE-FEDERATED:CAPS" title="LASSO_LIB_NAMEID_POLICY_TYPE_FEDERATED"><span class="type">LASSO_LIB_NAMEID_POLICY_TYPE_FEDERATED</span></a> or
+<a class="link" href="lasso-Strings-for-ID-FF-1.2.html#LASSO-LIB-NAMEID-POLICY-TYPE-ANY:CAPS" title="LASSO_LIB_NAMEID_POLICY_TYPE_ANY"><span class="type">LASSO_LIB_NAMEID_POLICY_TYPE_ANY</span></a>.</p>
+<p><em class="parameter"><code>IsPassive</code></em>
+; if <code class="literal">TRUE</code> (default) it tells the identity provider not to
+interact with the user.</p>
+<p><em class="parameter"><code>ForceAuthn</code></em>
+; only used if <em class="parameter"><code>IsPassive</code></em>
+ is <code class="literal">FALSE</code>, it tells the identity
+provider to force authentication of the user even when already
+authenticated.</p>
+<p><em class="parameter"><code>ProtocolProfile</code></em>
+ is the Single Sign-On and Federation profile to adopt;
+either <a class="link" href="lasso-Strings-for-ID-FF-1.2.html#LASSO-LIB-PROTOCOL-PROFILE-BRWS-ART:CAPS" title="LASSO_LIB_PROTOCOL_PROFILE_BRWS_ART"><span class="type">LASSO_LIB_PROTOCOL_PROFILE_BRWS_ART</span></a> (which is the default value)
+or <a class="link" href="lasso-Strings-for-ID-FF-1.2.html#LASSO-LIB-PROTOCOL-PROFILE-BRWS-POST:CAPS" title="LASSO_LIB_PROTOCOL_PROFILE_BRWS_POST"><span class="type">LASSO_LIB_PROTOCOL_PROFILE_BRWS_POST</span></a>.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoLibAuthnRequest.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

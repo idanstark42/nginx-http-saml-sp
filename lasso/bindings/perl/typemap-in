@@ -1,0 +1,18 @@
+INPUT
+T_STRING_OR_NULL
+    $var = SvPOK($arg) ? SvPV_nolen($arg) : NULL;
+
+T_STRING_NON_NULL
+    $var = SvPOK($arg) ? SvPV_nolen($arg) : (croak(\"$var cannot be undef\"), NULL);
+
+T_GOBJECT_WRAPPER
+    $var = ($type)gperl_get_object($arg);
+
+T_XMLNODE
+    $var = pv_to_xmlnode($arg);
+
+T_GLIST_STRING
+    $var = array_to_glist_string((AV*)SvRV($arg));
+
+T_GLIST_GOBJECT
+    $var = array_to_glist_gobject((AV*)SvRV($arg));

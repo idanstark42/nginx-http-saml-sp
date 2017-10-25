@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: LassoAuthentication</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="idwsf.html" title="Identity Web Services Framework 1.0">
+<link rel="prev" href="lasso-LassoPersonalProfileService.html" title="LassoPersonalProfileService">
+<link rel="next" href="lasso-LassoWsfProfile.html" title="LassoWsfProfile">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-authentication.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="idwsf.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="lasso-LassoPersonalProfileService.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-LassoWsfProfile.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-authentication"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-authentication.top_of_page"></a>LassoAuthentication</span></h2>
+<p>LassoAuthentication</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-authentication.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="returnvalue">LassoAuthentication</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-authentication.html#lasso-authentication-new" title="lasso_authentication_new ()">lasso_authentication_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-authentication.html#lasso-authentication-destroy" title="lasso_authentication_destroy ()">lasso_authentication_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-authentication.html#lasso-authentication-client-start" title="lasso_authentication_client_start ()">lasso_authentication_client_start</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-authentication.html#lasso-authentication-client-step" title="lasso_authentication_client_step ()">lasso_authentication_client_step</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-authentication.html#lasso-authentication-get-mechanism-list" title="lasso_authentication_get_mechanism_list ()">lasso_authentication_get_mechanism_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-authentication.html#lasso-authentication-init-request" title="lasso_authentication_init_request ()">lasso_authentication_init_request</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-authentication.html#lasso-authentication-process-request-msg" title="lasso_authentication_process_request_msg ()">lasso_authentication_process_request_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-authentication.html#lasso-authentication-process-response-msg" title="lasso_authentication_process_response_msg ()">lasso_authentication_process_response_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-authentication.html#lasso-authentication-server-start" title="lasso_authentication_server_start ()">lasso_authentication_server_start</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-authentication.html#lasso-authentication-server-step" title="lasso_authentication_server_step ()">lasso_authentication_server_step</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-authentication.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="lasso-authentication.html#LassoUserAccount" title="LassoUserAccount">LassoUserAccount</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="lasso-authentication.html#LassoSaslMechanisms" title="enum LassoSaslMechanisms">LassoSaslMechanisms</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication">LassoAuthentication</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-authentication.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="lasso-authentication.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lasso-authentication-new"></a><h3>lasso_authentication_new ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="returnvalue">LassoAuthentication</span></a> *
+lasso_authentication_new (<em class="parameter"><code><a class="link" href="lasso-LassoServer.html#LassoServer" title="struct LassoServer"><span class="type">LassoServer</span></a> *server</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-authentication-destroy"></a><h3>lasso_authentication_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_authentication_destroy (<em class="parameter"><code><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="type">LassoAuthentication</span></a> *authentication</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-authentication-client-start"></a><h3>lasso_authentication_client_start ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_authentication_client_start (<em class="parameter"><code><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="type">LassoAuthentication</span></a> *authentication</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-authentication-client-step"></a><h3>lasso_authentication_client_step ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_authentication_client_step (<em class="parameter"><code><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="type">LassoAuthentication</span></a> *authentication</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-authentication-get-mechanism-list"></a><h3>lasso_authentication_get_mechanism_list ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *
+lasso_authentication_get_mechanism_list
+                               (<em class="parameter"><code><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="type">LassoAuthentication</span></a> *authentication</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-authentication-init-request"></a><h3>lasso_authentication_init_request ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_authentication_init_request (<em class="parameter"><code><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="type">LassoAuthentication</span></a> *authentication</code></em>,
+                                   <em class="parameter"><code><a class="link" href="lasso-LassoDiscoDescription.html#LassoDiscoDescription" title="struct LassoDiscoDescription"><span class="type">LassoDiscoDescription</span></a> *description</code></em>,
+                                   <em class="parameter"><code>const <span class="type">gchar</span> *mechanisms</code></em>,
+                                   <em class="parameter"><code><a class="link" href="lasso-authentication.html#LassoUserAccount" title="LassoUserAccount"><span class="type">LassoUserAccount</span></a> *account</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-authentication-process-request-msg"></a><h3>lasso_authentication_process_request_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_authentication_process_request_msg
+                               (<em class="parameter"><code><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="type">LassoAuthentication</span></a> *authentication</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *soap_msg</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-authentication-process-response-msg"></a><h3>lasso_authentication_process_response_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_authentication_process_response_msg
+                               (<em class="parameter"><code><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="type">LassoAuthentication</span></a> *authentication</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *soap_msg</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-authentication-server-start"></a><h3>lasso_authentication_server_start ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_authentication_server_start (<em class="parameter"><code><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="type">LassoAuthentication</span></a> *authentication</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-authentication-server-step"></a><h3>lasso_authentication_server_step ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_authentication_server_step (<em class="parameter"><code><a class="link" href="lasso-authentication.html#LassoAuthentication" title="struct LassoAuthentication"><span class="type">LassoAuthentication</span></a> *authentication</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-authentication.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="LassoUserAccount"></a><h3>LassoUserAccount</h3>
+<pre class="programlisting">typedef struct LassoUserAccount LassoUserAccount;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LassoSaslMechanisms"></a><h3>enum LassoSaslMechanisms</h3>
+<div class="refsect3">
+<a name="id-1.3.7.5.7.3.3"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-SASL-MECH-ANONYMOUS:CAPS"></a>LASSO_SASL_MECH_ANONYMOUS</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-SASL-MECH-PLAIN:CAPS"></a>LASSO_SASL_MECH_PLAIN</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-SASL-MECH-CRAM-MD5:CAPS"></a>LASSO_SASL_MECH_CRAM_MD5</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LassoAuthentication"></a><h3>struct LassoAuthentication</h3>
+<pre class="programlisting">struct LassoAuthentication {
+	LassoWsfProfile parent;
+
+	/* The SASL context kept for the life of the connection */
+	sasl_conn_t *connection;
+	sasl_interact_t **client_interact;
+};
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

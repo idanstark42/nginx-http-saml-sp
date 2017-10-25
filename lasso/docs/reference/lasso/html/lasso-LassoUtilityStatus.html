@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: LassoUtilityStatus</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="xml-idwsf.html" title="Objects from ID-WSF 1.0 schemas">
+<link rel="prev" href="lasso-LassoSoapBindingUsageDirective.html" title="LassoSoapBindingUsageDirective">
+<link rel="next" href="idwsf2.html" title="ID-WSF 2.0">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-LassoUtilityStatus.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="xml-idwsf.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="lasso-LassoSoapBindingUsageDirective.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="idwsf2.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-LassoUtilityStatus"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-LassoUtilityStatus.top_of_page"></a>LassoUtilityStatus</span></h2>
+<p>LassoUtilityStatus — &lt;utility:Status&gt;</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-LassoUtilityStatus.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody><tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoUtilityStatus.html#LassoUtilityStatus" title="struct LassoUtilityStatus"><span class="returnvalue">LassoUtilityStatus</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoUtilityStatus.html#lasso-utility-status-new" title="lasso_utility_status_new ()">lasso_utility_status_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoUtilityStatus.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="lasso-LassoUtilityStatus.html#LassoUtilityStatus" title="struct LassoUtilityStatus">LassoUtilityStatus</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoUtilityStatus.description"></a><h2>Description</h2>
+<div class="figure">
+<a name="id-1.3.8.49.5.2"></a><p class="title"><b>Figure 142. Schema fragment for utility:Status</b></p>
+<div class="figure-contents"><pre class="programlisting">
+
+&lt;xs:element name="Status" type="StatusType"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt; A standard Status type&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:element&gt;
+&lt;xs:complexType name="StatusType"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt; A type that may be used for status codes. &lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:element ref="Status" minOccurs="0"/&gt;
+  &lt;/xs:sequence&gt;
+  &lt;xs:attribute name="code" type="xs:QName" use="required"/&gt;
+  &lt;xs:attribute name="ref" type="xs:NCName" use="optional"/&gt;
+  &lt;xs:attribute name="comment" type="xs:string" use="optional"/&gt;
+&lt;/xs:complexType&gt;
+</pre></div>
+</div>
+<br class="figure-break">
+</div>
+<div class="refsect1">
+<a name="lasso-LassoUtilityStatus.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lasso-utility-status-new"></a><h3>lasso_utility_status_new ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoUtilityStatus.html#LassoUtilityStatus" title="struct LassoUtilityStatus"><span class="returnvalue">LassoUtilityStatus</span></a> *
+lasso_utility_status_new (<em class="parameter"><code>const <span class="type">char</span> *code</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoUtilityStatus.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="LassoUtilityStatus"></a><h3>struct LassoUtilityStatus</h3>
+<pre class="programlisting">struct LassoUtilityStatus {
+	LassoNode parent;
+
+	LassoUtilityStatus *Status;
+	char *code;
+	char *ref;
+	char *comment;
+};
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

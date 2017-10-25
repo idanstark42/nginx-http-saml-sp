@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: LassoSession</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="architecture.html" title="Lasso Architecture">
+<link rel="prev" href="lasso-LassoFederation.html" title="LassoFederation">
+<link rel="next" href="lasso-LassoProfile.html" title="LassoProfile">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-LassoSession.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="architecture.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="lasso-LassoFederation.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-LassoProfile.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-LassoSession"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-LassoSession.top_of_page"></a>LassoSession</span></h2>
+<p>LassoSession — Principal Session</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-LassoSession.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="returnvalue">LassoSession</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSession.html#lasso-session-new" title="lasso_session_new ()">lasso_session_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="returnvalue">LassoSession</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSession.html#lasso-session-new-from-dump" title="lasso_session_new_from_dump ()">lasso_session_new_from_dump</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSession.html#lasso-session-dump" title="lasso_session_dump ()">lasso_session_dump</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSession.html#lasso-session-destroy" title="lasso_session_destroy ()">lasso_session_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSession.html#lasso-session-get-assertions" title="lasso_session_get_assertions ()">lasso_session_get_assertions</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="returnvalue">LassoNode</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSession.html#lasso-session-get-assertion" title="lasso_session_get_assertion ()">lasso_session_get_assertion</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSession.html#lasso-session-remove-assertion" title="lasso_session_remove_assertion ()">lasso_session_remove_assertion</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSession.html#lasso-session-add-assertion" title="lasso_session_add_assertion ()">lasso_session_add_assertion</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSession.html#lasso-session-get-provider-index" title="lasso_session_get_provider_index ()">lasso_session_get_provider_index</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSession.html#lasso-session-is-empty" title="lasso_session_is_empty ()">lasso_session_is_empty</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSession.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession">LassoSession</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSession.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSession.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lasso-session-new"></a><h3>lasso_session_new ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="returnvalue">LassoSession</span></a> *
+lasso_session_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.2.5"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a></p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-session-new-from-dump"></a><h3>lasso_session_new_from_dump ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="returnvalue">LassoSession</span></a> *
+lasso_session_new_from_dump (<em class="parameter"><code>const <span class="type">gchar</span> *dump</code></em>);</pre>
+<p>Restores the <em class="parameter"><code>dump</code></em>
+ to a new <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dump</p></td>
+<td class="parameter_description"><p>XML server dump</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.3.6"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a>; or NULL if an error occured</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-session-dump"></a><h3>lasso_session_dump ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+lasso_session_dump (<em class="parameter"><code><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a> *session</code></em>);</pre>
+<p>Dumps <em class="parameter"><code>session</code></em>
+ content to an XML string.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.4.6"></a><h4>Returns</h4>
+<p> the dump string.  It must be freed by the caller. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-session-destroy"></a><h3>lasso_session_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_session_destroy (<em class="parameter"><code><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a> *session</code></em>);</pre>
+<p>Destroys a session.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-session-get-assertions"></a><h3>lasso_session_get_assertions ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+lasso_session_get_assertions (<em class="parameter"><code><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a> *session</code></em>,
+                              <em class="parameter"><code>const <span class="type">char</span> *provider_id</code></em>);</pre>
+<p>Gets the assertions for the given <em class="parameter"><code>provider_id</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>provider_id</p></td>
+<td class="parameter_description"><p>the provider ID</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.6.6"></a><h4>Returns</h4>
+<p> a list of <a class="link" href="lasso-LassoSamlAssertion.html#LassoSamlAssertion" title="struct LassoSamlAssertion"><span class="type">LassoSamlAssertion</span></a>. </p>
+<p><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LassoNode]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-session-get-assertion"></a><h3>lasso_session_get_assertion ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="returnvalue">LassoNode</span></a> *
+lasso_session_get_assertion (<em class="parameter"><code><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a> *session</code></em>,
+                             <em class="parameter"><code>const <span class="type">gchar</span> *providerID</code></em>);</pre>
+<p>Gets the assertion for the given <em class="parameter"><code>providerID</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>providerID</p></td>
+<td class="parameter_description"><p>the provider ID</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.7.6"></a><h4>Returns</h4>
+<p> the assertion or NULL if it didn't exist.  This
+<a class="link" href="lasso-LassoSamlAssertion.html#LassoSamlAssertion" title="struct LassoSamlAssertion"><span class="type">LassoSamlAssertion</span></a> is internally allocated and must not be freed by
+the caller. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-session-remove-assertion"></a><h3>lasso_session_remove_assertion ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_session_remove_assertion (<em class="parameter"><code><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a> *session</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *providerID</code></em>);</pre>
+<p>Removes assertion for <em class="parameter"><code>providerID</code></em>
+ from <em class="parameter"><code>session</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>providerID</p></td>
+<td class="parameter_description"><p>the provider ID</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.8.6"></a><h4>Returns</h4>
+<p> 0 on success; or a negative value otherwise.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-session-add-assertion"></a><h3>lasso_session_add_assertion ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_session_add_assertion (<em class="parameter"><code><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a> *session</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *providerID</code></em>,
+                             <em class="parameter"><code><a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> *assertion</code></em>);</pre>
+<p>Adds <em class="parameter"><code>assertion</code></em>
+ to the principal session. This function also
+add the assertion to the index by assertionID.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>providerID</p></td>
+<td class="parameter_description"><p>the provider ID</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>assertion</p></td>
+<td class="parameter_description"><p>the assertion</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.9.6"></a><h4>Returns</h4>
+<p> 0 on success; or a negative value otherwise.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-session-get-provider-index"></a><h3>lasso_session_get_provider_index ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+lasso_session_get_provider_index (<em class="parameter"><code><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a> *session</code></em>,
+                                  <em class="parameter"><code><span class="type">gint</span> index</code></em>);</pre>
+<p>Looks up and returns the nth provider id.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>index of requested provider</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.10.6"></a><h4>Returns</h4>
+<p> the provider id; or NULL if there were no nth provider.  This
+string must be freed by the caller. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-session-is-empty"></a><h3>lasso_session_is_empty ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+lasso_session_is_empty (<em class="parameter"><code><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a> *session</code></em>);</pre>
+<p>Returns <code class="literal">TRUE</code> if session is empty.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>session</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.8.6.11.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if empty</p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSession.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="LassoSession"></a><h3>struct LassoSession</h3>
+<pre class="programlisting">struct LassoSession {
+	LassoNode parent;
+
+	/* Can actually contain LassoSamlAssertion or LassoSaml2Assertion */
+	GHashTable *assertions; /* of LassoNode */
+	gboolean is_dirty;
+};
+</pre>
+<p><a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a> stores the assertions received or emitted during the current session. It stores
+state for using profiles like <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> or <a class="link" href="lasso-LassoLogout.html#LassoLogout" title="struct LassoLogout"><span class="type">LassoLogout</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.2.8.7.2.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> <em class="structfield"><code><a name="LassoSession.parent"></a>parent</code></em>;</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">GHashTable</span> *<em class="structfield"><code><a name="LassoSession.assertions"></a>assertions</code></em>;</p></td>
+<td class="struct_member_description"><p> a hashtable of <a class="link" href="lasso-LassoSamlAssertion.html#LassoSamlAssertion" title="struct LassoSamlAssertion"><span class="type">LassoSamlAssertion</span></a> or <a class="link" href="lasso-LassoSaml2Assertion.html#LassoSaml2Assertion" title="struct LassoSaml2Assertion"><span class="type">LassoSaml2Assertion</span></a>, indexed by provider ids,. </p></td>
+<td class="struct_member_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> string LassoNode]</span></td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gboolean</span> <em class="structfield"><code><a name="LassoSession.is-dirty"></a>is_dirty</code></em>;</p></td>
+<td class="struct_member_description"><p>whether this session object has been modified since its creation.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

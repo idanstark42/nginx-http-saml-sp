@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: Objects from SAML 2.0 schemas</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="rn01.html" title="Application Programming Interface">
+<link rel="prev" href="lasso-Utility-functions-for-SAML-2.0.html" title="Utility functions for SAML 2.0">
+<link rel="next" href="lasso-SAML-2.0-Strings.html" title="SAML 2.0 Strings">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="rn01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="lasso-Utility-functions-for-SAML-2.0.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-SAML-2.0-Strings.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="xml-samlv2"></a>Objects from SAML 2.0 schemas</h2></div></div></div>
+<div class="toc"><dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="lasso-SAML-2.0-Strings.html">SAML 2.0 Strings</a></span><span class="refpurpose"> — String constants from SAML 2.0 specifications</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2Action.html">LassoSaml2Action</a></span><span class="refpurpose"> — &lt;saml2:Action&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2Advice.html">LassoSaml2Advice</a></span><span class="refpurpose"> — &lt;saml2:Advice&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2Assertion.html">LassoSaml2Assertion</a></span><span class="refpurpose"> — &lt;saml2:Assertion&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2AttributeStatement.html">LassoSaml2AttributeStatement</a></span><span class="refpurpose"> — &lt;saml2:AttributeStatement&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2AttributeValue.html">LassoSaml2AttributeValue</a></span><span class="refpurpose"> — value of an attribute in a SAML 2.0 assertion</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2Attribute.html">LassoSaml2Attribute</a></span><span class="refpurpose"> — &lt;saml2:Attribute&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2AudienceRestriction.html">LassoSaml2AudienceRestriction</a></span><span class="refpurpose"> — &lt;saml2:AudienceRestriction&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2AuthnContext.html">LassoSaml2AuthnContext</a></span><span class="refpurpose"> — &lt;saml2:AuthnContext&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2AuthnStatement.html">LassoSaml2AuthnStatement</a></span><span class="refpurpose"> — &lt;saml2:AuthnStatement&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2AuthzDecisionStatement.html">LassoSaml2AuthzDecisionStatement</a></span><span class="refpurpose"> — &lt;saml2:AuthzDecisionStatement&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2BaseIDAbstract.html">LassoSaml2BaseIDAbstract</a></span><span class="refpurpose"> — &lt;saml2:BaseIDAbstract&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2ConditionAbstract.html">LassoSaml2ConditionAbstract</a></span><span class="refpurpose"> — &lt;saml2:ConditionAbstract&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2Conditions.html">LassoSaml2Conditions</a></span><span class="refpurpose"> — &lt;saml2:Conditions&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2EncryptedElement.html">LassoSaml2EncryptedElement</a></span><span class="refpurpose"> — &lt;saml2:EncryptedElement&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2Evidence.html">LassoSaml2Evidence</a></span><span class="refpurpose"> — &lt;saml2:Evidence&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2KeyInfoConfirmationData.html">LassoSaml2KeyInfoConfirmationData</a></span><span class="refpurpose"> — &lt;saml2:KeyInfoConfirmationData&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2NameID.html">LassoSaml2NameID</a></span><span class="refpurpose"> — &lt;saml2:NameID&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2OneTimeUse.html">LassoSaml2OneTimeUse</a></span><span class="refpurpose"> — &lt;saml2:OneTimeUse&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2ProxyRestriction.html">LassoSaml2ProxyRestriction</a></span><span class="refpurpose"> — &lt;saml2:ProxyRestriction&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2StatementAbstract.html">LassoSaml2StatementAbstract</a></span><span class="refpurpose"> — &lt;saml2:StatementAbstract&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2SubjectConfirmationData.html">LassoSaml2SubjectConfirmationData</a></span><span class="refpurpose"> — &lt;saml2:SubjectConfirmationData&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2SubjectConfirmation.html">LassoSaml2SubjectConfirmation</a></span><span class="refpurpose"> — &lt;saml2:SubjectConfirmation&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2SubjectLocality.html">LassoSaml2SubjectLocality</a></span><span class="refpurpose"> — &lt;saml2:SubjectLocality&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSaml2Subject.html">LassoSaml2Subject</a></span><span class="refpurpose"> — &lt;saml2:Subject&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2ArtifactResolve.html">LassoSamlp2ArtifactResolve</a></span><span class="refpurpose"> — &lt;samlp2:ArtifactResolve&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2ArtifactResponse.html">LassoSamlp2ArtifactResponse</a></span><span class="refpurpose"> — &lt;samlp2:ArtifactResponse&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2AssertionIDRequest.html">LassoSamlp2AssertionIDRequest</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2AttributeQuery.html">LassoSamlp2AttributeQuery</a></span><span class="refpurpose"> — &lt;samlp2:AttributeQuery&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2AuthnQuery.html">LassoSamlp2AuthnQuery</a></span><span class="refpurpose"> — &lt;samlp2:AuthnQuery&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2AuthnRequest.html">LassoSamlp2AuthnRequest</a></span><span class="refpurpose"> — &lt;samlp2:AuthnRequest&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2AuthzDecisionQuery.html">LassoSamlp2AuthzDecisionQuery</a></span><span class="refpurpose"> — &lt;samlp2:AuthzDecisionQuery&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2Extensions.html">LassoSamlp2Extensions</a></span><span class="refpurpose"> — &lt;samlp2:Extensions&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2IDPEntry.html">LassoSamlp2IDPEntry</a></span><span class="refpurpose"> — &lt;samlp2:IDPEntry&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2IDPList.html">LassoSamlp2IDPList</a></span><span class="refpurpose"> — &lt;samlp2:IDPList&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2LogoutRequest.html">LassoSamlp2LogoutRequest</a></span><span class="refpurpose"> — &lt;samlp2:LogoutRequest&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2LogoutResponse.html">LassoSamlp2LogoutResponse</a></span><span class="refpurpose"> — &lt;samlp2:LogoutResponse&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2ManageNameIDRequest.html">LassoSamlp2ManageNameIDRequest</a></span><span class="refpurpose"> — &lt;samlp2:ManageNameIDRequest&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2ManageNameIDResponse.html">LassoSamlp2ManageNameIDResponse</a></span><span class="refpurpose"> — &lt;samlp2:ManageNameIDResponse&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2NameIDMappingRequest.html">LassoSamlp2NameIDMappingRequest</a></span><span class="refpurpose"> — &lt;samlp2:NameIDMappingRequest&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2NameIDMappingResponse.html">LassoSamlp2NameIDMappingResponse</a></span><span class="refpurpose"> — &lt;samlp2:NameIDMappingResponse&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2NameIDPolicy.html">LassoSamlp2NameIDPolicy</a></span><span class="refpurpose"> — &lt;samlp2:NameIDPolicy&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2RequestAbstract.html">LassoSamlp2RequestAbstract</a></span><span class="refpurpose"> — &lt;samlp2:RequestAbstract&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2RequestedAuthnContext.html">LassoSamlp2RequestedAuthnContext</a></span><span class="refpurpose"> — &lt;samlp2:RequestedAuthnContext&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2Response.html">LassoSamlp2Response</a></span><span class="refpurpose"> — &lt;samlp2:Response&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2Scoping.html">LassoSamlp2Scoping</a></span><span class="refpurpose"> — &lt;samlp2:Scoping&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2StatusCode.html">LassoSamlp2StatusCode</a></span><span class="refpurpose"> — &lt;samlp2:StatusCode&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2StatusDetail.html">LassoSamlp2StatusDetail</a></span><span class="refpurpose"> — &lt;samlp2:StatusDetail&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2StatusResponse.html">LassoSamlp2StatusResponse</a></span><span class="refpurpose"> — &lt;samlp2:StatusResponse&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2Status.html">LassoSamlp2Status</a></span><span class="refpurpose"> — &lt;samlp2:Status&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2SubjectQueryAbstract.html">LassoSamlp2SubjectQueryAbstract</a></span><span class="refpurpose"> — &lt;samlp2:SubjectQueryAbstract&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoSamlp2Terminate.html">LassoSamlp2Terminate</a></span><span class="refpurpose"> — &lt;samlp2:Terminate&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoEcpRequest.html">LassoEcpRequest</a></span><span class="refpurpose"> — &lt;ecp:Request&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoEcpResponse.html">LassoEcpResponse</a></span><span class="refpurpose"> — &lt;ecp:Response&gt;</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="lasso-LassoEcpRelayState.html">LassoEcpRelayState</a></span><span class="refpurpose"> — &lt;ecp:RelayState&gt;</span>
+</dt>
+</dl></div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

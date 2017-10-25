@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: LassoIdWsf2DstRefQueryItem</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="xml-idwsf2.html" title="Objects from ID-WSF 2.0 schemas">
+<link rel="prev" href="lasso-LassoIdWsf2DstRefModify.html" title="LassoIdWsf2DstRefModify">
+<link rel="next" href="lasso-LassoIdWsf2DstRefQueryResponse.html" title="LassoIdWsf2DstRefQueryResponse">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-LassoIdWsf2DstRefQueryItem.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="xml-idwsf2.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="lasso-LassoIdWsf2DstRefModify.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-LassoIdWsf2DstRefQueryResponse.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-LassoIdWsf2DstRefQueryItem"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-LassoIdWsf2DstRefQueryItem.top_of_page"></a>LassoIdWsf2DstRefQueryItem</span></h2>
+<p>LassoIdWsf2DstRefQueryItem — &lt;dstref:QueryItem&gt;</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-LassoIdWsf2DstRefQueryItem.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoIdWsf2DstRefQueryItem.html#LassoIdWsf2DstRefQueryItem" title="struct LassoIdWsf2DstRefQueryItem"><span class="returnvalue">LassoIdWsf2DstRefQueryItem</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoIdWsf2DstRefQueryItem.html#lasso-idwsf2-dstref-query-item-new" title="lasso_idwsf2_dstref_query_item_new ()">lasso_idwsf2_dstref_query_item_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoIdWsf2DstRefQueryItem.html#LassoIdWsf2DstRefQueryItem" title="struct LassoIdWsf2DstRefQueryItem"><span class="returnvalue">LassoIdWsf2DstRefQueryItem</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoIdWsf2DstRefQueryItem.html#lasso-idwsf2-dstref-query-item-new-full" title="lasso_idwsf2_dstref_query_item_new_full ()">lasso_idwsf2_dstref_query_item_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoIdWsf2DstRefQueryItem.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="lasso-LassoIdWsf2DstRefQueryItem.html#LassoIdWsf2DstRefQueryItem" title="struct LassoIdWsf2DstRefQueryItem">LassoIdWsf2DstRefQueryItem</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoIdWsf2DstRefQueryItem.description"></a><h2>Description</h2>
+<div class="figure">
+<a name="id-1.3.10.42.5.2"></a><p class="title"><b>Figure 182. Schema fragment for dstref:QueryItem</b></p>
+<div class="figure-contents"><pre class="programlisting">
+
+&lt;xs:complexType name="QueryItemType"&gt;
+  &lt;xs:complexContent&gt;
+    &lt;xs:extension base="dstref:ResultQueryType"&gt;
+      &lt;xs:attributeGroup ref="dst:PaginationAttributeGroup"/&gt;
+    &lt;/xs:extension&gt;
+  &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;
+</pre></div>
+</div>
+<br class="figure-break">
+</div>
+<div class="refsect1">
+<a name="lasso-LassoIdWsf2DstRefQueryItem.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lasso-idwsf2-dstref-query-item-new"></a><h3>lasso_idwsf2_dstref_query_item_new ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoIdWsf2DstRefQueryItem.html#LassoIdWsf2DstRefQueryItem" title="struct LassoIdWsf2DstRefQueryItem"><span class="returnvalue">LassoIdWsf2DstRefQueryItem</span></a> *
+lasso_idwsf2_dstref_query_item_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="lasso-LassoIdWsf2DstRefQueryItem.html#LassoIdWsf2DstRefQueryItem" title="struct LassoIdWsf2DstRefQueryItem"><span class="type">LassoIdWsf2DstRefQueryItem</span></a> object.</p>
+<div class="refsect3">
+<a name="id-1.3.10.42.6.2.5"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="lasso-LassoIdWsf2DstRefQueryItem.html#LassoIdWsf2DstRefQueryItem" title="struct LassoIdWsf2DstRefQueryItem"><span class="type">LassoIdWsf2DstRefQueryItem</span></a> object</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-idwsf2-dstref-query-item-new-full"></a><h3>lasso_idwsf2_dstref_query_item_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoIdWsf2DstRefQueryItem.html#LassoIdWsf2DstRefQueryItem" title="struct LassoIdWsf2DstRefQueryItem"><span class="returnvalue">LassoIdWsf2DstRefQueryItem</span></a> *
+lasso_idwsf2_dstref_query_item_new_full
+                               (<em class="parameter"><code>const <span class="type">gchar</span> *item_xpath</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *item_id</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoIdWsf2DstRefQueryItem.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="LassoIdWsf2DstRefQueryItem"></a><h3>struct LassoIdWsf2DstRefQueryItem</h3>
+<pre class="programlisting">struct LassoIdWsf2DstRefQueryItem {
+	LassoIdWsf2DstRefResultQuery parent;
+
+	/* attributes */
+	int count;
+	int offset;
+	char *setID;
+	char *setReq;
+};
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

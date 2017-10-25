@@ -1,0 +1,1773 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: LassoProvider</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="architecture.html" title="Lasso Architecture">
+<link rel="prev" href="lasso-LassoServer.html" title="LassoServer">
+<link rel="next" href="lasso-LassoIdentity.html" title="LassoIdentity">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-LassoProvider.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="architecture.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="lasso-LassoServer.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-LassoIdentity.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-LassoProvider"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-LassoProvider.top_of_page"></a>LassoProvider</span></h2>
+<p>LassoProvider — Service or identity provider</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-LassoProvider.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="returnvalue">LassoProvider</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-new" title="lasso_provider_new ()">lasso_provider_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="returnvalue">LassoProvider</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-new-from-buffer" title="lasso_provider_new_from_buffer ()">lasso_provider_new_from_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-assertion-consumer-service-url" title="lasso_provider_get_assertion_consumer_service_url ()">lasso_provider_get_assertion_consumer_service_url</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-metadata-one" title="lasso_provider_get_metadata_one ()">lasso_provider_get_metadata_one</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-metadata-list" title="lasso_provider_get_metadata_list ()">lasso_provider_get_metadata_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="returnvalue">LassoProvider</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-new-from-dump" title="lasso_provider_new_from_dump ()">lasso_provider_new_from_dump</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoProvider.html#LassoHttpMethod" title="enum LassoHttpMethod"><span class="returnvalue">LassoHttpMethod</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-first-http-method" title="lasso_provider_get_first_http_method ()">lasso_provider_get_first_http_method</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-accept-http-method" title="lasso_provider_accept_http_method ()">lasso_provider_accept_http_method</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-has-protocol-profile" title="lasso_provider_has_protocol_profile ()">lasso_provider_has_protocol_profile</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-base64-succinct-id" title="lasso_provider_get_base64_succinct_id ()">lasso_provider_get_base64_succinct_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">xmlNode</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-organization" title="lasso_provider_get_organization ()">lasso_provider_get_organization</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoProvider.html#LassoProtocolConformance" title="enum LassoProtocolConformance"><span class="returnvalue">LassoProtocolConformance</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-protocol-conformance" title="lasso_provider_get_protocol_conformance ()">lasso_provider_get_protocol_conformance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoProvider.html#LassoEncryptionMode" title="enum LassoEncryptionMode"><span class="returnvalue">LassoEncryptionMode</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-encryption-mode" title="lasso_provider_get_encryption_mode ()">lasso_provider_get_encryption_mode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-set-encryption-mode" title="lasso_provider_set_encryption_mode ()">lasso_provider_set_encryption_mode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-set-encryption-sym-key-type" title="lasso_provider_set_encryption_sym_key_type ()">lasso_provider_set_encryption_sym_key_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-verify-single-node-signature" title="lasso_provider_verify_single_node_signature ()">lasso_provider_verify_single_node_signature</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-default-name-id-format" title="lasso_provider_get_default_name_id_format ()">lasso_provider_get_default_name_id_format</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-sp-name-qualifier" title="lasso_provider_get_sp_name_qualifier ()">lasso_provider_get_sp_name_qualifier</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-idp-supported-attributes" title="lasso_provider_get_idp_supported_attributes ()">lasso_provider_get_idp_supported_attributes</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-valid-until" title="lasso_provider_get_valid_until ()">lasso_provider_get_valid_until</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-cache-duration" title="lasso_provider_get_cache_duration ()">lasso_provider_get_cache_duration</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-metadata-one-for-role" title="lasso_provider_get_metadata_one_for_role ()">lasso_provider_get_metadata_one_for_role</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-metadata-list-for-role" title="lasso_provider_get_metadata_list_for_role ()">lasso_provider_get_metadata_list_for_role</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-metadata-keys-for-role" title="lasso_provider_get_metadata_keys_for_role ()">lasso_provider_get_metadata_keys_for_role</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="returnvalue">LassoProviderRole</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-roles" title="lasso_provider_get_roles ()">lasso_provider_get_roles</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-match-conformance" title="lasso_provider_match_conformance ()">lasso_provider_match_conformance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-set-protocol-conformance" title="lasso_provider_set_protocol_conformance ()">lasso_provider_set_protocol_conformance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoProvider.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider">LassoProvider</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole">LassoProviderRole</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="lasso-LassoProvider.html#LassoHttpMethod" title="enum LassoHttpMethod">LassoHttpMethod</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="lasso-LassoProvider.html#LassoMdProtocolType" title="enum LassoMdProtocolType">LassoMdProtocolType</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="lasso-LassoProvider.html#LassoProtocolConformance" title="enum LassoProtocolConformance">LassoProtocolConformance</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="lasso-LassoProvider.html#LassoEncryptionMode" title="enum LassoEncryptionMode">LassoEncryptionMode</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="lasso-LassoProvider.html#LassoEncryptionSymKeyType" title="enum LassoEncryptionSymKeyType">LassoEncryptionSymKeyType</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoProvider.description"></a><h2>Description</h2>
+<p>The <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object holds metadata about a provider. Metadata are sorted into descriptors,
+each descriptor being assigned a role. We refer you to <em class="citetitle">Liberty Metadata Description
+and Discovery
+Specification </em> and <em class="citetitle">Metadata for the OASIS Security Assertion Markup Language
+(SAML) V2.0</em>.</p>
+<p>Roles are represented by the enumeration <a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a>, you can access descriptors
+content using <a class="link" href="lasso-LassoProvider.html#lasso-provider-get-metadata-list-for-role" title="lasso_provider_get_metadata_list_for_role ()"><code class="function">lasso_provider_get_metadata_list_for_role()</code></a> and <code class="function">lasso_provider_get_metadata_by_role()</code>.
+Descriptors resources are flattened inside a simple hashtable. For example to get the URL(s) for the
+SAML 2.0 single logout response endpoint using binding HTTP-POST of the SP descriptor of a provider
+called x, you would call:</p>
+<pre class="programlisting">
+GList *urls = lasso_provider_get_metadata_list_for_role(x, LASSO_PROVIDER_ROLE_SP, "SingleLogoutService HTTP-POST ResponseLocation");
+</pre>
+<p>A provider usually possess a default role stored in the <a class="link" href="lasso-LassoProvider.html#LassoProvider.role"><span class="type">LassoProvider.role</span></a> field, which is
+initialized by the <a class="link" href="lasso-LassoServer.html#lasso-server-add-provider" title="lasso_server_add_provider ()"><code class="function">lasso_server_add_provider()</code></a> method when registering a new remote provider to our
+current provider. The methods <code class="function">lasso_provider_get_metadata()</code> and <a class="link" href="lasso-LassoProvider.html#lasso-provider-get-metadata-list" title="lasso_provider_get_metadata_list ()"><code class="function">lasso_provider_get_metadata_list()</code></a>
+use this default role to access descriptors.</p>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoProvider.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lasso-provider-new"></a><h3>lasso_provider_new ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="returnvalue">LassoProvider</span></a> *
+lasso_provider_new (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> role</code></em>,
+                    <em class="parameter"><code>const <span class="type">char</span> *metadata</code></em>,
+                    <em class="parameter"><code>const <span class="type">char</span> *public_key</code></em>,
+                    <em class="parameter"><code>const <span class="type">char</span> *ca_cert_chain</code></em>);</pre>
+<p>Creates a new <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>role</p></td>
+<td class="parameter_description"><p>provider role, identity provider or service provider</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>metadata</p></td>
+<td class="parameter_description"><p>path to the provider metadata file</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>public_key:(allow-none)</p></td>
+<td class="parameter_description"><p>path to the provider public key file (may be a certificate) or NULL</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ca_cert_chain:(allow-none)</p></td>
+<td class="parameter_description"><p>path to the provider CA certificate chain file or NULL</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.2.6"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a>; or NULL if an error occured</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-new-from-buffer"></a><h3>lasso_provider_new_from_buffer ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="returnvalue">LassoProvider</span></a> *
+lasso_provider_new_from_buffer (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> role</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *metadata</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *public_key</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *ca_cert_chain</code></em>);</pre>
+<p>Creates a new <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>role</p></td>
+<td class="parameter_description"><p>provider role, identity provider or service provider</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>metadata</p></td>
+<td class="parameter_description"><p>string buffer containing a metadata file</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>public_key:(allow-none)</p></td>
+<td class="parameter_description"><p>path to the provider public key file (may be a certificate) or NULL</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ca_cert_chain:(allow-none)</p></td>
+<td class="parameter_description"><p>path to the provider CA certificate chain file or NULL</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.3.6"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a>; or NULL if an error occured</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-assertion-consumer-service-url"></a><h3>lasso_provider_get_assertion_consumer_service_url ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+lasso_provider_get_assertion_consumer_service_url
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *service_id</code></em>);</pre>
+<p>Extracts the AssertionConsumerServiceURL from the provider metadata
+descriptor.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>service_id:(allow-none)</p></td>
+<td class="parameter_description"><p>the AssertionConsumerServiceID, NULL for default</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.4.6"></a><h4>Returns</h4>
+<p> the element value, NULL if the element was not found.  This
+string must be freed by the caller. </p>
+<p><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-metadata-one"></a><h3>lasso_provider_get_metadata_one ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+lasso_provider_get_metadata_one (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                 <em class="parameter"><code>const <span class="type">char</span> *name</code></em>);</pre>
+<p>Extracts the element <em class="parameter"><code>name</code></em>
+ from the provider metadata descriptor.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>the element name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.5.6"></a><h4>Returns</h4>
+<p> the element value, NULL if the element was not found.
+This string must be freed by the caller. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-metadata-list"></a><h3>lasso_provider_get_metadata_list ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+lasso_provider_get_metadata_list (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                  <em class="parameter"><code>const <span class="type">char</span> *name</code></em>);</pre>
+<p>Extracts zero to many elements from the provider metadata descriptor.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>the element name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.6.6"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with the elements.  This GList is internally
+allocated and points to internally allocated strings.  It must
+not be freed, modified or stored. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> string]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-new-from-dump"></a><h3>lasso_provider_new_from_dump ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="returnvalue">LassoProvider</span></a> *
+lasso_provider_new_from_dump (<em class="parameter"><code>const <span class="type">gchar</span> *dump</code></em>);</pre>
+<p>Restores the <em class="parameter"><code>dump</code></em>
+ to a new <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dump</p></td>
+<td class="parameter_description"><p>XML provider dump</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.7.6"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a>; or NULL if an error occured.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-first-http-method"></a><h3>lasso_provider_get_first_http_method ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoProvider.html#LassoHttpMethod" title="enum LassoHttpMethod"><span class="returnvalue">LassoHttpMethod</span></a>
+lasso_provider_get_first_http_method (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                      <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *remote_provider</code></em>,
+                                      <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoMdProtocolType" title="enum LassoMdProtocolType"><span class="type">LassoMdProtocolType</span></a> protocol_type</code></em>);</pre>
+<p>Looks up and returns a <a class="link" href="lasso-LassoProvider.html#LassoHttpMethod" title="enum LassoHttpMethod"><span class="type">LassoHttpMethod</span></a> appropriate for performing the
+<em class="parameter"><code>protocol_type</code></em>
+ between <em class="parameter"><code>provider</code></em>
+ and <em class="parameter"><code>remote_provider</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p> a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>remote_provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> depicting the remote provider</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>protocol_type</p></td>
+<td class="parameter_description"><p>a Liberty profile</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.8.6"></a><h4>Returns</h4>
+<p> the <a class="link" href="lasso-LassoProvider.html#LassoHttpMethod" title="enum LassoHttpMethod"><span class="type">LassoHttpMethod</span></a></p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-accept-http-method"></a><h3>lasso_provider_accept_http_method ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+lasso_provider_accept_http_method (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                   <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *remote_provider</code></em>,
+                                   <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoMdProtocolType" title="enum LassoMdProtocolType"><span class="type">LassoMdProtocolType</span></a> protocol_type</code></em>,
+                                   <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoHttpMethod" title="enum LassoHttpMethod"><span class="type">LassoHttpMethod</span></a> http_method</code></em>,
+                                   <em class="parameter"><code><span class="type">gboolean</span> initiate_profile</code></em>);</pre>
+<p>Gets if <em class="parameter"><code>http_method</code></em>
+ is an appropriate method for the <em class="parameter"><code>protocol_type</code></em>
+ profile
+between <em class="parameter"><code>provider</code></em>
+ and <em class="parameter"><code>remote_provider</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>remote_provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> depicting the remote provider</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>protocol_type</p></td>
+<td class="parameter_description"><p>a Liberty profile type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>http_method</p></td>
+<td class="parameter_description"><p>an HTTP method</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>initiate_profile</p></td>
+<td class="parameter_description"><p>whether <em class="parameter"><code>provider</code></em>
+initiates the profile</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.9.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if it is appropriate</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-has-protocol-profile"></a><h3>lasso_provider_has_protocol_profile ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+lasso_provider_has_protocol_profile (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                     <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoMdProtocolType" title="enum LassoMdProtocolType"><span class="type">LassoMdProtocolType</span></a> protocol_type</code></em>,
+                                     <em class="parameter"><code>const <span class="type">char</span> *protocol_profile</code></em>);</pre>
+<p>Gets if <em class="parameter"><code>provider</code></em>
+ supports <em class="parameter"><code>protocol_profile</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>protocol_type</p></td>
+<td class="parameter_description"><p>a Liberty profile type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>protocol_profile</p></td>
+<td class="parameter_description"><p>a fully-qualified Liberty profile</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.10.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if it is supported</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-base64-succinct-id"></a><h3>lasso_provider_get_base64_succinct_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+lasso_provider_get_base64_succinct_id (<em class="parameter"><code>const <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>);</pre>
+<p>Computes and returns the base64-encoded provider succinct ID.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.11.6"></a><h4>Returns</h4>
+<p> the provider succinct ID.  This string must be freed by the
+caller. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-organization"></a><h3>lasso_provider_get_organization ()</h3>
+<pre class="programlisting"><span class="returnvalue">xmlNode</span> *
+lasso_provider_get_organization (<em class="parameter"><code>const <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>);</pre>
+<p>Returns the provider metadata &lt;Organization&gt; XML node.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.12.6"></a><h4>Returns</h4>
+<p> the &lt;Organization/&gt; node (libxml2 xmlNode*); or NULL if it is
+not found.  This xmlnode must be freed by the caller. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-protocol-conformance"></a><h3>lasso_provider_get_protocol_conformance ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoProvider.html#LassoProtocolConformance" title="enum LassoProtocolConformance"><span class="returnvalue">LassoProtocolConformance</span></a>
+lasso_provider_get_protocol_conformance
+                               (<em class="parameter"><code>const <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>);</pre>
+<p>Return the protocol conformance of the given provider, it should allow to switch behaviour of SP
+and IdP code toward a specific protocol. See also <a class="link" href="lasso-LassoProvider.html#LassoProtocolConformance" title="enum LassoProtocolConformance"><span class="type">LassoProtocolConformance</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.13.6"></a><h4>Returns</h4>
+<p> a value in the <a class="link" href="lasso-LassoProvider.html#LassoProtocolConformance" title="enum LassoProtocolConformance"><span class="type">LassoProtocolConformance</span></a> enumeration.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-encryption-mode"></a><h3>lasso_provider_get_encryption_mode ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoProvider.html#LassoEncryptionMode" title="enum LassoEncryptionMode"><span class="returnvalue">LassoEncryptionMode</span></a>
+lasso_provider_get_encryption_mode (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>);</pre>
+<p>Return the current encryption mode.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.14.6"></a><h4>Returns</h4>
+<p> a value in the <a class="link" href="lasso-LassoProvider.html#LassoEncryptionMode" title="enum LassoEncryptionMode"><span class="type">LassoEncryptionMode</span></a> enumeration.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-set-encryption-mode"></a><h3>lasso_provider_set_encryption_mode ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_provider_set_encryption_mode (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                    <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoEncryptionMode" title="enum LassoEncryptionMode"><span class="type">LassoEncryptionMode</span></a> encryption_mode</code></em>);</pre>
+<p>Activate or desactivate encryption</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>provider to set encryption for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>encryption_mode</p></td>
+<td class="parameter_description"><p>TRUE to activate, FALSE to desactivate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-set-encryption-sym-key-type"></a><h3>lasso_provider_set_encryption_sym_key_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_provider_set_encryption_sym_key_type
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoEncryptionSymKeyType" title="enum LassoEncryptionSymKeyType"><span class="type">LassoEncryptionSymKeyType</span></a> encryption_sym_key_type</code></em>);</pre>
+<p>Set the type of the generated encryption symetric key</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>provider to set encryption for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>encryption_sym_key_type</p></td>
+<td class="parameter_description"><p>enum type for generated symetric key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-verify-single-node-signature"></a><h3>lasso_provider_verify_single_node_signature ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_provider_verify_single_node_signature
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                <em class="parameter"><code><a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> *node</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *id_attr_name</code></em>);</pre>
+<p>Return wheter the provider signed this node.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> object, still having its originalXmlnode content, and containing an XML
+signature.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>id_attr_name</p></td>
+<td class="parameter_description"><p>the name of the ID attribute to lookup.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.17.6"></a><h4>Returns</h4>
+<p> 0 if the node is signed by this provider, an error code otherwise.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-default-name-id-format"></a><h3>lasso_provider_get_default_name_id_format ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+lasso_provider_get_default_name_id_format
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>);</pre>
+<p>If the provider has a list of supported name id formats in its metadatas, return the first one.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.18.6"></a><h4>Returns</h4>
+<p> a NameIDFormat URI or NULL, the returned value must be freed by the caller. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-sp-name-qualifier"></a><h3>lasso_provider_get_sp_name_qualifier ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+lasso_provider_get_sp_name_qualifier (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>);</pre>
+<p>Return the entityID to use for qualifying NameIdentifier.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <span class="type">LassoPRovider</span> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.19.6"></a><h4>Returns</h4>
+<p> a private string or NULL. Do not keep a reference on this string or
+free it. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-idp-supported-attributes"></a><h3>lasso_provider_get_idp_supported_attributes ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+lasso_provider_get_idp_supported_attributes
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>);</pre>
+<p>If the provider supports the IDP SSO role, then return the list of Attribute definition that this
+provider declared supporting.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.20.6"></a><h4>Returns</h4>
+<p> a list of <a class="link" href="lasso-LassoSaml2Attribute.html#LassoSaml2Attribute" title="struct LassoSaml2Attribute"><span class="type">LassoSaml2Attribute</span></a> or <a class="link" href="lasso-LassoSamlAttribute.html#LassoSamlAttribute" title="struct LassoSamlAttribute"><span class="type">LassoSamlAttribute</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LassoNode]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-valid-until"></a><h3>lasso_provider_get_valid_until ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *
+lasso_provider_get_valid_until (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>);</pre>
+<p>Return the time after which the metadata for this provider will become invalid. This is an
+ISO-8601 formatted string.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.21.6"></a><h4>Returns</h4>
+<p> an internally allocated string, you can copy it but not store it. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-cache-duration"></a><h3>lasso_provider_get_cache_duration ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *
+lasso_provider_get_cache_duration (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>);</pre>
+<p>Return the time during which the metadata for this provider can be kept.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.22.6"></a><h4>Returns</h4>
+<p> an internally allocated string, you can copy it but not store it. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-metadata-one-for-role"></a><h3>lasso_provider_get_metadata_one_for_role ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *
+lasso_provider_get_metadata_one_for_role
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> role</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *name</code></em>);</pre>
+<p>Return the given information extracted from the metadata of the given <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> for the
+given <em class="parameter"><code>role</code></em>
+ descriptor.</p>
+<p>Retun value: a newly allocated string or NULL. If non-NULL must be freed by the caller.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.23.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>role</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>a metadata information name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-metadata-list-for-role"></a><h3>lasso_provider_get_metadata_list_for_role ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+lasso_provider_get_metadata_list_for_role
+                               (<em class="parameter"><code>const <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> role</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *name</code></em>);</pre>
+<p>Extracts zero to many elements from the <em class="parameter"><code>provider</code></em>
+ descriptor for the given <em class="parameter"><code>role</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>role</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>the element name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.24.6"></a><h4>Returns</h4>
+<p> a <span class="type">GList</span> with the elements.  This GList is internally
+allocated and points to internally allocated strings.  It must
+not be freed, modified or stored. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> string]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-metadata-keys-for-role"></a><h3>lasso_provider_get_metadata_keys_for_role ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+lasso_provider_get_metadata_keys_for_role
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> role</code></em>);</pre>
+<p>Returns the list of metadata keys existing for the given provider.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>role</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.25.6"></a><h4>Returns</h4>
+<p> a newly allocated list of strings. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-get-roles"></a><h3>lasso_provider_get_roles ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="returnvalue">LassoProviderRole</span></a>
+lasso_provider_get_roles (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>);</pre>
+<p>Return the bitmask of the supported roles.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.26.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> enumeration value.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-match-conformance"></a><h3>lasso_provider_match_conformance ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+lasso_provider_match_conformance (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                  <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *another_provider</code></em>);</pre>
+<p>Return whether the two provider support a same protocol.
+See also <a class="link" href="lasso-LassoProvider.html#LassoProtocolConformance" title="enum LassoProtocolConformance"><span class="type">LassoProtocolConformance</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>another_provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.27.6"></a><h4>Returns</h4>
+<p> TRUE or FALSE.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-provider-set-protocol-conformance"></a><h3>lasso_provider_set_protocol_conformance ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_provider_set_protocol_conformance
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> *provider</code></em>,
+                                <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoProtocolConformance" title="enum LassoProtocolConformance"><span class="type">LassoProtocolConformance</span></a> protocol_conformance</code></em>);</pre>
+<p>Normally the protocol conformance is set when the metadata for the
+provider is loaded because the metadata defines the type of
+server. However some <a class="link" href="lasso-LassoServer.html#LassoServer" title="struct LassoServer"><span class="type">LassoServer</span></a> variants do not have metadata
+(e.g. ECP) therefore instead of loading the metadata it is
+necessary to explicitly set the protocol conformance because parts
+of the Lasso library dispatch based on the protocol conformance.
+Without the protocol conformance being set it is likely the wrong
+code will execute.</p>
+<p>**WARNING**, do not manually set the protocol conformance if
+metadata has been loaded, metadata is the final arbiter of protocol
+conformance.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.28.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>provider</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>protocol_conformance</p></td>
+<td class="parameter_description"><p><a class="link" href="lasso-LassoProvider.html#LassoProtocolConformance" title="enum LassoProtocolConformance"><span class="type">LassoProtocolConformance</span></a> enumerated value.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.28.7"></a><h4>Returns</h4>
+<p> 0 on success; another value if an error occured.</p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoProvider.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="LassoProvider"></a><h3>struct LassoProvider</h3>
+<pre class="programlisting">struct LassoProvider {
+	LassoNode parent;
+
+	gchar *ProviderID;
+	LassoProviderRole role;
+
+	char *metadata_filename;
+	gchar *public_key;
+	gchar *ca_cert_chain;
+};
+</pre>
+<p>Any kind of provider, identity provider, service provider, attribute authority, authorization
+authority will be represented by a <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> object. This object will holds public keys,
+certificate chains and metadata informations. The ID-FF 1.2 and SAML 2.0 metadata files are
+flattened inside a key-value map that you can access using the functions
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-metadata-one-for-role" title="lasso_provider_get_metadata_one_for_role ()"><code class="function">lasso_provider_get_metadata_one_for_role()</code></a>, <a class="link" href="lasso-LassoProvider.html#lasso-provider-get-metadata-list-for-role" title="lasso_provider_get_metadata_list_for_role ()"><code class="function">lasso_provider_get_metadata_list_for_role()</code></a>,
+<a class="link" href="lasso-LassoProvider.html#lasso-provider-get-metadata-keys-for-role" title="lasso_provider_get_metadata_keys_for_role ()"><code class="function">lasso_provider_get_metadata_keys_for_role()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.7.2.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> <em class="structfield"><code><a name="LassoProvider.parent"></a>parent</code></em>;</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="LassoProvider.ProviderID"></a>ProviderID</code></em>;</p></td>
+<td class="struct_member_description"><p>the identifier URI of this provider</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> <em class="structfield"><code><a name="LassoProvider.role"></a>role</code></em>;</p></td>
+<td class="struct_member_description"><p>the role prescribed when this <a class="link" href="lasso-LassoProvider.html#LassoProvider" title="struct LassoProvider"><span class="type">LassoProvider</span></a> was built</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">char</span> *<em class="structfield"><code><a name="LassoProvider.metadata-filename"></a>metadata_filename</code></em>;</p></td>
+<td class="struct_member_description"><p>file path or content of the metadata description for this provider.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="LassoProvider.public-key"></a>public_key</code></em>;</p></td>
+<td class="struct_member_description"><p>file path or content of the public key file for this provider.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="LassoProvider.ca-cert-chain"></a>ca_cert_chain</code></em>;</p></td>
+<td class="struct_member_description"><p>file path or content of the CA cert chain used to validate signature of this
+provider (can be used instead of a public key to limit the need for metadata updates).</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LassoProviderRole"></a><h3>enum LassoProviderRole</h3>
+<p><a class="link" href="lasso-LassoProvider.html#LassoProviderRole" title="enum LassoProviderRole"><span class="type">LassoProviderRole</span></a> is an enumeration allowing to enumerate the roles handled by a provider, it
+can be used in a bitmask as each value is a power of 2 (except <a class="link" href="lasso-LassoProvider.html#LASSO-PROVIDER-ROLE-ANY:CAPS"><span class="type">LASSO_PROVIDER_ROLE_ANY</span></a> which is
+the full bitmask and LASSO_PROVIDER_ROLE_NONE).</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.7.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROVIDER-ROLE-ANY:CAPS"></a>LASSO_PROVIDER_ROLE_ANY</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROVIDER-ROLE-NONE:CAPS"></a>LASSO_PROVIDER_ROLE_NONE</p></td>
+<td class="enum_member_description">
+<p>unitialized value (internal use)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROVIDER-ROLE-SP:CAPS"></a>LASSO_PROVIDER_ROLE_SP</p></td>
+<td class="enum_member_description">
+<p>service provider.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROVIDER-ROLE-IDP:CAPS"></a>LASSO_PROVIDER_ROLE_IDP</p></td>
+<td class="enum_member_description">
+<p>identity provider.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROVIDER-ROLE-BOTH:CAPS"></a>LASSO_PROVIDER_ROLE_BOTH</p></td>
+<td class="enum_member_description">
+<p>service&amp;identity provider.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROVIDER-ROLE-AUTHN-AUTHORITY:CAPS"></a>LASSO_PROVIDER_ROLE_AUTHN_AUTHORITY</p></td>
+<td class="enum_member_description">
+<p>an authentification authority, i.e. an endpoint able to
+return previously returned assertion,</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROVIDER-ROLE-AUTHZ-AUTHORITY:CAPS"></a>LASSO_PROVIDER_ROLE_AUTHZ_AUTHORITY</p></td>
+<td class="enum_member_description">
+<p>an authorization authority, i.e. an endpoint able to return
+assertion providing authorization about a principal acessing a resource,</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROVIDER-ROLE-ATTRIBUTE-AUTHORITY:CAPS"></a>LASSO_PROVIDER_ROLE_ATTRIBUTE_AUTHORITY</p></td>
+<td class="enum_member_description">
+<p>an attribute authority, i.e. an endpoint able to return
+attributes aboute a principal,</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROVIDER-ROLE-LAST:CAPS"></a>LASSO_PROVIDER_ROLE_LAST</p></td>
+<td class="enum_member_description">
+<p>all values in the enumeration are guaranteed to be &lt; to
+<em class="parameter"><code>LASSO_PROVIDER_ROLE_LAST</code></em>
+.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROVIDER-ROLE-ALL:CAPS"></a>LASSO_PROVIDER_ROLE_ALL</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LassoHttpMethod"></a><h3>enum LassoHttpMethod</h3>
+<p>Method.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.7.4.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-NONE:CAPS"></a>LASSO_HTTP_METHOD_NONE</p></td>
+<td class="enum_member_description">
+<p>invalid value (internal use)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-ANY:CAPS"></a>LASSO_HTTP_METHOD_ANY</p></td>
+<td class="enum_member_description">
+<p>any method will do</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-IDP-INITIATED:CAPS"></a>LASSO_HTTP_METHOD_IDP_INITIATED</p></td>
+<td class="enum_member_description">
+<p>not a method, for IdP initiated profile</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-GET:CAPS"></a>LASSO_HTTP_METHOD_GET</p></td>
+<td class="enum_member_description">
+<p>HTTP GET</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-POST:CAPS"></a>LASSO_HTTP_METHOD_POST</p></td>
+<td class="enum_member_description">
+<p>Browser POST</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-REDIRECT:CAPS"></a>LASSO_HTTP_METHOD_REDIRECT</p></td>
+<td class="enum_member_description">
+<p>HTTP-Redirect based</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-SOAP:CAPS"></a>LASSO_HTTP_METHOD_SOAP</p></td>
+<td class="enum_member_description">
+<p>SOAP/HTTP based</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-ARTIFACT-GET:CAPS"></a>LASSO_HTTP_METHOD_ARTIFACT_GET</p></td>
+<td class="enum_member_description">
+<p>Artifact by HTTP GET (SAML 2.0)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-ARTIFACT-POST:CAPS"></a>LASSO_HTTP_METHOD_ARTIFACT_POST</p></td>
+<td class="enum_member_description">
+<p>Artifact by HTTP POST (SAML 2.0)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-PAOS:CAPS"></a>LASSO_HTTP_METHOD_PAOS</p></td>
+<td class="enum_member_description">
+<p>PAOS/HTTP based (SAML 2.0)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-HTTP-METHOD-LAST:CAPS"></a>LASSO_HTTP_METHOD_LAST</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LassoMdProtocolType"></a><h3>enum LassoMdProtocolType</h3>
+<p>Liberty Metadata Type.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.7.5.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-FEDERATION-TERMINATION:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_FEDERATION_TERMINATION</p></td>
+<td class="enum_member_description">
+<p>Federation Termination Notification</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-NAME-IDENTIFIER-MAPPING:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_NAME_IDENTIFIER_MAPPING</p></td>
+<td class="enum_member_description">
+<p>Name Identifier Mapping</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-REGISTER-NAME-IDENTIFIER:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_REGISTER_NAME_IDENTIFIER</p></td>
+<td class="enum_member_description">
+<p>Name Registration</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-SINGLE-LOGOUT:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_SINGLE_LOGOUT</p></td>
+<td class="enum_member_description">
+<p>Single Logout</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-SINGLE-SIGN-ON:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_SINGLE_SIGN_ON</p></td>
+<td class="enum_member_description">
+<p>Single Sign-On and Federation</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-ARTIFACT-RESOLUTION:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_ARTIFACT_RESOLUTION</p></td>
+<td class="enum_member_description">
+<p>Artifact Resolution (SAML 2.0)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-MANAGE-NAME-ID:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_MANAGE_NAME_ID</p></td>
+<td class="enum_member_description">
+<p>Manage Name Identifier (SAML 2.0)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-ASSERTION-ID-REQUEST:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_ASSERTION_ID_REQUEST</p></td>
+<td class="enum_member_description">
+<p>Assertion ID Request (SAML 2.0)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-AUTHN-QUERY:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_AUTHN_QUERY</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-AUTHZ:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_AUTHZ</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-ATTRIBUTE:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_ATTRIBUTE</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-MD-PROTOCOL-TYPE-LAST:CAPS"></a>LASSO_MD_PROTOCOL_TYPE_LAST</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LassoProtocolConformance"></a><h3>enum LassoProtocolConformance</h3>
+<p>Provider protocol conformance.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.7.6.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROTOCOL-NONE:CAPS"></a>LASSO_PROTOCOL_NONE</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROTOCOL-LIBERTY-1-0:CAPS"></a>LASSO_PROTOCOL_LIBERTY_1_0</p></td>
+<td class="enum_member_description">
+<p>Liberty ID-FF 1.0</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROTOCOL-LIBERTY-1-1:CAPS"></a>LASSO_PROTOCOL_LIBERTY_1_1</p></td>
+<td class="enum_member_description">
+<p>Liberty ID-FF 1.1</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROTOCOL-LIBERTY-1-2:CAPS"></a>LASSO_PROTOCOL_LIBERTY_1_2</p></td>
+<td class="enum_member_description">
+<p>Liberty ID-FF 1.2 / ID-WSF 1.0</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-PROTOCOL-SAML-2-0:CAPS"></a>LASSO_PROTOCOL_SAML_2_0</p></td>
+<td class="enum_member_description">
+<p>SAML 2.0</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LassoEncryptionMode"></a><h3>enum LassoEncryptionMode</h3>
+<p>Encryption mode.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.7.7.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-ENCRYPTION-MODE-NONE:CAPS"></a>LASSO_ENCRYPTION_MODE_NONE</p></td>
+<td class="enum_member_description">
+<p>Encrypt nothing</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-ENCRYPTION-MODE-NAMEID:CAPS"></a>LASSO_ENCRYPTION_MODE_NAMEID</p></td>
+<td class="enum_member_description">
+<p>Encrypt NameIDs</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-ENCRYPTION-MODE-ASSERTION:CAPS"></a>LASSO_ENCRYPTION_MODE_ASSERTION</p></td>
+<td class="enum_member_description">
+<p>Encrypt Assertions</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LassoEncryptionSymKeyType"></a><h3>enum LassoEncryptionSymKeyType</h3>
+<p>Encryption symetric key type.</p>
+<div class="refsect3">
+<a name="id-1.3.2.5.7.8.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-ENCRYPTION-SYM-KEY-TYPE-DEFAULT:CAPS"></a>LASSO_ENCRYPTION_SYM_KEY_TYPE_DEFAULT</p></td>
+<td class="enum_member_description">
+<p>Default type (AES 128)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-ENCRYPTION-SYM-KEY-TYPE-AES-256:CAPS"></a>LASSO_ENCRYPTION_SYM_KEY_TYPE_AES_256</p></td>
+<td class="enum_member_description">
+<p>Aes 256 bits key</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-ENCRYPTION-SYM-KEY-TYPE-AES-128:CAPS"></a>LASSO_ENCRYPTION_SYM_KEY_TYPE_AES_128</p></td>
+<td class="enum_member_description">
+<p>Aes 128 bits key</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-ENCRYPTION-SYM-KEY-TYPE-3DES:CAPS"></a>LASSO_ENCRYPTION_SYM_KEY_TYPE_3DES</p></td>
+<td class="enum_member_description">
+<p>Triple DES 192 bits key</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="LASSO-ENCRYTPION-SYM-KEY-TYPE-LAST:CAPS"></a>LASSO_ENCRYTPION_SYM_KEY_TYPE_LAST</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

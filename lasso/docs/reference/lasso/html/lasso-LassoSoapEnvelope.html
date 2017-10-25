@@ -1,0 +1,710 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: LassoSoapEnvelope</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="soap.html" title="Object from the SOAP 1.1 schemas">
+<link rel="prev" href="lasso-LassoSoapDetail.html" title="LassoSoapDetail">
+<link rel="next" href="lasso-LassoSoapFault.html" title="LassoSoapFault">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-LassoSoapEnvelope.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="soap.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="lasso-LassoSoapDetail.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-LassoSoapFault.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-LassoSoapEnvelope"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-LassoSoapEnvelope.top_of_page"></a>LassoSoapEnvelope</span></h2>
+<p>LassoSoapEnvelope — &lt;soap:Envelope&gt;</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-LassoSoapEnvelope.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="returnvalue">LassoSoapEnvelope</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-new" title="lasso_soap_envelope_new ()">lasso_soap_envelope_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="returnvalue">LassoSoapEnvelope</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-new-full" title="lasso_soap_envelope_new_full ()">lasso_soap_envelope_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="returnvalue">LassoSoapEnvelope</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-new-from-message" title="lasso_soap_envelope_new_from_message ()">lasso_soap_envelope_new_from_message</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-add-action" title="lasso_soap_envelope_add_action ()">lasso_soap_envelope_add_action</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-add-security-token" title="lasso_soap_envelope_add_security_token ()">lasso_soap_envelope_add_security_token</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-add-to-body" title="lasso_soap_envelope_add_to_body ()">lasso_soap_envelope_add_to_body</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-get-action" title="lasso_soap_envelope_get_action ()">lasso_soap_envelope_get_action</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-get-body-content" title="lasso_soap_envelope_get_body_content ()">lasso_soap_envelope_get_body_content</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoWsAddrAttributedURI.html#LassoWsAddrAttributedURI" title="struct LassoWsAddrAttributedURI"><span class="returnvalue">LassoWsAddrAttributedURI</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-get-message-id" title="lasso_soap_envelope_get_message_id ()">lasso_soap_envelope_get_message_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoWsAddrRelatesTo.html#LassoWsAddrRelatesTo" title="struct LassoWsAddrRelatesTo"><span class="returnvalue">LassoWsAddrRelatesTo</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-get-relates-to" title="lasso_soap_envelope_get_relates_to ()">lasso_soap_envelope_get_relates_to</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoSaml2Assertion.html#LassoSaml2Assertion" title="struct LassoSaml2Assertion"><span class="returnvalue">LassoSaml2Assertion</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-get-saml2-security-token" title="lasso_soap_envelope_get_saml2_security_token ()">lasso_soap_envelope_get_saml2_security_token</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">LassoIdWsf2Sb2UserInteractionHint</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-get-sb2-user-interaction-hint" title="lasso_soap_envelope_get_sb2_user_interaction_hint ()">lasso_soap_envelope_get_sb2_user_interaction_hint</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.html#lasso-soap-envelope-sb2-get-provider-id" title="lasso_soap_envelope_sb2_get_provider_id ()">lasso_soap_envelope_sb2_get_provider_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.html#lasso-soap-envelope-sb2-get-redirect-request-url" title="lasso_soap_envelope_sb2_get_redirect_request_url ()">lasso_soap_envelope_sb2_get_redirect_request_url</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoIdWsf2Sb2TargetIdentity.html#LassoIdWsf2Sb2TargetIdentity" title="struct LassoIdWsf2Sb2TargetIdentity"><span class="returnvalue">LassoIdWsf2Sb2TargetIdentity</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.html#lasso-soap-envelope-sb2-get-target-identity-header" title="lasso_soap_envelope_sb2_get_target_identity_header ()">lasso_soap_envelope_sb2_get_target_identity_header</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-set-sb2-user-interaction-hint" title="lasso_soap_envelope_set_sb2_user_interaction_hint ()">lasso_soap_envelope_set_sb2_user_interaction_hint</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoWsSec1SecurityHeader.html#LassoWsSec1SecurityHeader" title="struct LassoWsSec1SecurityHeader"><span class="returnvalue">LassoWsSec1SecurityHeader</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-wssec-get-security-header" title="lasso_soap_envelope_wssec_get_security_header ()">lasso_soap_envelope_wssec_get_security_header</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoSoapFault.html#LassoSoapFault" title="struct LassoSoapFault"><span class="returnvalue">LassoSoapFault</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-get-soap-fault" title="lasso_soap_envelope_get_soap_fault ()">lasso_soap_envelope_get_soap_fault</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-set-relates-to" title="lasso_soap_envelope_set_relates_to ()">lasso_soap_envelope_set_relates_to</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSoapEnvelope.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope">LassoSoapEnvelope</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSoapEnvelope.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSoapEnvelope.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lasso-soap-envelope-new"></a><h3>lasso_soap_envelope_new ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="returnvalue">LassoSoapEnvelope</span></a> *
+lasso_soap_envelope_new (<em class="parameter"><code><a class="link" href="lasso-LassoSoapBody.html#LassoSoapBody" title="struct LassoSoapBody"><span class="type">LassoSoapBody</span></a> *body</code></em>);</pre>
+<p>Creates a new <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> with a new empty <a class="link" href="lasso-LassoSoapBody.html#LassoSoapBody" title="struct LassoSoapBody"><span class="type">LassoSoapBody</span></a>
+member.  Note, this function does not add a <a class="link" href="lasso-LassoSoapHeader.html#LassoSoapHeader" title="struct LassoSoapHeader"><span class="type">LassoSoapHeader</span></a>, if
+you need both headers and a body use
+<a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-new-full" title="lasso_soap_envelope_new_full ()"><code class="function">lasso_soap_envelope_new_full()</code></a> instead.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.2.5"></a><h4>Returns</h4>
+<p> new <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a></p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-new-full"></a><h3>lasso_soap_envelope_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="returnvalue">LassoSoapEnvelope</span></a> *
+lasso_soap_envelope_new_full (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> with new empty <a class="link" href="lasso-LassoSoapHeader.html#LassoSoapHeader" title="struct LassoSoapHeader"><span class="type">LassoSoapHeader</span></a>
+and <a class="link" href="lasso-LassoSoapBody.html#LassoSoapBody" title="struct LassoSoapBody"><span class="type">LassoSoapBody</span></a> members.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.3.5"></a><h4>Returns</h4>
+<p> new <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a></p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-new-from-message"></a><h3>lasso_soap_envelope_new_from_message ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="returnvalue">LassoSoapEnvelope</span></a> *
+lasso_soap_envelope_new_from_message (<em class="parameter"><code>const <span class="type">gchar</span> *message</code></em>);</pre>
+<p>Given an XML document in <em class="parameter"><code>message</code></em>
+, parse it and convert it into a
+<a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a>, then insert that <a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> into the body of the newly
+returned <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>message</p></td>
+<td class="parameter_description"><p>XML document</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.4.6"></a><h4>Returns</h4>
+<p> new <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a></p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-add-action"></a><h3>lasso_soap_envelope_add_action ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_soap_envelope_add_action (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *action</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-add-security-token"></a><h3>lasso_soap_envelope_add_security_token ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_soap_envelope_add_security_token
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>,
+                                <em class="parameter"><code><a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> *token</code></em>);</pre>
+<p>Add <em class="parameter"><code>token</code></em>
+ as a security token to the headers of <em class="parameter"><code>soap_envelope</code></em>
+ using a
+<a class="link" href="lasso-LassoWsSec1SecurityHeader.html#LassoWsSec1SecurityHeader" title="struct LassoWsSec1SecurityHeader"><span class="type">LassoWsSec1SecurityHeader</span></a> element as a container. Eventually create the
+<a class="link" href="lasso-LassoWsSec1SecurityHeader.html#LassoWsSec1SecurityHeader" title="struct LassoWsSec1SecurityHeader"><span class="type">LassoWsSec1SecurityHeader</span></a> element if it does not exist already.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>token</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> to use as a security token</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-add-to-body"></a><h3>lasso_soap_envelope_add_to_body ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_soap_envelope_add_to_body (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>,
+                                 <em class="parameter"><code><a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> *content</code></em>);</pre>
+<p>Add new content to the SOAP message body.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>content</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> object to add to the body of the SOAP message</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-get-action"></a><h3>lasso_soap_envelope_get_action ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+lasso_soap_envelope_get_action (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-get-body-content"></a><h3>lasso_soap_envelope_get_body_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+lasso_soap_envelope_get_body_content (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+<p>Return the body content of the <em class="parameter"><code>soap_envelope</code></em>
+ object.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.9.6"></a><h4>Returns</h4>
+<p> the content or NULL if the concent is empty or the object invalid. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> LassoNode]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-get-message-id"></a><h3>lasso_soap_envelope_get_message_id ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoWsAddrAttributedURI.html#LassoWsAddrAttributedURI" title="struct LassoWsAddrAttributedURI"><span class="returnvalue">LassoWsAddrAttributedURI</span></a> *
+lasso_soap_envelope_get_message_id (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>,
+                                    <em class="parameter"><code><span class="type">gboolean</span> create</code></em>);</pre>
+<p>Return the WS-Addressing header MessageID content.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>create</p></td>
+<td class="parameter_description"><p> whether to create the node if it is not found. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Default parameter value (for in case the shadows-to function has less parameters)."><span class="acronym">default</span></acronym> FALSE]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.10.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="lasso-LassoWsAddrAttributedURI.html#LassoWsAddrAttributedURI" title="struct LassoWsAddrAttributedURI"><span class="type">LassoWsAddrAttributedURI</span></a> object or NULL if none is found, and
+creation was not allowed. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-get-relates-to"></a><h3>lasso_soap_envelope_get_relates_to ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoWsAddrRelatesTo.html#LassoWsAddrRelatesTo" title="struct LassoWsAddrRelatesTo"><span class="returnvalue">LassoWsAddrRelatesTo</span></a> *
+lasso_soap_envelope_get_relates_to (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *envelope</code></em>,
+                                    <em class="parameter"><code><span class="type">gboolean</span> create</code></em>);</pre>
+<p>Returns the RelatesTo WS-Addressing header, if it exists.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>create</p></td>
+<td class="parameter_description"><p> whether to create the node if it is not found. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Default parameter value (for in case the shadows-to function has less parameters)."><span class="acronym">default</span></acronym> FALSE]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.11.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="lasso-LassoWsAddrAttributedURI.html#LassoWsAddrAttributedURI" title="struct LassoWsAddrAttributedURI"><span class="type">LassoWsAddrAttributedURI</span></a> object or NULL if none is found, and creation was not allowed. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-get-saml2-security-token"></a><h3>lasso_soap_envelope_get_saml2_security_token ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoSaml2Assertion.html#LassoSaml2Assertion" title="struct LassoSaml2Assertion"><span class="returnvalue">LassoSaml2Assertion</span></a> *
+lasso_soap_envelope_get_saml2_security_token
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+<p>Return a SAML2 Assertion used as a security token if one is found in the headers of
+<em class="parameter"><code>soap_envelope</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.12.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="lasso-LassoSaml2Assertion.html#LassoSaml2Assertion" title="struct LassoSaml2Assertion"><span class="type">LassoSaml2Assertion</span></a>, or NULL if none is found. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-get-sb2-user-interaction-hint"></a><h3>lasso_soap_envelope_get_sb2_user_interaction_hint ()</h3>
+<pre class="programlisting"><span class="returnvalue">LassoIdWsf2Sb2UserInteractionHint</span>
+lasso_soap_envelope_get_sb2_user_interaction_hint
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-sb2-get-provider-id"></a><h3>lasso_soap_envelope_sb2_get_provider_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *
+lasso_soap_envelope_sb2_get_provider_id
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+<p>Return the providerID contained in the sb2:Sender header.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.14.6"></a><h4>Returns</h4>
+<p> the providerID string or NULL if no sb2:Sender header is present.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-sb2-get-redirect-request-url"></a><h3>lasso_soap_envelope_sb2_get_redirect_request_url ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+lasso_soap_envelope_sb2_get_redirect_request_url
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+<p>Return the redirect request URL from the sb2:RedirectRequest SOAP Fault detail.</p>
+<p>The WSC MUST verify that this URL belong to the WSP. You can do this by comparing the domain
+with the one in the <em class="parameter"><code>LassoProfile.msg_url</code></em> field</p>
+<p>The WSC MUST redirect the User Agent to this URL with a GET or POST request. It MUST add a
+parameter named ReturnToURL giving the URL where the WSP will send the User Agent after the
+interaction. It MAY add an IDP parameter indicating to the WSP how to authenticate the principal
+if no preexisting session with the User Agent exists</p>
+<p>The WSP must check that the ReturnToURL belon to the WSP, by using the providerID URL for example.</p>
+<p>After the interaction the WSC must redirect the User Agent to the ReturnToURL URL adding a parameter named ResendMessage. If ResendMessage is 0 or false, it means that the principal refused to continue the process. Any other value means that the prinicpal accepted and so the WSC can try again its request.</p>
+<p>In order to succeed the request need to refer to the SOAP Fault response containing the RedirectRequest element. See <a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-get-relates-to" title="lasso_soap_envelope_get_relates_to ()"><code class="function">lasso_soap_envelope_get_relates_to()</code></a>, and <a class="link" href="lasso-LassoWsAddrAttributedURI.html#LassoWsAddrAttributedURI" title="struct LassoWsAddrAttributedURI"><span class="type">LassoWsAddrAttributedURI</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.15.10"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.15.11"></a><h4>Returns</h4>
+<p> the redirect URL string or NULL if no sb2:RedirectRequest detail is present. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-sb2-get-target-identity-header"></a><h3>lasso_soap_envelope_sb2_get_target_identity_header ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoIdWsf2Sb2TargetIdentity.html#LassoIdWsf2Sb2TargetIdentity" title="struct LassoIdWsf2Sb2TargetIdentity"><span class="returnvalue">LassoIdWsf2Sb2TargetIdentity</span></a> *
+lasso_soap_envelope_sb2_get_target_identity_header
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+<p>Return the first sb2:TargetIdentity header.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.16.6"></a><h4>Returns</h4>
+<p> the first <a class="link" href="lasso-LassoIdWsf2Sb2TargetIdentity.html#LassoIdWsf2Sb2TargetIdentity" title="struct LassoIdWsf2Sb2TargetIdentity"><span class="type">LassoIdWsf2Sb2TargetIdentity</span></a> object found in the
+headers of the <em class="parameter"><code>soap_envelope</code></em>
+, or NULL if none is found. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-set-sb2-user-interaction-hint"></a><h3>lasso_soap_envelope_set_sb2_user_interaction_hint ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_soap_envelope_set_sb2_user_interaction_hint
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>,
+                                <em class="parameter"><code><span class="type">LassoIdWsf2Sb2UserInteractionHint</span> hint</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-wssec-get-security-header"></a><h3>lasso_soap_envelope_wssec_get_security_header ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoWsSec1SecurityHeader.html#LassoWsSec1SecurityHeader" title="struct LassoWsSec1SecurityHeader"><span class="returnvalue">LassoWsSec1SecurityHeader</span></a> *
+lasso_soap_envelope_wssec_get_security_header
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+<p>Return the first wsse:Security header found in the headers of <em class="parameter"><code>soap_envelope</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.18.6"></a><h4>Returns</h4>
+<p> the wsse:Security header found in the SOAP message, or NULL if
+none is found. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-get-soap-fault"></a><h3>lasso_soap_envelope_get_soap_fault ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoSoapFault.html#LassoSoapFault" title="struct LassoSoapFault"><span class="returnvalue">LassoSoapFault</span></a> *
+lasso_soap_envelope_get_soap_fault (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>,
+                                    <em class="parameter"><code><span class="type">gboolean</span> create</code></em>);</pre>
+<p>Return the first SOAP Fault in the Body of the soap message <em class="parameter"><code>soap_envelope</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>create</p></td>
+<td class="parameter_description"><p> whether to create the SOAP Fault. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Default parameter value (for in case the shadows-to function has less parameters)."><span class="acronym">default</span></acronym> FALSE]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.19.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="lasso-LassoSoapFault.html#LassoSoapFault" title="struct LassoSoapFault"><span class="type">LassoSoapFault</span></a> object or NULL. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-set-relates-to"></a><h3>lasso_soap_envelope_set_relates_to ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_soap_envelope_set_relates_to (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>,
+                                    <em class="parameter"><code><span class="type">char</span> *value</code></em>,
+                                    <em class="parameter"><code><span class="type">char</span> *relationship</code></em>);</pre>
+<p>Set the value of the RelatesTo header, if it does not exist it is created. If <em class="parameter"><code>value</code></em>
+ is NULL, the
+header is removed.</p>
+<div class="refsect3">
+<a name="id-1.3.11.4.6.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value:(allow-none)</p></td>
+<td class="parameter_description"><p>the value to set into the new header</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>relationship:(allow-none)</p></td>
+<td class="parameter_description"><p>kind of the relationship</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoSoapEnvelope.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="LassoSoapEnvelope"></a><h3>struct LassoSoapEnvelope</h3>
+<pre class="programlisting">struct LassoSoapEnvelope {
+	LassoNode parent;
+
+	LassoSoapHeader *Header;
+	LassoSoapBody *Body;
+};
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

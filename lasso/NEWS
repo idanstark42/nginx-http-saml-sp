@@ -1,0 +1,678 @@
+NEWS
+====
+
+2.5.1 - February 19th 2016
+---------------------------
+17 commits, 16 files changed, 1096 insertions, 42 deletions
+
+ - Add missing urn constants used in PAOS HTTP header
+ - Set NotBefore in SAML 2.0 login assertions
+ - tests: fix leak in test test16_test_get_issuer
+ - id-ff: fix leak of profile->private_data->message_id
+ - saml-2.0: fix leak of message_id in lasso_profile_saml20_build_paos_request_msg
+ - tests: fix leaks in test_ecp
+ - xml: fix wrong termination of comment
+ - xml: fix leak in lasso_soap_envelope_new_full
+ - profile: fix leak of private idp_list field
+ - saml-2.0: fix leaks of url
+ - tests: fix leak
+ - tests: update valgrind suppressions
+ - perl: remove quotes from $PERL -V::ccflags: output (#9572)
+ - Fix wrong snippet type (fixes #9616). Thanks to Brett Gardner for the patch.
+ - tools.c: use correct NID and digest length when building RSA signature using SHA-2 digest
+   (fixes #10019) Thanks to Brett Gardner for the patch.
+ - bindings/php5: fix enum getters and setters (fixes #10032). Thanks to Brett Gardner for the bug
+   report.
+ - fix warning about INCLUDES directive
+
+2.5.0 - September 2nd 2015
+--------------------------
+151 commits, 180 files changed, 8391 insertions, 1339 deletions
+
+ - lots of bugfixes (reported by static analysis tools like clang,
+   coverity and manual inspection) thanks to Simo Sorce and John Dennis from
+   RedHat
+ - xsd:choices are now parsed correctly by implementing a real finite automata
+   for parsing XML documents. New flag for jumping forward and backward in
+   schema snippets have been added. It fixes parsing of message from third
+   party not following the ordre from the schema (they are entitled to do it but
+   most SAML implementations do not)
+ - added C CGI examples for SP and IdP side
+ - removed the _POSIX_SOURCE declaration
+ - added support for the SHA-2 family of hash functions
+ - fixed protocol profile selection when parsing AuthnRequest
+ - added support for Python 3, thanks to Houzéfa Abbasbhay from XCG Consulting
+ - fixed default value of WantAuthnRequestSigned in metadata parsing
+ - SAML 2.0 ECP is now functionnal, thanks to John Dennis from RedHat
+ - added two new API function to LassoProfile to extract the Issuer and
+   InResponseTo attribute of messages, allowing pre-treatment before parsing
+   the message, to load the metadata of the remote provider, or find the request
+   which the response matches.
+ - fixed segfault when parsing HTTP-Redirect marlformed base64 content
+ - added support for automake 1.15 (jdennis)
+
+2.4.1 - August 28th 2014
+---------------------------
+56 commits, 35 files changed, 12590 insertions(+), 31117 deletions(-)
+
+ - fix bug #4455 runtime bug in perl binding on debian wheezy 32bits #
+ - fix warning on g_type_init() on GLib > 2.36
+ - lot of null pointer, boundary checks, and dead code removal after validation
+	 using Coverity and Clang static analyzer (Simo Sorce)
+ - always set NotOnOrAfter on the Condition element
+ - fix pkg-config typo (Simon Josefsson)
+ - Python binding now conserve the order of session indexes values
+ - fix memory leaks
+ - Python bindings now automatically convert unicode values to UTF-8
+
+2.4.0 - January 7th 2014
+------------------------
+281 commits, 933 files changed, 45384 insertions, 6313 deletions
+
+Minor version number increase since ABI was extended (new methods).
+
+ - Key rollover support:
+   Lasso is now able to accept messages signed by any key declared as a signing
+   key in a metadata and not just the last one. You can also decrypt encrypted
+   nodes using any of a list of private keys, allowing roll-over of encryption
+   certificates. Signing key roll-over is automatic, your provider just have to
+   provide the new signing key in their metadata. For multiple-encryption key
+   you can load another private key than the one loaded in the LassoServer
+   constuctor with code like that:
+
+      >>> import lasso
+      >>> server = lasso.Server(our_metadata, first_private_key_path)
+      >>> server.setEncryptionPrivateKey(second_private_key_path)
+
+   See the FAQ file for the workflow of a proper key roll-over.
+
+ - Partial logout response now produces a specific error code when parsed by
+   lasso_logout_process_response_msg()
+ - Bugs in lasso_assertion_query_build_request_msg() were fixed
+ - Processing of assertions is not stopped when checking that first level
+   status code is not success, so that later code can check the second level
+   status code.
+ - A new generic error for denied request was added,
+   LASSO_PROFILE_ERROR_REQUEST_DENIED
+ - A new API lasso_server_load_metadata() was added to load federation files
+   (XML files containing metadata from multiple providers) and to check
+   signatures on them.
+ - Better warning and errors are reported in logs when failing to load a
+   metadata file.
+ - Bugs around missing namespace declaration for dump file were fixed, it
+   prevented reloading dumped object (like LassoLogin).
+ - lasso_node_get_xml_node_for_any_type() must be able to copy the content of
+   an XML node to another (namespace, attribute and children). It did not, now
+   it is fixed. It can be used for example to add specific attribute like «
+   xsi:type="string" » to a Saml2AttributeValue. Here is a python snippet to do that:
+
+      >>> import lasso
+      >>> a = lasso.Saml2AttributeValue()
+      >>> a.setOriginalXmlnode('<Dummy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="string">Value</Dummy>')
+      >>> print a.debug(0)
+      <saml:AttributeValue xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="string">Value</saml:AttributeValue>
+ - support for symetric keys signatures: for a long time XMLDsig standard has
+   supported HMAC signature, or signature based on a shared secret key an hash
+   algorithm. Lasso now supports to share a key with another Lasso using
+   service or identity provider and to verify and sign SAML exchange using this
+   key. Performance can be 100 times more than with assymetric cryptography,
+   i.e. RSA.
+ - nodes able to hold any XML attribyte (like saml:AttributeValue) contains a
+   hashtable to for holding those attributes, those hashtable have a new syntax
+   for attributes of another namespace than the current node namespace,
+   inspired by the Python ElementTree library:
+
+    {the_namespace}the_attribute_name
+
+   ex:
+
+    {http://www.w3.org/2001/XMLSchema-instance}type
+
+   for the classic xsi:type attribute.
+ - xmldsig:X509Data node now possess a binding as a Lasso object. You can use
+   it combined with the new class LassoSaml2KeyInformationDataType to use the
+   holder-of-key subject confirmation method.
+ - The perfs benchmarking tools now allows to select a different metadata set
+   (for example to test with different public key sizes).
+ - Perl minimal version for the binding was downgraded to 5
+ - pseudo-XSchema validation: the new XML deserializer does more to enforce
+   constraints of the schema defining SAML messages. It means Lasso is less
+   forgiving with non-conform implementation of SAML.
+ - thin-sessions mode: A new flag was added named thin-session, you can set it
+   using lasso_set_flag("thin-sessions") or by setting the LASSO_FLAG
+   environement variable to the string "thin-sessions". The effect of this flag
+   is to remove complete storage of assertions in the LassoSession object,
+   which was made mainly to support logout and the artifact binding for ID-FF
+   1.2. A new thinner structure is used for supporting logout, and ID-FF 1.2
+   can now use the same storage mechanism as the SAML 2 implementation for the
+   artifact binding (i.e. using lasso_profile_get_artifact_message after
+   artifact generation and lasso_profile_set_artifact_message before artifact
+   retrieval).
+ - better initialization and access to SessionIndex in logout requests:
+   LassoSession now store all generated SessionIndex for a session using a
+   small structure, using it the LassoLogout profile can now initialize
+   LassoLogout message with all of them. It's not necessary to implement this
+   functionnalitý in your service or identity provider anymore.
+ - new LassoKey object: this new class was introduced to simplify management of
+   keys when using shared key signature. But you can also use it to load
+   assymetric keys. In the future it should gain API to do XML signature and
+   encryptiong independently of any SAML 2.0 or ID-FF 1.2 exchange. Providing
+   the first simple binding of libxmlsec to Python.
+ - Improvements to autoconf and automake files to compile under Darwin (Mac Os
+   X) and Fedora.
+ - a FAQ file was started.
+ - added API:
+	LASSO_LOGOUT_ERROR_PARTIAL_LOGOUT
+	LASSO_PROFILE_ERROR_ENDPOINT_INDEX_NOT_FOUND
+	LASSO_PROFILE_ERROR_REQUEST_DENIED
+	LASSO_PROVIDER_ROLE_ALL
+	LASSO_SERVER_ERROR_NO_PROVIDER_LOADED
+	LASSO_SERVER_LOAD_METADATA_FLAG_CHECK_ENTITIES_DESCRIPTOR_SIGNATURE
+	LASSO_SERVER_LOAD_METADATA_FLAG_CHECK_ENTITY_DESCRIPTOR_SIGNATURE
+	LASSO_SERVER_LOAD_METADATA_FLAG_DEFAULT
+	LASSO_SERVER_LOAD_METADATA_FLAG_INHERIT_SIGNATURE
+	LASSO_SIGNATURE_METHOD_HMAC_SHA1
+	LASSO_SIGNATURE_METHOD_NONE
+	LASSO_XMLENC_ERROR_INVALID_ENCRYPTED_DATA
+	LASSO_XMLENC_HREF
+	LASSO_XMLENC_PREFIX
+	struct LassoDsX509Data {  LassoDsX509DataPrivate* private_data  }
+	struct LassoKey {  LassoKeyPrivate* private_data  }
+	struct LassoSaml2KeyInfoConfirmationDataType {  LassoSaml2KeyInfoConfirmationDataTypePrivate* private_data  }
+	LassoServerLoadMetadataFlag
+	LassoDsX509Data*   lasso_ds_key_value_get_x509_data ( LassoDsKeyValue* key_value )
+	None   lasso_ds_key_value_set_x509_data ( LassoDsKeyValue* key_value, LassoDsX509Data* x509_data )
+	const char*   lasso_ds_x509_data_get_certificate ( LassoDsX509Data* x509_data )
+	const char*   lasso_ds_x509_data_get_crl ( LassoDsX509Data* x509_data )
+	const char*   lasso_ds_x509_data_get_subject_name ( LassoDsX509Data* x509_data )
+	GType   lasso_ds_x509_data_get_type (  )
+	LassoDsX509Data*   lasso_ds_x509_data_new (  )
+	None   lasso_ds_x509_data_set_certificate ( LassoDsX509Data* x509_data, const char* certificate )
+	None   lasso_ds_x509_data_set_crl ( LassoDsX509Data* x509_data, const char* crl )
+	None   lasso_ds_x509_data_set_subject_name ( LassoDsX509Data* x509_data, const char* subject_name )
+	GType   lasso_key_get_type (  )
+	LassoKey*   lasso_key_new_for_signature_from_base64_string ( char* base64_string, char* password, LassoSignatureMethod signature_method, char* certificate )
+	LassoKey*   lasso_key_new_for_signature_from_file ( char* filename_or_buffer, char* password, LassoSignatureMethod signature_method, char* certificate )
+	char*   lasso_key_query_sign ( LassoKey* key, const char* query )
+	lasso_error_t   lasso_key_query_verify ( LassoKey* key, const char* query )
+	xmlNode*   lasso_key_saml2_xml_sign ( LassoKey* key, const char* id, xmlNode* document )
+	lasso_error_t   lasso_key_saml2_xml_verify ( LassoKey* key, char* id, xmlNode* document )
+	GList*   lasso_lib_logout_request_get_session_indexes ( LassoLibLogoutRequest* lib_logout_request )
+	None   lasso_lib_logout_request_set_session_indexes ( LassoLibLogoutRequest* lib_logout_request, GList* session_indexes )
+	lasso_error_t   lasso_provider_add_key ( LassoProvider* provider, LassoKey* key, gboolean after )
+	lasso_error_t   lasso_provider_set_server_signing_key ( LassoProvider* provider, LassoKey* key )
+	int   lasso_provider_verify_signature ( LassoProvider* provider, const char* message, const char* id_attr_name, LassoMessageFormat format )
+	GList*   lasso_saml2_key_info_confirmation_data_type_get_key_info ( LassoSaml2KeyInfoConfirmationDataType* kicdt )
+	GType   lasso_saml2_key_info_confirmation_data_type_get_type (  )
+	LassoNode*   lasso_saml2_key_info_confirmation_data_type_new (  )
+	None   lasso_saml2_key_info_confirmation_data_type_set_key_info ( LassoSaml2KeyInfoConfirmationDataType* kicdt, GList* key_infos )
+	gboolean   lasso_saml_name_identifier_equals ( LassoSamlNameIdentifier* a, LassoSamlNameIdentifier* b )
+	lasso_error_t   lasso_server_add_provider2 ( LassoServer* server, LassoProvider* provider )
+	lasso_error_t   lasso_server_load_metadata ( LassoServer* server, LassoProviderRole role, const gchar* federation_file, const gchar* trusted_roots, GList* blacklisted_entity_ids, GList** loaded_entity_ids, LassoServerLoadMetadataFlag flags )
+	GList*   lasso_session_get_assertion_ids ( LassoSession* session, const gchar* providerID )
+	GList*   lasso_session_get_name_ids ( LassoSession* session, const gchar* providerID )
+	GList*   lasso_session_get_session_indexes ( LassoSession* session, const gchar* providerID, LassoNode* name_id )
+
+
+2.3.6 - November 29th 2011
+--------------------------
+
+2 commits, 2 files changed, 28 insertions, 2 deletions
+
+ * fix a bug when receiving a signature using the InclusiveNamespaces
+   PrefixList by copying namespace declaration from upper level at the level of
+   the signed node.
+ * fix compilation warning on recent version of GCC
+
+
+2.3.5 - January 11th 2010
+-------------------------
+
+36 commits, 31 files changed, 240 insertions, 92 deletions
+
+Generic:
+ * add more backward compatible replacement for GHashTable methods (to compile
+   under centos5)
+ * a generic way to attach encryption parameters to LassoNode has been added, a
+   future major release should see the removal of specific field for storing
+   those parameters in node supporting encryption.
+ * The way we format encrypted node is now more compatible with Shibboleth and
+   I hope with other implementations: the KeyInfo is kept inside the
+   EncryptedData element, and not repeated inside a child of the EncryptedElement.
+ * Fixed: LASSO_SIGNATURE_VERIFY_HINT_FORCE did not force checking signature on
+   messages
+ * Fixed: lasso_provider_get_first_http_method broke when an unknown binding
+   was found in an endpoint declaration
+
+SAMLv2:
+ * Fixed: segfault when checking signature on logout responses (introduced in 2.3.4)
+ * SPNameQualifier is more set on subject NameID of assertions, as it should be
+   reserved for Affiliation members (and it broke shibboleth which only expect
+   this to be used for affiliation, wrongly I think).
+ * Conditions->notBefore/notOnOrAfter is motre setted by
+   lasso_login_build_assertion, only notOnOrAfter on SubjectConfirmationData,
+   which is more inline with the specification.
+ * the logout profile now use the session to initialize the NameID in requests,
+   not the identity. It allow to have a transient federation in the session but
+   a persistent one in the identity
+ * fixed support for the POST binding
+ * Fixed: it seems that strtol does not reset errno under Centos 5, we do it by hand.
+
+Python binding:
+ * constructors now raise a lasso.Error instead of a simple Exception when failing
+
+PHP5 binding:
+ * removed dependency upon an internal function of liblasso3
+
+
+2.3.4 - Otober 8th 2010
+-----------------------
+
+21 commits, 18 files changed, 312 insertions, 58 deletions
+
+Generic
+ * fix warning for compiling on Pardus and EL5
+ * the release tarball now contains the figures for the documentation
+ * lasso_login_process_authn_request documentation gained details on returned errors
+
+SAMLv2:
+ * report unknown provider instead of an error on parameter value when
+   resolving and artifact in an assertionConsumer endpoint and the provider is
+   not registered into the server object.
+ * lasso_provider_get_assertion_consumer_url now use specific SAMLv2 methods
+ * fixed a bug in the ordering of indexed endpoints which produced error when
+   looking up the default assertion consumer. It also improved ordering in
+   presence of the attribute isDefault="false". A non-regression test was
+   added for this functionality.
+
+ID-FFv1.2:
+ * respect the signature verify hint when handling authn requests
+
+2.3.3 - October 1st 2010
+------------------------
+
+44 commits, 264 files changed, 858 insertions, 401 deletions
+
+Generic:
+ * Fixed a lot of memleaks thanks to valgrind, the greatest tool on earth (with
+   coccinelle).
+ * Add missing annotation creating memleaks in python binding (on lasso_*_dump king   of methods).
+ * Fix bad inclusion of an ID-WSF include file when ID-WSF support is not enabled
+ * Benchmarking program was updated to measure each part of a WebSSO
+   independently (AuthnRequest generation/processing, AuthnResponse
+   generation/processing).
+ * Add new macro lasso_strisequal and lasso_strisnotequal to avoid errors with
+   strcmp. (Thanks to coccinelle semantic patches).
+
+SAMLv2:
+ * Add uniform support for LassoProfileVerifySignatureHint for other profiles
+   than WebSSO.
+ * Report signature errors in response to NameIDNanagement requests
+ * Fix wrong use of macro lasso_foreach breaking the mecanism for finding a
+   default assertion consumer.
+ * Behaviour of lasso_login_build_assertion was modified:
+   - when the NameIDPolicy lacks a Format attribute or the Format attribute is
+     the unspecified format (see the spec for the corresponding URN). Now it
+     results in a transient nameid being generated. If you want it to be
+     persistent you must change it before calling this method.
+   - the setting of the SubjectConfirmationData->NotOnOrAfter attribute was
+     restored as it is mandated by the WebSSO profile. It's the same value as
+     Conditions->NotOnOrAfter.
+ * Fix missing initialization of Destination attribute on Samlp2StatusResponse
+   object for synchronous bindings (Redirect & Post)
+
+2.3.2 - September 7th 2010
+--------------------------
+
+ * Fix bug in increment of the libtool version info, increasing the SONAME
+   uselessly.
+
+2.3.1 - September 7th 2010
+--------------------------
+
+31 commits, 23 files changed, 523 insertions, 356 deletions
+
+ * An ABI breakage was introduced in 2.3.0 with change of value for enumeration
+   values LASSO_PROVIDER_ROLE_SP and LASSO_PROVIDER_ROLE_IDP, it breaked code
+   compiled with previous version and dumps of server objects. This release fix
+   it.
+ * SAMLv2 handling of the artifact binding for the WebSSO profile is now
+   simpler, no more dumping of the response nodes and signing at the artifact
+   building time, the final response is signed when the artifact is generated
+   and when unserialized later it is only manipulated as XML for not breaking
+   the signature. It fixes usage of ciphered private keys with the
+   HTTP-Artifact binding.
+ * SAMLv2 internal storage of endpoints was modified to better keep the
+   ordering between endpoints, which is espacially important for
+   AssertionConsumerService endpoints and difficult to implement well.
+
+2.3.0 - July 21th 2010
+----------------------
+
+391 commits, 332 files changed, 13919 insertions, 7137 deletions
+
+So what's new ?
+
+ * Misc:
+	- a public key is no more mandatory for building a LassoProvider
+	- date parsing now conforms to XSD and ISO8601 specification,
+	  especially with respect to milliseconds (they are just ignored, but
+	  parsing do not fails now).
+	- the encryption private key can be loaded with a password (SAMLv2
+	  support only)
+	- keep on replacing direct glib data structure manipulation function by
+	  safer lasso macros.
+	- remove useless verbosity when there is already some error reporting
+	  through method return value.
+	- add a signature_verify_hint parameter to all profiles, which can be
+	  used to specify the policy for verifying signatures. The choices are:
+	  - maybe, i.e. let Lasso decides,
+	  - force, i.e. always verify, even when it is not needed by the spec,
+	  - ignore, i.e. verify, but do not block processing on signature
+	    verifications error.
+	- add a new snippet type: SNIPPET_COLLECT_NAMESPACES, to collect all
+	  declared namespaces in the context of a node. It is needed for
+	  interpreting a string value which depend on the locally declared
+	  namespaces (like XPath queries).
+	- support full syntax for query strings (lasso missed support for
+	  semi-colon separator between query string key-value pairs).
+	- make LassoServer load its public key like LassoProvider
+	- lasso_build_unique_id is now part of the public API
+	- add lasso_profile_sso_role_with to decide on the role we have toward
+	  another provider (depending on the Identity, the Session or the
+	  Server object in this order).
+	- add a lasso_node_debug method wich output a human friendly dump (i.e.
+	  indented) of a serialized LassoNode, contrary to dump which returns a
+	  computer friendly one (dump will conserve signature values, not
+	  debug).
+
+ * SAMLv2:
+	- constraint on the number of SessionIndex value in a LogoutRequest was
+	  worked-around (see
+	  lasso_samlp2_logout_request_get/set_session_indexes)
+	- full support for encrypted signing key (ID-FFv1.2 is coming in next
+	  release)
+	- The treatment of assertions consumer endpoints metadata was improved to be
+	  what the specification says, i.e find the best default.
+	- lasso_assertion_query_build_request_msg now properly initialize the Subject
+	  of the query from all possibles sources (first profile->nameIdentifier, then
+	  from the identity dump and finally from the session).
+	- when a parsed Assertion contains a signature, we return the
+	  original_xmlnode instead of serializing the LassoNode content when
+	  calling lasso_node_get_xmlNode. This is in order to keep canonical
+	  representation of signed assertions. The result is that parsed and
+	  signed assertions should be considered read-only with respect to
+	  serialization.
+	- lasso_login_build_assertion no longer initialize sessionNotOnOrAfter,
+	  it must be done explicitely by the IdP implementation. Only the
+	  assertion lifetime is set by the arguments.
+	- when loading metadata for a provider, we verify that a role
+	  descriptor exists for the prescribed role: i.e if you do
+	  server.addProvider(lasso.PROVIDER_ROLE_SP, "metadata.xml"), lasso
+	  checks that the metadata contain a descriptor for the role "SPSSO".
+	- new helper methods to manipulate and check conditions on
+	  SAMLv2 assertions.
+	- move strings to their own header (but keep retro-compatibility
+	  through inclusion in xml/strings.h).
+
+ * Bindings:
+	- improve general use of bindings/utils.py module inside the bindings
+	  to share type matching logic.
+
+ * Python binding:
+	- Glib warning are tunneled through python logging API
+	- camelcasing of uppercase starting fields for python and java bindings has
+	  been fixed, old orthograph has been also kept for compatibility. The problem
+	  could be seen on LassoAssertion object where the field ID was renamed iD
+	  which was difficult to guess.
+	- node class now supports pickling by leveraging existing XML
+	  serialization. It posseses the same limitations as the existing XML
+	  serialization, for example serializing a LassProfile is not an
+	  idempotent operation, it will miss the server, identity and session
+	  fields.
+	- empty GList now return an empty tuple, not None (it fixes a lot
+	  list traversal codes)
+	- do not forget to emit 'pass' in declaration of class without any
+	  content (no method, no field, no constructor)
+	- the code to emit 'freeing' code for values was factorized and improved.
+	- for empty lists returns an empty pyhon list, not None.
+
+ * Perl binding:
+	- support for out parameters was added.
+	- better memory freeing
+
+ * Java binding:
+	- finished exception support for error returning methods.
+	- optimize the makefile for file listing generation
+	- for NULL GList returns an empty ArrayList object, not null.
+
+ * Documentation:
+	- add examples to LassoLogout documentation
+	- fix missing or deprecated methods in lasso-sections.txt
+	- document LassoIdWsf2Profile methods
+	- document runtime flags
+
+ * Tests:
+	- new macros to help in testing (see tests/tests.h), they also make
+	  better error reporting (when comparing values, they show the expected
+	  and the obtained value).
+	- SAMLv2 AuthnRequest through HTTP-Artifact binding is tested
+	- SAMLv2 LogoutRequest with multiple SessionIndex is tested
+	- force C locale for integration test (we match UI strings, so it is
+	  needed).
+	- SAMLv2, test websso with encrypted private keys (idp and sp side)
+	- SAMLv2, add a python test for attribute authority
+
+ * ID-WSF 2.0:
+	- constant strings were moved to their own header
+	  (lasso/xml/id-wsf-2.0/idwsf2_strings.h)
+	- add helper method to retrieve the bootstrap EPR from an assertion and
+	  to mint assertion to use as WS-Security tokens.
+	- add method lasso_idwsf2_data_service_get_query_item_result_content to
+	  retrieve DST query result as text
+	- sign SAMLv2 assertion used as WS-Security tokens
+
+And many minor bug-fixes...
+
+2.2.91 - January 26th 2010
+--------------------------
+
+A new Perl binding, fix for backward compatibility with old versions of glib,
+LassoLogout API is more robust since it does not need anymore for all SP logout
+to finish to work, new macro lasso_list_add_new_xml_node, add support for
+WS-Security UsernameToken (equivalent of poor man HTTP Digest Authentication),
+make public internal APIs: lasso_session_add_assertion,
+lasso_session_get_assertion and lasso_session_remove_assertion.
+
+2.2.90 - January 18th 2010
+--------------------------
+
+Lots of internal changes and some external one too.
+
+There is a new api to force, forbid or let Lasso sign messages, it is called
+lasso_profile_set_signature_hint.
+
+Big overhaul of the ID-WSF 1 and 2 codes, and of the SAML 2.0 profiles. Now all
+SAML 2.0 profile use common internal functions from the lasso_saml20_profile_
+namespace to handle bindings (SOAP,Redirect,POST,Artifact,PAOS). New internal
+API to load SSL keys from many more formats from the public API.
+
+In ID-WSF 2.0, Data Service Template has been simplified, we no more try to
+apply queries, it is the responsability of the using code to handle them.
+
+In bindings land, the file bindings/utils.py has been stuffed with utility
+function to manipulate 'type' tuple, with are now used to transfer argument and
+type description, their schema is (name, C-type, { dictionary of options } ),
+they are now used everywhere in the different bindings. We support output
+argument in PHP5, Python and Java, i.e. pointer of pointer arguments with are
+written to in order to return multiple values. For language where the binding
+convert error codes to exceptions (all of them now), the ouput value is
+returned as the normal return value of the method, so only one output argument
+is handled for now.
+
+We now use GObject-introspection annotations in the documentation to transfer
+to the binding generator the necessary metadata about the API (content of
+lists, hashtables, wheter pointer are caller/callee owned, can be NULL or if
+argument have a default value). The file bindings/override.xml is now
+deprecated.
+
+In documentation land, the main reference documentation was reorganizaed and
+more symbols have been added to it. Many more functions are documented.
+
+There is now tools to control the evolution of the ABI/API of Lasso.
+
+2.2.2 - March 24th 2009
+-----------------------
+
+Many fixes and improvements to the ID-WSF 1 support, new API to load SSL keys
+off memory, documentation for ID-WSF methods, general robustness and memory
+leak fixes.
+
+2.2.1 - July 22nd 2008
+----------------------
+
+Fixed problems with signed SAML 2.0 URL strings and checks against existing
+assertions to tell if authentication was required.
+
+2.2.0 - May 28th 2008
+---------------------
+
+Added support for encrypted NameIdentifier in ID-FF 1.2, fixed various minor
+issues with ID-WSF support and several bugs and memory management issues; also
+replaced bindings for Java, PHP 5 and Python with new ones, created by a custom
+code generator.
+
+2.1.1 - August 21st 2007
+------------------------
+
+Added support for LassoSignatureType to bindings (support was already but
+implicitely present for Python), fixed references to Node and String lists
+in all bindings.
+
+2.1.0 - August 13rd 2007
+------------------------
+
+Added preliminary support for ID-WSF 2, Discovery and Data Service Template,
+added missing accessors for class elements in SAML 2 language bindings, fixed
+potential DoS in message parsing.
+
+
+2.0.0 - January 16th 2007
+-------------------------
+
+Completed SAMLv2 support, passed conformance event organized by the Liberty
+Alliance from December 4th to 8th 2006.  Gratuitous giant version bump to
+mark this step.  Fixed memory leaks and potential segmentation faults.
+
+
+1.9.9 - December 19th 2006
+--------------------------
+
+  [Test version, news copied over to 2.0.0]
+
+
+0.6.6 - October 16th 2006
+-----------------------
+
+Fixed issues in ID-WSF Data and Interaction services support, fixed a few
+robustness issues in corner cases.
+
+  [This version was finally not released due to decision to first finish
+   SAMLv2 support and pass the conformance tests.]
+
+
+0.6.5 - March 21st 2006
+-----------------------
+
+Fixed support for SWIG 1.3.28 (now required), fixed a win32 build issue, fixed
+documentation.
+
+
+0.6.4 - March 8th 2006
+----------------------
+
+Added first draft of ID-WSF Interaction Service support, added message
+signatures to ID-WSF messages, added first draft of SAML 2 support (only
+Web-SSO and part of Single Logout for the moment), fixed some corner cases,
+improved error detection in different places, upgraded SWIG support to 1.3.28
+and generally improved the bindings.
+
+
+0.6.3 - September 30th 2005
+---------------------------
+
+Improved behaviour when confronted to other Liberty providers that do not
+implement all the mandatory Liberty requirements, improved error status code
+reporting, completed support for public keys embedded in metadata files, fixed
+a few corner case bugs.  Also continued work on ID-WSF support, implementing
+Discovery and DST services but still considered experimental and disabled by
+default.
+	  
+
+0.6.2 - May 26th 2005
+---------------------
+
+Fixed usage of NameIdentifiers after calls to Register Name Identifier profile,
+improved robustness against other Liberty implementations, improved loading of
+metadata, fixed minor bugs and memory leaks.  Continued work on ID-WSF support,
+still partial and disabled by default.
+
+
+0.6.1 - February 22nd 2005
+--------------------------
+
+Completed <lib:Extension> support, added full bidirectional query string support
+for AuthnContextStatementRef, AuthnContextClassRef and AuthnContextComparison,
+fixed a crasher-bug in a rare case of single sign on profile, tested and
+shipped with Microsoft Visual Studio project files.
+
+
+0.6.0 - January 27th 2005
+-------------------------
+
+Rewrote library internals to use standard structures instead of libxml2 nodes;
+this allows faster processing, more flexibility and better support for language
+bindings.  Documented all the API functions.  Fixed and improved the rest.
+
+
+0.5.0 - November 9th 2004
+-------------------------
+
+All features of SP Basic, SP, IDP, and LECP profiles for Liberty IDFF 1.2
+Static Conformance are now implemented, except for "Backward Compatibility".
+Extended features are also supported, except for "Affiliations".  Compatible
+with the demo application of the last Beta version of SourceID Liberty 2.0.
+
+Improved metadata support, a lot of new feature and bugfixes.
+
+API, ABI, and dump format of messages have changed, so this release is not
+compatible with previous versions.
+
+
+0.4.1 - September 7th 2004
+--------------------------
+
+Small bug fixes. Windows DLL are now linked with standard call aliases.
+
+
+0.4.0 - September 6th 2004
+--------------------------
+
+Complete support for the main profiles of Liberty Alliance IF-FF 1.2 (Single
+Sign On, Single Logout, and Federation Termination).  Revamped language
+bindings to use SWIG (supported languages are noew Python, PHP, Java and C#).
+More unit tests.  Bugs fixed.
+
+
+0.3.0 - July 27th 2004
+----------------------
+
+Improved support for Single Sign On and Single Logout profiles.  Python and
+Java bindings.  Unit tests.  Bugs fixed.
+
+
+0.2.0 - June 1st 2004
+---------------------
+
+First release as a C library.
+

@@ -1,0 +1,1805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: LassoLogin</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="idff.html" title="Identity Federation Framework - ID-FF 1.2 profiles">
+<link rel="prev" href="idff.html" title="Identity Federation Framework - ID-FF 1.2 profiles">
+<link rel="next" href="lasso-LassoLogout.html" title="LassoLogout">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-LassoLogin.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="idff.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="idff.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-LassoLogout.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-LassoLogin"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-LassoLogin.top_of_page"></a>LassoLogin</span></h2>
+<p>LassoLogin — Single Sign-On and Federation Profile</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-LassoLogin.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="returnvalue">LassoLogin</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-new" title="lasso_login_new ()">lasso_login_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="returnvalue">LassoLogin</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-new-from-dump" title="lasso_login_new_from_dump ()">lasso_login_new_from_dump</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-accept-sso" title="lasso_login_accept_sso ()">lasso_login_accept_sso</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-build-artifact-msg" title="lasso_login_build_artifact_msg ()">lasso_login_build_artifact_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-build-assertion" title="lasso_login_build_assertion ()">lasso_login_build_assertion</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-build-authn-request-msg" title="lasso_login_build_authn_request_msg ()">lasso_login_build_authn_request_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-build-authn-response-msg" title="lasso_login_build_authn_response_msg ()">lasso_login_build_authn_response_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-build-request-msg" title="lasso_login_build_request_msg ()">lasso_login_build_request_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-build-response-msg" title="lasso_login_build_response_msg ()">lasso_login_build_response_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-destroy" title="lasso_login_destroy ()">lasso_login_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-dump" title="lasso_login_dump ()">lasso_login_dump</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="returnvalue">LassoNode</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-get-assertion" title="lasso_login_get_assertion ()">lasso_login_get_assertion</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-init-authn-request" title="lasso_login_init_authn_request ()">lasso_login_init_authn_request</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-init-idp-initiated-authn-request" title="lasso_login_init_idp_initiated_authn_request ()">lasso_login_init_idp_initiated_authn_request</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-init-request" title="lasso_login_init_request ()">lasso_login_init_request</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-must-ask-for-consent" title="lasso_login_must_ask_for_consent ()">lasso_login_must_ask_for_consent</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-must-authenticate" title="lasso_login_must_authenticate ()">lasso_login_must_authenticate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-process-authn-request-msg" title="lasso_login_process_authn_request_msg ()">lasso_login_process_authn_request_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-process-authn-response-msg" title="lasso_login_process_authn_response_msg ()">lasso_login_process_authn_response_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-process-paos-response-msg" title="lasso_login_process_paos_response_msg ()">lasso_login_process_paos_response_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-process-request-msg" title="lasso_login_process_request_msg ()">lasso_login_process_request_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-process-response-msg" title="lasso_login_process_response_msg ()">lasso_login_process_response_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-LassoLogin.html#lasso-login-validate-request-msg" title="lasso_login_validate_request_msg ()">lasso_login_validate_request_msg</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoLogin.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin">LassoLogin</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoLogin.description"></a><h2>Description</h2>
+<p>The Single Sign On process allows a user to log in once to an identity
+provider (IdP), and to be then transparently loged in to the required
+service providers (SP) belonging to the IP "circle of trust".  Subordinating
+different identities of the same user within a circle of trust to a unique
+IP is called "Identity Federation".  The liberty Alliance specifications
+allows, thanks to this federation, strong and unique authentication coupled
+with control by the user of his personal informations. The explicit user
+agreement is necessary before proceeding to Identity Federation.</p>
+<p>
+The service provider must implement the following process:
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>creating an authentication request with
+ <a class="link" href="lasso-LassoLogin.html#lasso-login-init-authn-request" title="lasso_login_init_authn_request ()"><code class="function">lasso_login_init_authn_request()</code></a>;</p></li>
+<li class="listitem"><p>sending it to the identity provider with
+ <a class="link" href="lasso-LassoLogin.html#lasso-login-build-authn-request-msg" title="lasso_login_build_authn_request_msg ()"><code class="function">lasso_login_build_authn_request_msg()</code></a>;</p></li>
+<li class="listitem">
+<p>receiving and processing the answer:
+   </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
+<li class="listitem">either an authentication response with
+     <a class="link" href="lasso-LassoLogin.html#lasso-login-process-authn-response-msg" title="lasso_login_process_authn_response_msg ()"><code class="function">lasso_login_process_authn_response_msg()</code></a>
+</li>
+<li class="listitem">or an artifact with <a class="link" href="lasso-LassoLogin.html#lasso-login-init-request" title="lasso_login_init_request ()"><code class="function">lasso_login_init_request()</code></a> then sending the
+     request to the IdP with <a class="link" href="lasso-LassoLogin.html#lasso-login-build-request-msg" title="lasso_login_build_request_msg ()"><code class="function">lasso_login_build_request_msg()</code></a> and processing the
+     new answer with <a class="link" href="lasso-LassoLogin.html#lasso-login-process-response-msg" title="lasso_login_process_response_msg ()"><code class="function">lasso_login_process_response_msg()</code></a>.</li>
+</ul></div>
+<p>
+   </p>
+</li>
+</ul></div>
+<p>
+</p>
+<p>Our first example shows how to initiate a request toward an ID-FF 1.2 or SAML 2.0 identity
+provider. It supposes that we already initialized a <a class="link" href="lasso-LassoServer.html#LassoServer" title="struct LassoServer"><span class="type">LassoServer</span></a> object with the metadatas or our
+provider (and its private key if we want to sign the request), and that we added the metadatas of
+the targetted IdP with the method <a class="link" href="lasso-LassoServer.html#lasso-server-add-provider" title="lasso_server_add_provider ()"><code class="function">lasso_server_add_provider()</code></a>.  </p>
+<div class="example">
+<a name="id-1.3.3.2.5.5"></a><p class="title"><b>Example 2. Service Provider Login URL</b></p>
+<div class="example-contents">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre></td>
+        <td class="listing_code"><pre class="programlisting">LassoLogin <span class="gtkdoc opt">*</span>login<span class="gtkdoc opt">;</span>
+<span class="gtkdoc kwb">int</span> rc<span class="gtkdoc opt">;</span> <span class="gtkdoc slc">// hold return codes</span>
+
+login <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoLogin.html#lasso-login-new">lasso_login_new</a></span><span class="gtkdoc opt">(</span>server<span class="gtkdoc opt">);</span>
+rc <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoLogin.html#lasso-login-init-authn-request">lasso_login_init_authn_request</a></span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">,</span> <span class="string">&quot;http://identity-provider-id/&quot;</span><span class="gtkdoc opt">,</span>
+                LASSO_HTTP_METHOD_REDIRECT<span class="gtkdoc opt">);</span>
+<span class="keyword">if</span> <span class="gtkdoc opt">(</span>rc <span class="gtkdoc opt">!=</span> <span class="number">0</span><span class="gtkdoc opt">) {</span>
+  <span class="gtkdoc opt">...</span> <span class="gtkdoc slc">// handle errors, most of them are related to bad initialization</span>
+<span class="gtkdoc opt">}</span>
+
+<span class="gtkdoc slc">// customize AuthnRequest</span>
+<span class="gtkdoc slc">// protocolProfile is the protocolProfile of the provider http://identity-provider-id/</span>
+<span class="keyword">if</span> <span class="gtkdoc opt">(</span>protocolProfile <span class="gtkdoc opt">==</span> LASSO_LIBERTY_1_2<span class="gtkdoc opt">) {</span>
+        LassoLibAuthnRequest <span class="gtkdoc opt">*</span>request <span class="gtkdoc opt">=</span> <span class="function">LASSO_LIB_AUTHN_REQUEST</span><span class="gtkdoc opt">(</span><span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">)-&gt;</span>request<span class="gtkdoc opt">);</span>
+        request<span class="gtkdoc opt">-&gt;</span>NameIDPolicy <span class="gtkdoc opt">=</span> <span class="function">strdup</span><span class="gtkdoc opt">(</span>LASSO_LIB_NAMEID_POLICY_TYPE_FEDERATED<span class="gtkdoc opt">);</span>
+        request<span class="gtkdoc opt">-&gt;</span>ForceAuthn <span class="gtkdoc opt">=</span> TRUE<span class="gtkdoc opt">;</span>
+        request<span class="gtkdoc opt">-&gt;</span>IsPassive <span class="gtkdoc opt">=</span> FALSE<span class="gtkdoc opt">;</span>
+        <span class="gtkdoc slc">// tell the IdP how to return the response</span>
+        request<span class="gtkdoc opt">-&gt;</span>ProtocolProfile <span class="gtkdoc opt">=</span> <span class="function">strdup</span><span class="gtkdoc opt">(</span>LASSO_LIB_PROTOCOL_PROFILE_BRWS_ART<span class="gtkdoc opt">);</span>
+<span class="gtkdoc opt">}</span> <span class="keyword">else if</span> <span class="gtkdoc opt">(</span>protocolProfile <span class="gtkdoc opt">==</span> LASSO_SAML_2_0<span class="gtkdoc opt">) {</span>
+        LassoSamlp2AuthnRequest <span class="gtkdoc opt">*</span>request <span class="gtkdoc opt">=</span> <span class="function">LASSO_SAMLP2_AUTHN_REQUEST</span><span class="gtkdoc opt">(</span><span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">)-&gt;</span>request<span class="gtkdoc opt">);</span>
+        <span class="keyword">if</span> <span class="gtkdoc opt">(</span>request<span class="gtkdoc opt">-&gt;</span>NameIDPolicy<span class="gtkdoc opt">-&gt;</span>Format<span class="gtkdoc opt">) {</span>
+                <span class="function">g_free</span><span class="gtkdoc opt">(</span>request<span class="gtkdoc opt">-&gt;</span>NameIDPolicy<span class="gtkdoc opt">-&gt;</span>Format<span class="gtkdoc opt">);</span>
+        <span class="gtkdoc opt">}</span>
+        request<span class="gtkdoc opt">-&gt;</span>NameIDPolicy<span class="gtkdoc opt">-&gt;</span>Format <span class="gtkdoc opt">=</span> <span class="function">g_strdup</span><span class="gtkdoc opt">(</span>LASSO_NAME_IDENTIFIER_FORMAT_PERSISTENT<span class="gtkdoc opt">);</span>
+        <span class="gtkdoc slc">// Allow creation of new federation</span>
+        <span class="gtkdoc slc">// </span>
+        request<span class="gtkdoc opt">-&gt;</span>NameIDPolicy<span class="gtkdoc opt">-&gt;</span>AllowCreate <span class="gtkdoc opt">=</span> <span class="number">1</span><span class="gtkdoc opt">;</span>
+        request<span class="gtkdoc opt">-&gt;</span>ForceAuthn <span class="gtkdoc opt">=</span> TRUE<span class="gtkdoc opt">;</span>
+        request<span class="gtkdoc opt">-&gt;</span>IsPassive <span class="gtkdoc opt">=</span> FALSE<span class="gtkdoc opt">;</span>
+        <span class="gtkdoc slc">// tell the IdP how to return the response</span>
+        <span class="keyword">if</span> <span class="gtkdoc opt">(</span>request<span class="gtkdoc opt">-&gt;</span>ProtocolBinding<span class="gtkdoc opt">) {</span>
+                 <span class="function">g_free</span><span class="gtkdoc opt">(</span>request<span class="gtkdoc opt">-&gt;</span>ProtocolBinding<span class="gtkdoc opt">);</span>
+        <span class="gtkdoc opt">}</span>
+        <span class="gtkdoc slc">// here we expect an artifact response, it could be post, redirect or PAOS.</span>
+        request<span class="gtkdoc opt">-&gt;</span>ProtocolBinding <span class="gtkdoc opt">=</span> <span class="function">g_strdup</span><span class="gtkdoc opt">(</span>LASSO_SAML2_METADATA_BINDING_ARTIFACT<span class="gtkdoc opt">);</span>
+   <span class="gtkdoc opt">}</span>
+<span class="gtkdoc slc">// Lasso will choose whether to sign the request by looking at the IdP</span>
+<span class="gtkdoc slc">// metadatas and at our metadatas, but you can always force him to sign or to</span>
+<span class="gtkdoc slc">// not sign using the method lasso_profile_set_signature_hint() on the</span>
+<span class="gtkdoc slc">// LassoLogin object.</span>
+
+rc <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoLogin.html#lasso-login-build-authn-request-msg">lasso_login_build_authn_request_msg</a></span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">);</span>
+<span class="keyword">if</span> <span class="gtkdoc opt">(</span>rc <span class="gtkdoc opt">!=</span> <span class="number">0</span><span class="gtkdoc opt">) {</span>
+      <span class="gtkdoc opt">....</span> <span class="gtkdoc slc">// handle errors</span>
+      <span class="gtkdoc slc">// could be that the requested binding (POST, Redirect, etc..) is not supported (LASSO_PROFILE_ERROR_UNSUPPORTED_PROFILE)</span>
+      <span class="gtkdoc slc">// or that we could not sign the request (LASSO_PROFILE_ERROR_BUILDING_QUERY_FAILED).</span>
+<span class="gtkdoc opt">}</span>
+
+<span class="gtkdoc slc">// redirect user to identity provider</span>
+   <span class="gtkdoc slc">// we chose the Redirect binding, so we have to generate a redirect HTTP response to the URL returned by Lasso</span>
+<span class="function">printf</span><span class="gtkdoc opt">(</span><span class="string">&quot;Location: %s</span><span class="gtkdoc esc">\n\n</span><span class="string">Redirected to IdP</span><span class="gtkdoc esc">\n</span><span class="string">&quot;</span><span class="gtkdoc opt">,</span> <span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">)-&gt;</span>msg_url<span class="gtkdoc opt">);</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+<br class="example-break"><p>Next example shows how to receive the response from the identity
+provider for ID-FF 1.2.</p>
+<div class="example">
+<a name="id-1.3.3.2.5.7"></a><p class="title"><b>Example 3. Service Provider Assertion Consumer Service URL for ID-FF 1.2</b></p>
+<div class="example-contents">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</pre></td>
+        <td class="listing_code"><pre class="programlisting">LassoLogin <span class="gtkdoc opt">*</span>login<span class="gtkdoc opt">;</span>
+<span class="gtkdoc kwb">char</span> <span class="gtkdoc opt">*</span>request_method <span class="gtkdoc opt">=</span> <span class="function">getenv</span><span class="gtkdoc opt">(</span><span class="string">&quot;REQUEST_METHOD&quot;</span><span class="gtkdoc opt">);</span>
+<span class="gtkdoc kwb">char</span> <span class="gtkdoc opt">*</span>artifact_msg <span class="gtkdoc opt">=</span> NULL<span class="gtkdoc opt">, *</span>lares <span class="gtkdoc opt">=</span> NULL<span class="gtkdoc opt">, *</span>lareq <span class="gtkdoc opt">=</span> NULL<span class="gtkdoc opt">;</span>
+<span class="gtkdoc kwb">char</span> <span class="gtkdoc opt">*</span>name_identifier<span class="gtkdoc opt">;</span>
+lassoHttpMethod method<span class="gtkdoc opt">;</span>
+<span class="gtkdoc kwb">int</span> rc <span class="gtkdoc opt">=</span> <span class="number">0</span><span class="gtkdoc opt">;</span>
+
+login <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoLogin.html#lasso-login-new">lasso_login_new</a></span><span class="gtkdoc opt">(</span>server<span class="gtkdoc opt">);</span>
+<span class="keyword">if</span> <span class="gtkdoc opt">(</span><span class="function">strcmp</span><span class="gtkdoc opt">(</span>request_method<span class="gtkdoc opt">,</span> <span class="string">&quot;GET&quot;</span><span class="gtkdoc opt">) ==</span> <span class="number">0</span><span class="gtkdoc opt">) {</span>
+        artifact_msg <span class="gtkdoc opt">=</span> <span class="function">getenv</span><span class="gtkdoc opt">(</span><span class="string">&quot;QUERY_STRING&quot;</span><span class="gtkdoc opt">);</span>
+        method <span class="gtkdoc opt">=</span> LASSO_HTTP_METHOD_REDIRECT<span class="gtkdoc opt">;</span>
+<span class="gtkdoc opt">}</span> <span class="keyword">else</span> <span class="gtkdoc opt">{</span>
+        <span class="gtkdoc slc">// read submitted form; if it has a LAREQ field, put it in lareq,</span>
+        <span class="gtkdoc slc">// if it has a LARES field, put it in lares</span>
+        <span class="keyword">if</span> <span class="gtkdoc opt">(</span>lareq<span class="gtkdoc opt">) {</span>
+                artifact_msg <span class="gtkdoc opt">=</span> lareq<span class="gtkdoc opt">;</span>
+        <span class="gtkdoc opt">}</span> <span class="keyword">else if</span> <span class="gtkdoc opt">(</span>lares<span class="gtkdoc opt">) {</span>
+                response_msg <span class="gtkdoc opt">=</span> lares<span class="gtkdoc opt">;</span>
+        <span class="gtkdoc opt">}</span> <span class="keyword">else</span> <span class="gtkdoc opt">{</span>
+                <span class="gtkdoc slc">// bail out</span>
+        <span class="gtkdoc opt">}</span>
+        method <span class="gtkdoc opt">=</span> LASSO_HTTP_METHOD_POST<span class="gtkdoc opt">;</span>
+<span class="gtkdoc opt">}</span>
+
+<span class="keyword">if</span> <span class="gtkdoc opt">(</span>artifact_msg<span class="gtkdoc opt">) {</span>
+        <span class="gtkdoc slc">// we received an artifact response,</span>
+        <span class="gtkdoc slc">// it means we did not really receive the response,</span>
+        <span class="gtkdoc slc">// only a token to redeem the real response from the identity</span>
+        <span class="gtkdoc slc">// provider through a SOAP resolution call</span>
+        rc <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoLogin.html#lasso-login-init-request">lasso_login_init_request</a></span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">,</span> artifact_msg<span class="gtkdoc opt">,</span> method<span class="gtkdoc opt">);</span>
+        <span class="keyword">if</span> <span class="gtkdoc opt">(</span>rc <span class="gtkdoc opt">!=</span> <span class="number">0</span><span class="gtkdoc opt">) {</span>
+                  <span class="gtkdoc opt">...</span> <span class="gtkdoc slc">// handle errors</span>
+                  <span class="gtkdoc slc">// there is usually no error at this step, only</span>
+                  <span class="gtkdoc slc">// if the IdP response is malformed</span>
+        <span class="gtkdoc opt">}</span>
+        rc <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoLogin.html#lasso-login-build-request-msg">lasso_login_build_request_msg</a></span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">);</span>
+        <span class="keyword">if</span> <span class="gtkdoc opt">(</span>rc <span class="gtkdoc opt">!=</span> <span class="number">0</span><span class="gtkdoc opt">) {</span>
+                  <span class="gtkdoc opt">...</span> <span class="gtkdoc slc">// handle errors</span>
+                  <span class="gtkdoc slc">// as for AuthnRequest generation, it generally is caused</span>
+                  <span class="gtkdoc slc">// by a bad initialization like an impossibility to load</span>
+                  <span class="gtkdoc slc">// the private key.</span>
+        <span class="gtkdoc opt">}</span>
+        <span class="gtkdoc slc">// makes a SOAP call, soap_call is NOT a Lasso function</span>
+        soap_answer_msg <span class="gtkdoc opt">=</span> <span class="function">soap_call</span><span class="gtkdoc opt">(</span><span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">)-&gt;</span>msg_url<span class="gtkdoc opt">,</span>
+                        <span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">)-&gt;</span>msg_body<span class="gtkdoc opt">);</span>
+        rc <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoLogin.html#lasso-login-process-response-msg">lasso_login_process_response_msg</a></span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">,</span> soap_answer_msg<span class="gtkdoc opt">);</span>
+        <span class="keyword">if</span> <span class="gtkdoc opt">(</span>rc <span class="gtkdoc opt">!=</span> <span class="number">0</span><span class="gtkdoc opt">) {</span>
+                  <span class="gtkdoc opt">...</span> <span class="gtkdoc slc">// handle errors</span>
+                  <span class="gtkdoc slc">// here you can know if the IdP refused the request, </span>
+        <span class="gtkdoc opt">}</span>
+<span class="gtkdoc opt">}</span> <span class="keyword">else if</span> <span class="gtkdoc opt">(</span>response_msg<span class="gtkdoc opt">) {</span>
+        <span class="function"><a href="lasso-LassoLogin.html#lasso-login-process-authn-response-msg">lasso_login_process_authn_response_msg</a></span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">,</span> response_msg<span class="gtkdoc opt">);</span>
+<span class="gtkdoc opt">}</span>
+
+<span class="gtkdoc slc">// looks up name_identifier in local file, database, whatever and gets back</span>
+<span class="gtkdoc slc">// two things: identity_dump and session_dump</span>
+name_identifier <span class="gtkdoc opt">=</span> <span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">)-&gt;</span>nameIdentifier
+<span class="function"><a href="lasso-LassoProfile.html#lasso-profile-set-identity-from-dump">lasso_profile_set_identity_from_dump</a></span><span class="gtkdoc opt">(</span><span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">),</span> identity_dump<span class="gtkdoc opt">);</span>
+<span class="function"><a href="lasso-LassoProfile.html#lasso-profile-set-session-from-dump">lasso_profile_set_session_from_dump</a></span><span class="gtkdoc opt">(</span><span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">),</span> session_dump<span class="gtkdoc opt">);</span>
+
+<span class="function"><a href="lasso-LassoLogin.html#lasso-login-accept-sso">lasso_login_accept_sso</a></span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">);</span>
+
+<span class="keyword">if</span> <span class="gtkdoc opt">(</span><span class="function"><a href="lasso-LassoProfile.html#lasso-profile-is-identity-dirty">lasso_profile_is_identity_dirty</a></span><span class="gtkdoc opt">(</span><span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">))) {</span>
+        LassoIdentity <span class="gtkdoc opt">*</span>identity<span class="gtkdoc opt">;</span>
+        <span class="gtkdoc kwb">char</span> <span class="gtkdoc opt">*</span>identity_dump<span class="gtkdoc opt">;</span>
+        identity <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoProfile.html#lasso-profile-get-identity">lasso_profile_get_identity</a></span><span class="gtkdoc opt">(</span><span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">));</span>
+        identity_dump <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoIdentity.html#lasso-identity-dump">lasso_identity_dump</a></span><span class="gtkdoc opt">(</span>identity<span class="gtkdoc opt">);</span>
+        <span class="gtkdoc slc">// record identity_dump in file, database...</span>
+<span class="gtkdoc opt">}</span>
+
+<span class="keyword">if</span> <span class="gtkdoc opt">(</span><span class="function"><a href="lasso-LassoProfile.html#lasso-profile-is-session-dirty">lasso_profile_is_session_dirty</a></span><span class="gtkdoc opt">(</span><span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">))) {</span>
+        LassoSession <span class="gtkdoc opt">*</span>session<span class="gtkdoc opt">;</span>
+        <span class="gtkdoc kwb">char</span> <span class="gtkdoc opt">*</span>session_dump<span class="gtkdoc opt">;</span>
+        session <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoProfile.html#lasso-profile-get-session">lasso_profile_get_session</a></span><span class="gtkdoc opt">(</span><span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">));</span>
+        session_dump <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoSession.html#lasso-session-dump">lasso_session_dump</a></span><span class="gtkdoc opt">(</span>session<span class="gtkdoc opt">);</span>
+        <span class="gtkdoc slc">// record session_dump in file, database...</span>
+<span class="gtkdoc opt">}</span>
+
+<span class="gtkdoc slc">// redirect user anywhere</span>
+<span class="function">printf</span><span class="gtkdoc opt">(</span><span class="string">&quot;Location: %s</span><span class="gtkdoc esc">\n\n</span><span class="string">Redirected to site root</span><span class="gtkdoc esc">\n</span><span class="string">&quot;</span><span class="gtkdoc opt">,</span> login<span class="gtkdoc opt">-&gt;</span>msg_url<span class="gtkdoc opt">);</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+<br class="example-break"><p>The implement an IdP you must create a single sign-on service endpoint, the needed APIs for
+this are <a class="link" href="lasso-LassoLogin.html#lasso-login-process-authn-request-msg" title="lasso_login_process_authn_request_msg ()"><code class="function">lasso_login_process_authn_request_msg()</code></a>, <a class="link" href="lasso-LassoLogin.html#lasso-login-validate-request-msg" title="lasso_login_validate_request_msg ()"><code class="function">lasso_login_validate_request_msg()</code></a>,
+<a class="link" href="lasso-LassoLogin.html#lasso-login-build-assertion" title="lasso_login_build_assertion ()"><code class="function">lasso_login_build_assertion()</code></a>, <a class="link" href="lasso-LassoLogin.html#lasso-login-build-authn-response-msg" title="lasso_login_build_authn_response_msg ()"><code class="function">lasso_login_build_authn_response_msg()</code></a> and
+<a class="link" href="lasso-LassoLogin.html#lasso-login-build-artifact-msg" title="lasso_login_build_artifact_msg ()"><code class="function">lasso_login_build_artifact_msg()</code></a>. You will have to chose between
+<a class="link" href="lasso-LassoLogin.html#lasso-login-build-authn-response-msg" title="lasso_login_build_authn_response_msg ()"><code class="function">lasso_login_build_authn_response_msg()</code></a> and <a class="link" href="lasso-LassoLogin.html#lasso-login-build-artifact-msg" title="lasso_login_build_artifact_msg ()"><code class="function">lasso_login_build_artifact_msg()</code></a> depending on the
+requested protocol for the response by the service provider</p>
+<div class="example">
+<a name="id-1.3.3.2.5.9"></a><p class="title"><b>Example 4. Identity provider single sign-on service</b></p>
+<div class="example-contents">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></td>
+        <td class="listing_code"><pre class="programlisting">LassoLogin <span class="gtkdoc opt">*</span>login<span class="gtkdoc opt">;</span>
+<span class="gtkdoc kwb">char</span> <span class="gtkdoc opt">*</span>request_method <span class="gtkdoc opt">=</span> <span class="function">getenv</span><span class="gtkdoc opt">(</span><span class="string">&quot;REQUEST_METHOD&quot;</span><span class="gtkdoc opt">);</span>
+<span class="gtkdoc kwb">char</span> <span class="gtkdoc opt">*</span>artifact_msg <span class="gtkdoc opt">=</span> NULL<span class="gtkdoc opt">, *</span>lares <span class="gtkdoc opt">=</span> NULL<span class="gtkdoc opt">, *</span>lareq <span class="gtkdoc opt">=</span> NULL<span class="gtkdoc opt">;</span>
+<span class="gtkdoc kwb">char</span> <span class="gtkdoc opt">*</span>name_identifier<span class="gtkdoc opt">;</span>
+lassoHttpMethod method<span class="gtkdoc opt">;</span>
+<span class="gtkdoc kwb">int</span> rc <span class="gtkdoc opt">=</span> <span class="number">0</span><span class="gtkdoc opt">;</span>
+
+login <span class="gtkdoc opt">=</span> <span class="function"><a href="lasso-LassoLogin.html#lasso-login-new">lasso_login_new</a></span><span class="gtkdoc opt">(</span>server<span class="gtkdoc opt">);</span>
+<span class="keyword">if</span> <span class="gtkdoc opt">(</span><span class="function">strcmp</span><span class="gtkdoc opt">(</span>request_method<span class="gtkdoc opt">,</span> <span class="string">'GET'</span><span class="gtkdoc opt">)) {</span> <span class="gtkdoc slc">// AuthnRequest send with the HTTP-Redirect binding</span>
+    <span class="gtkdoc slc">//</span>
+    <span class="function"><a href="lasso-LassoProfile.html#lasso-profile-set-signature-verify-hint">lasso_profile_set_signature_verify_hint</a></span><span class="gtkdoc opt">(</span><span class="function">LASSO_PROFILE</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">),</span>
+            LASSO_PROFILE_SIGNATURE_VERIFY_HINT_FORCE<span class="gtkdoc opt">);</span>
+    rc <span class="gtkdoc opt">=</span> <span class="function">lasso_process_authn_request_msg</span><span class="gtkdoc opt">(</span>login<span class="gtkdoc opt">,</span> <span class="function">getenv</span><span class="gtkdoc opt">(</span><span class="string">&quot;QUERY_STRING&quot;</span><span class="gtkdoc opt">));</span>
+    <span class="keyword">if</span> <span class="gtkdoc opt">(</span>rc <span class="gtkdoc opt">!=</span> <span class="number">0</span><span class="gtkdoc opt">) {</span>
+        <span class="gtkdoc slc">// handle errors</span>
+    <span class="gtkdoc opt">}</span>
+
+
+<span class="gtkdoc opt">}</span> <span class="keyword">else</span> <span class="gtkdoc opt">{</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+<br class="example-break">
+</div>
+<div class="refsect1">
+<a name="lasso-LassoLogin.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lasso-login-new"></a><h3>lasso_login_new ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="returnvalue">LassoLogin</span></a> *
+lasso_login_new (<em class="parameter"><code><a class="link" href="lasso-LassoServer.html#LassoServer" title="struct LassoServer"><span class="type">LassoServer</span></a> *server</code></em>);</pre>
+<p>Creates a new <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>server</p></td>
+<td class="parameter_description"><p>the <a class="link" href="lasso-LassoServer.html#LassoServer" title="struct LassoServer"><span class="type">LassoServer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.2.6"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object; or NULL if an error
+occured</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-new-from-dump"></a><h3>lasso_login_new_from_dump ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="returnvalue">LassoLogin</span></a> *
+lasso_login_new_from_dump (<em class="parameter"><code><a class="link" href="lasso-LassoServer.html#LassoServer" title="struct LassoServer"><span class="type">LassoServer</span></a> *server</code></em>,
+                           <em class="parameter"><code>const <span class="type">gchar</span> *dump</code></em>);</pre>
+<p>Restores the <em class="parameter"><code>dump</code></em>
+ to a new <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>server</p></td>
+<td class="parameter_description"><p>the <a class="link" href="lasso-LassoServer.html#LassoServer" title="struct LassoServer"><span class="type">LassoServer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dump</p></td>
+<td class="parameter_description"><p>XML login dump</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.3.6"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a>; or NULL if an error occured.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-accept-sso"></a><h3>lasso_login_accept_sso ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_accept_sso (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>);</pre>
+<p>Gets the assertion of the response and adds it to the <a class="link" href="lasso-LassoSession.html#LassoSession" title="struct LassoSession"><span class="type">LassoSession</span></a> object.
+Builds a federation with the 2 name identifiers of the assertion
+and adds it into the identity.
+If the session or the identity are NULL, they are created.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.4.6"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PARAM-ERROR-BAD-TYPE-OR-NULL-OBJ:CAPS" title="LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ"><span class="type">LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ</span></a> if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-RESPONSE:CAPS" title="LASSO_PROFILE_ERROR_MISSING_RESPONSE"><span class="type">LASSO_PROFILE_ERROR_MISSING_RESPONSE</span></a> if no response is present in the login profile object;
+usually because no call to lasso_login_process_authn_response_msg was done;
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-ASSERTION:CAPS" title="LASSO_PROFILE_ERROR_MISSING_ASSERTION"><span class="type">LASSO_PROFILE_ERROR_MISSING_ASSERTION</span></a> if the response does not contain an assertion,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-NAME-IDENTIFIER-NOT-FOUND:CAPS" title="LASSO_PROFILE_ERROR_NAME_IDENTIFIER_NOT_FOUND"><span class="type">LASSO_PROFILE_ERROR_NAME_IDENTIFIER_NOT_FOUND</span></a> if the assertion does not contain a NameID element,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-NAME-IDENTIFIER:CAPS" title="LASSO_PROFILE_ERROR_MISSING_NAME_IDENTIFIER"><span class="type">LASSO_PROFILE_ERROR_MISSING_NAME_IDENTIFIER</span></a> same as
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-NAME-IDENTIFIER-NOT-FOUND:CAPS" title="LASSO_PROFILE_ERROR_NAME_IDENTIFIER_NOT_FOUND"><span class="type">LASSO_PROFILE_ERROR_NAME_IDENTIFIER_NOT_FOUND</span></a>,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-ASSERTION-REPLAY:CAPS" title="LASSO_LOGIN_ERROR_ASSERTION_REPLAY"><span class="type">LASSO_LOGIN_ERROR_ASSERTION_REPLAY</span></a> if the assertion has already been used.
+</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-build-artifact-msg"></a><h3>lasso_login_build_artifact_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_build_artifact_msg (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                                <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoHttpMethod" title="enum LassoHttpMethod"><span class="type">LassoHttpMethod</span></a> http_method</code></em>);</pre>
+<p>Builds a SAML artifact. Depending of the HTTP method, the data for the sending of
+the artifact are stored in <em class="parameter"><code>msg_url</code></em>
+ (REDIRECT) or <em class="parameter"><code>msg_url</code></em>
+, <em class="parameter"><code>msg_body</code></em>
+ and
+<em class="parameter"><code>msg_relayState</code></em>
+ (POST).</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>http_method</p></td>
+<td class="parameter_description"><p>the HTTP method to send the artifact (REDIRECT or POST)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.5.6"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>
+LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_MISSING_REMOTE_PROVIDERID if no remote provider ID was setup in the login
+profile object, it's usually done by lasso_login_process_authn_request_msg,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_INVALID_HTTP_METHOD if the HTTP method is neither LASSO_HTTP_METHOD_REDIRECT
+or LASSO_HTTP_METHOD_POST (ID-FF 1.2 case) or neither LASSO_HTTP_METHOD_ARTIFACT_GET or
+LASSO_HTTP_METHOD_ARTIFACT_POST (SAML 2.0 case) for SAML 2.0),
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_INVALID_PROTOCOLPROFILE if the current protocolProfile is not
+</p></li>
+<li class="listitem"><p>
+LASSO_LOGIN_PROTOCOL_PROFILE_BRWS_ART (only for ID-FF 1.2),
+</p></li>
+<li class="listitem"><p>
+LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND if the remote provider is not known to our server object
+which impeach us to find a service endpoint,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_MISSING_RESPONSE if the response object is missing,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_MISSING_STATUS_CODE if the response object is missing a status code,
+</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-build-assertion"></a><h3>lasso_login_build_assertion ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_build_assertion (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *authenticationMethod</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *authenticationInstant</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *reauthenticateOnOrAfter</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *notBefore</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *notOnOrAfter</code></em>);</pre>
+<p>Builds an assertion and stores it in profile session.
+<em class="parameter"><code>authenticationInstant</code></em>
+, reauthenticateOnOrAfter, <em class="parameter"><code>notBefore</code></em>
+ and
+<em class="parameter"><code>notOnOrAfter</code></em>
+ may be NULL.  If <em class="parameter"><code>authenticationInstant</code></em>
+ is NULL, the current
+time will be used.  Time values must be encoded in UTC.</p>
+<p>Construct the authentication assertion for the response. It must be called after validating the
+request using <a class="link" href="lasso-LassoLogin.html#lasso-login-validate-request-msg" title="lasso_login_validate_request_msg ()"><code class="function">lasso_login_validate_request_msg()</code></a>. The created assertion is accessed using
+<a class="link" href="lasso-LassoLogin.html#lasso-login-get-assertion" title="lasso_login_get_assertion ()"><code class="function">lasso_login_get_assertion()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.6.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>authenticationMethod</p></td>
+<td class="parameter_description"><p>the authentication method</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>authenticationInstant</p></td>
+<td class="parameter_description"><p>the time at which the authentication took place</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>notBefore</p></td>
+<td class="parameter_description"><p>the earliest time instant at which the assertion is valid</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>notOnOrAfter</p></td>
+<td class="parameter_description"><p>the time instant at which the assertion has expired</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.6.7"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PARAM-ERROR-BAD-TYPE-OR-NULL-OBJ:CAPS" title="LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ"><span class="type">LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ</span></a> if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-IDENTITY-NOT-FOUND:CAPS" title="LASSO_PROFILE_ERROR_IDENTITY_NOT_FOUND"><span class="type">LASSO_PROFILE_ERROR_IDENTITY_NOT_FOUND</span></a> if no identity object was found in the login profile object.
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-RESPONSE:CAPS" title="LASSO_PROFILE_ERROR_MISSING_RESPONSE"><span class="type">LASSO_PROFILE_ERROR_MISSING_RESPONSE</span></a> if no response object is present ( it is normally initialized
+by <a class="link" href="lasso-LassoLogin.html#lasso-login-process-authn-request-msg" title="lasso_login_process_authn_request_msg ()"><code class="function">lasso_login_process_authn_request_msg()</code></a> )
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-FEDERATION-NOT-FOUND:CAPS" title="LASSO_PROFILE_ERROR_FEDERATION_NOT_FOUND"><span class="type">LASSO_PROFILE_ERROR_FEDERATION_NOT_FOUND</span></a> if a <a class="link" href="lasso-SAML-2.0-Strings.html#LASSO-SAML2-NAME-IDENTIFIER-FORMAT-PERSISTENT:CAPS" title="LASSO_SAML2_NAME_IDENTIFIER_FORMAT_PERSISTENT"><span class="type">LASSO_SAML2_NAME_IDENTIFIER_FORMAT_PERSISTENT</span></a> or <a class="link" href="lasso-SAML-2.0-Strings.html#LASSO-SAML2-NAME-IDENTIFIER-FORMAT-ENCRYPTED:CAPS" title="LASSO_SAML2_NAME_IDENTIFIER_FORMAT_ENCRYPTED"><span class="type">LASSO_SAML2_NAME_IDENTIFIER_FORMAT_ENCRYPTED</span></a> NameID format is asked and no corresponding federation was found in the <a class="link" href="lasso-LassoIdentity.html#LassoIdentity" title="struct LassoIdentity"><span class="type">LassoIdentity</span></a> object,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-SERVER-ERROR-PROVIDER-NOT-FOUND:CAPS" title="LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND"><span class="type">LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND</span></a> if encryption is needed and the request issuing provider is unknown (it as not been registered in the <a class="link" href="lasso-LassoServer.html#LassoServer" title="struct LassoServer"><span class="type">LassoServer</span></a> object),
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-DS-ERROR-ENCRYPTION-FAILED:CAPS" title="LASSO_DS_ERROR_ENCRYPTION_FAILED"><span class="type">LASSO_DS_ERROR_ENCRYPTION_FAILED</span></a> if encryption is needed but it failed,
+</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-build-authn-request-msg"></a><h3>lasso_login_build_authn_request_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_build_authn_request_msg (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>);</pre>
+<p>Converts profile authentication request (<em class="parameter"><code>request</code></em>
+ member) into a Liberty message, either an URL
+in HTTP-Redirect profile or an URL and a field value in Browser-POST (form) profile.</p>
+<p>The URL is set into the <em class="parameter"><code>msg_url</code></em>
+ member and the eventual field value (LAREQ) is set into the
+<em class="parameter"><code>msg_body</code></em>
+ member.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.7.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.7.7"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PARAM-ERROR-BAD-TYPE-OR-NULL-OBJ:CAPS" title="LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ"><span class="type">LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ</span></a> if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-REMOTE-PROVIDERID:CAPS" title="LASSO_PROFILE_ERROR_MISSING_REMOTE_PROVIDERID"><span class="type">LASSO_PROFILE_ERROR_MISSING_REMOTE_PROVIDERID</span></a> if not remote provider ID was setup&amp;160;- it usually
+means that <a class="link" href="lasso-LassoLogin.html#lasso-login-init-request" title="lasso_login_init_request ()"><code class="function">lasso_login_init_request()</code></a> was not called before,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-SERVER-ERROR-PROVIDER-NOT-FOUND:CAPS" title="LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND"><span class="type">LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND</span></a> if the remote provider ID is not registered in the server
+object,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-UNSUPPORTED-PROFILE:CAPS" title="LASSO_PROFILE_ERROR_UNSUPPORTED_PROFILE"><span class="type">LASSO_PROFILE_ERROR_UNSUPPORTED_PROFILE</span></a> if the SSO profile is not supported by the targeted
+provider,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-BUILDING-QUERY-FAILED:CAPS" title="LASSO_PROFILE_ERROR_BUILDING_QUERY_FAILED"><span class="type">LASSO_PROFILE_ERROR_BUILDING_QUERY_FAILED</span></a> if the building of the query part of the redirect URL
+or of the body of the POST content failed&amp;160;- it only happens with the <a class="link" href="lasso-LassoProvider.html#LASSO-HTTP-METHOD-REDIRECT:CAPS"><span class="type">LASSO_HTTP_METHOD_REDIRECT</span></a>,
+<a class="link" href="lasso-LassoProvider.html#LASSO-HTTP-METHOD-POST:CAPS"><span class="type">LASSO_HTTP_METHOD_POST</span></a>, <a class="link" href="lasso-LassoProvider.html#LASSO-HTTP-METHOD-ARTIFACT-GET:CAPS"><span class="type">LASSO_HTTP_METHOD_ARTIFACT_GET</span></a> and
+<a class="link" href="lasso-LassoProvider.html#LASSO-HTTP-METHOD-ARTIFACT-POST:CAPS"><span class="type">LASSO_HTTP_METHOD_ARTIFACT_POST</span></a> bindings&amp;160;-,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-UNKNOWN-PROFILE-URL:CAPS" title="LASSO_PROFILE_ERROR_UNKNOWN_PROFILE_URL"><span class="type">LASSO_PROFILE_ERROR_UNKNOWN_PROFILE_URL</span></a> if the metadata of the remote provider does not contain
+an url for the SSO profile,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-INVALID-REQUEST:CAPS" title="LASSO_PROFILE_ERROR_INVALID_REQUEST"><span class="type">LASSO_PROFILE_ERROR_INVALID_REQUEST</span></a> if the request object is not of the needed type, is usually
+means that <a class="link" href="lasso-LassoLogin.html#lasso-login-init-request" title="lasso_login_init_request ()"><code class="function">lasso_login_init_request()</code></a> was not called before,
+</p></li>
+<li class="listitem"><p>
+<span class="type">LASSO_PROFILE_MISSING_REQUEST</span> if the request object is missing,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-INVALID-HTTP-METHOD:CAPS" title="LASSO_PROFILE_ERROR_INVALID_HTTP_METHOD"><span class="type">LASSO_PROFILE_ERROR_INVALID_HTTP_METHOD</span></a> if the current setted <em class="parameter"><code>http_method</code></em> on the <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a>
+object is invalid.
+</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-build-authn-response-msg"></a><h3>lasso_login_build_authn_response_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_build_authn_response_msg (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>);</pre>
+<p>Converts profile authentication response (<em class="parameter"><code>response</code></em>
+ member) into a Liberty
+message.</p>
+<p>The URL is set into the <em class="parameter"><code>msg_url</code></em>
+ member and the field value (LARES) is set
+into the <em class="parameter"><code>msg_body</code></em>
+ member.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.8.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.8.7"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>
+LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_INVALID_PROTOCOLPROFILE if the current protocol profile is not
+</p></li>
+<li class="listitem"><p>
+LASSO_LOGIN_PROTOCOL_PROFILE_BRWS_POST or LASSO_LOGIN_PROTOCOL_PROFILE_BRWS_LECP,
+</p></li>
+<li class="listitem"><p>
+LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND if the remote provider ID is not registered in the server
+object,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_UNKNOWN_PROFILE_URL if the metadata of the remote provider does not contain
+an URL for the assertion consuming service,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_MISSING_SERVER the server object is needed to sign a message and it is
+missing,
+</p></li>
+<li class="listitem"><p>
+LASSO_DS_ERROR_PRIVATE_KEY_LOAD_FAILED the private key for signing could not be found,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_MISSING_RESPONSE if the response object is missing,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_UNSUPPORTED_PROFILE if the SSO profile is not supported by the targeted
+provider,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_BUILDING_QUERY_FAILED if using <a class="link" href="lasso-LassoProvider.html#LASSO-HTTP-METHOD-REDIRECT:CAPS"><span class="type">LASSO_HTTP_METHOD_REDIRECT</span></a> building of the redirect
+URL failed,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_BUILDING_MSG_FAILED if using <a class="link" href="lasso-LassoProvider.html#LASSO-HTTP-METHOD-POST:CAPS"><span class="type">LASSO_HTTP_METHOD_POST</span></a>, <a class="link" href="lasso-LassoProvider.html#LASSO-HTTP-METHOD-SOAP:CAPS"><span class="type">LASSO_HTTP_METHOD_SOAP</span></a> or
+<a class="link" href="lasso-LassoProvider.html#LASSO-HTTP-METHOD-PAOS:CAPS"><span class="type">LASSO_HTTP_METHOD_PAOS</span></a> and building the <em class="parameter"><code>msg_body</code></em> failed.
+</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-build-request-msg"></a><h3>lasso_login_build_request_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_build_request_msg (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>);</pre>
+<p>Produce a SOAP Artifact Resolve message. It must follows a call to
+<a class="link" href="lasso-LassoLogin.html#lasso-login-init-request" title="lasso_login_init_request ()"><code class="function">lasso_login_init_request()</code></a> on the artifact message.
+Converts  artifact request into a Liberty SOAP message.</p>
+<p>The URL is set into the <em class="parameter"><code>msg_url</code></em>
+ member and the SOAP message is set into the
+<em class="parameter"><code>msg_body</code></em>
+ member. You should POST the <em class="parameter"><code>msg_body</code></em>
+ to the <em class="parameter"><code>msg_url</code></em>
+ afterward.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.9.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.9.7"></a><h4>Returns</h4>
+<p> 0 on success; or
+LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,
+LASSO_PROFILE_ERROR_MISSING_REMOTE_PROVIDERID if not remote provider ID was setup -- it usually
+means that lasso_login_init_request was not called before,
+LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND if the remote provider ID is not registered in the server
+object.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-build-response-msg"></a><h3>lasso_login_build_response_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_build_response_msg (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                                <em class="parameter"><code><span class="type">gchar</span> *remote_providerID</code></em>);</pre>
+<p>Converts profile assertion response (<em class="parameter"><code>response</code></em>
+ member) into a Liberty SOAP
+messageresponse message.</p>
+<p>The URL is set into the <em class="parameter"><code>msg_url</code></em>
+ member and the SOAP message is set into the
+<em class="parameter"><code>msg_body</code></em>
+ member.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.10.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>remote_providerID</p></td>
+<td class="parameter_description"><p>service provider ID</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.10.7"></a><h4>Returns</h4>
+<p> 0 on success; or a negative value otherwise.
+LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,
+LASSO_PROFILE_ERROR_SESSION_NOT_FOUND if no session object was found in the login profile object
+-- it should be created by <a class="link" href="lasso-LassoLogin.html#lasso-login-build-assertion" title="lasso_login_build_assertion ()"><code class="function">lasso_login_build_assertion()</code></a> if you did not set it manually before
+calling <a class="link" href="lasso-LassoLogin.html#lasso-login-build-assertion" title="lasso_login_build_assertion ()"><code class="function">lasso_login_build_assertion()</code></a>.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-destroy"></a><h3>lasso_login_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lasso_login_destroy (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>);</pre>
+<p>Destroys a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object.</p>
+<p><em class="parameter"><code>Deprecated</code></em>
+: Since <span class="type">2.2.1</span>, use <code class="function">g_object_unref()</code> instead.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.11.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-dump"></a><h3>lasso_login_dump ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+lasso_login_dump (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>);</pre>
+<p>Dumps <em class="parameter"><code>login</code></em>
+ content to an XML string.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.12.6"></a><h4>Returns</h4>
+<p> the dump string.  It must be freed by the caller. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-get-assertion"></a><h3>lasso_login_get_assertion ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="returnvalue">LassoNode</span></a> *
+lasso_login_get_assertion (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>);</pre>
+<p>Return the last build assertion.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.13.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="lasso-node.html#LassoNode" title="struct LassoNode"><span class="type">LassoNode</span></a> representing the build assertion (generally a <a class="link" href="lasso-LassoSamlAssertion.html#LassoSamlAssertion" title="struct LassoSamlAssertion"><span class="type">LassoSamlAssertion</span></a> when
+using ID-FF 1.2 or a <a class="link" href="lasso-LassoSaml2Assertion.html#LassoSaml2Assertion" title="struct LassoSaml2Assertion"><span class="type">LassoSaml2Assertion</span></a> when using SAML 2.0)</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-init-authn-request"></a><h3>lasso_login_init_authn_request ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_init_authn_request (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *remote_providerID</code></em>,
+                                <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoHttpMethod" title="enum LassoHttpMethod"><span class="type">LassoHttpMethod</span></a> http_method</code></em>);</pre>
+<p>Initializes a new AuthnRequest from current service provider to remote
+identity provider specified in <em class="parameter"><code>remote_providerID</code></em> (if NULL the first known
+identity provider is used).</p>
+<p>For ID-FF 1.2 the default NameIDPolicy in an AuthnRequest is None, which imply that a
+federation must already exist on the IdP side.</p>
+<p>For SAML 2.0 the default NameIDPolicy is the first listed in the metadatas of the current
+provider, or if none is specified, Transient, which ask the IdP to give a one-time
+federation</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.14.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>remote_providerID:(allow-none)</p></td>
+<td class="parameter_description"><p>the providerID of the identity provider (may be NULL)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>http_method</p></td>
+<td class="parameter_description"><p> HTTP method to use for request transmission. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Default parameter value (for in case the shadows-to function has less parameters)."><span class="acronym">default</span></acronym> LASSO_HTTP_METHOD_REDIRECT]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.14.8"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,</p></li>
+<li class="listitem"><p>LASSO_PROFILE_ERROR_MISSING_REMOTE_PROVIDERID if <em class="parameter"><code>remote_providerID</code></em> is NULL and no default remote
+provider could be found from the server object -- usually the first one in the order of adding to
+the server object --,</p></li>
+<li class="listitem"><p>LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND if the <em class="parameter"><code>remote_providerID</code></em> is not known to our server object.</p></li>
+<li class="listitem"><p>LASSO_PROFILE_ERROR_INVALID_HTTP_METHOD if the HTTP method is neither LASSO_HTTP_METHOD_REDIRECT
+or LASSO_HTTP_METHOD_POST,</p></li>
+<li class="listitem"><p>LASSO_PROFILE_ERROR_BUILDING_REQUEST_FAILED if creation of the request object failed.</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-init-idp-initiated-authn-request"></a><h3>lasso_login_init_idp_initiated_authn_request ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_init_idp_initiated_authn_request
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *remote_providerID</code></em>);</pre>
+<p>Generates an authentication response without matching authentication
+request.</p>
+<p>The choice of NameIDFormat is the same as for <a class="link" href="lasso-LassoLogin.html#lasso-login-init-authn-request" title="lasso_login_init_authn_request ()"><code class="function">lasso_login_init_authn_request()</code></a> but with the
+target <em class="parameter"><code>remote_providerID</code></em> as the current provider</p>
+<p>If <em class="parameter"><code>remote_providerID</code></em> is NULL, the first known provider is used.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.15.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>remote_providerID</p></td>
+<td class="parameter_description"><p>the providerID of the remote service provider (may be
+NULL)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.15.8"></a><h4>Returns</h4>
+<p> 0 on success; or a negative value otherwise. Error codes are the same as
+<a class="link" href="lasso-LassoLogin.html#lasso-login-init-authn-request" title="lasso_login_init_authn_request ()"><code class="function">lasso_login_init_authn_request()</code></a>.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-init-request"></a><h3>lasso_login_init_request ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_init_request (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                          <em class="parameter"><code><span class="type">gchar</span> *response_msg</code></em>,
+                          <em class="parameter"><code><a class="link" href="lasso-LassoProvider.html#LassoHttpMethod" title="enum LassoHttpMethod"><span class="type">LassoHttpMethod</span></a> response_http_method</code></em>);</pre>
+<p>Initializes an artifact request. <em class="parameter"><code>response_msg</code></em>
+ is either the query string
+(in redirect mode) or the form LAREQ field (in browser-post mode).
+It should only be used if you received an artifact message, <em class="parameter"><code>response_msg</code></em>
+ must be content of the
+artifact field for the POST artifact binding of the query string for the REDIRECT artifact
+binding. You must set the <em class="parameter"><code>response_http_method</code></em>
+ argument according to the way you received the
+artifact message.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>response_msg</p></td>
+<td class="parameter_description"><p>the authentication response received</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>response_http_method</p></td>
+<td class="parameter_description"><p>the method used to receive the authentication
+response</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.16.6"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>
+LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,
+</p></li>
+<li class="listitem"><p>
+LASSO_PARAM_ERROR_INVALID_VALUE if <em class="parameter"><code>response_msg</code></em> is NULL,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_INVALID_HTTP_METHOD if the HTTP method is neither LASSO_HTTP_METHOD_REDIRECT
+or LASSO_HTTP_METHOD_POST (in the ID-FF 1.2 case) or neither LASSO_HTTP_METHOD_ARTIFACT_GET or
+LASSO_HTTP_METHOD_ARTIFACT_POST (in the SAML 2.0 case),
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_MISSING_ARTIFACT if no artifact field was found in the query string (only
+possible for the LASSO_HTTP_METHOD_REDIRECT case),
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_INVALID_ARTIFACT if decoding of the artifact failed -- whether because
+the base64 encoding is invalid or because the type code is wrong --,
+</p></li>
+<li class="listitem"><p>
+LASSO_PROFILE_ERROR_MISSING_REMOTE_PROVIDERID if no provider ID could be found corresponding to
+the hash contained in the artifact.
+</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-must-ask-for-consent"></a><h3>lasso_login_must_ask_for_consent ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+lasso_login_must_ask_for_consent (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>);</pre>
+<p>Evaluates if consent must be asked to the Principal to federate him.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.17.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if consent must be asked</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-must-authenticate"></a><h3>lasso_login_must_authenticate ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+lasso_login_must_authenticate (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>);</pre>
+<p>Evaluates if user must be authenticated.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.18.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if user must be authenticated</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-process-authn-request-msg"></a><h3>lasso_login_process_authn_request_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_process_authn_request_msg (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                                       <em class="parameter"><code>const <span class="type">char</span> *authn_request_msg</code></em>);</pre>
+<p>Processes received authentication request, checks it is signed correctly,
+checks if requested protocol profile is supported, etc.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>authn_request_msg</p></td>
+<td class="parameter_description"><p>the authentication request received</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.19.6"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PARAM-ERROR-BAD-TYPE-OR-NULL-OBJ:CAPS" title="LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ"><span class="type">LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ</span></a> if login is no a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-REQUEST:CAPS" title="LASSO_PROFILE_ERROR_MISSING_REQUEST"><span class="type">LASSO_PROFILE_ERROR_MISSING_REQUEST</span></a> if <em class="parameter"><code>authn_request_msg</code></em> is <span class="type">NULL</span> and no request as actually
+been processed or initialized &amp;<span class="type">151</span>; see <a class="link" href="lasso-LassoLogin.html#lasso-login-init-idp-initiated-authn-request" title="lasso_login_init_idp_initiated_authn_request ()"><code class="function">lasso_login_init_idp_initiated_authn_request()</code></a>,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-INVALID-MSG:CAPS" title="LASSO_PROFILE_ERROR_INVALID_MSG"><span class="type">LASSO_PROFILE_ERROR_INVALID_MSG</span></a> if the content of <em class="parameter"><code>authn_request_msg</code></em> cannot be parsed to as a
+valid lib:AuthnRequest messages for any support binding (mainly HTTP-Redirect, HTTP-Post and
+SOAP),
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-ISSUER:CAPS" title="LASSO_PROFILE_ERROR_MISSING_ISSUER"><span class="type">LASSO_PROFILE_ERROR_MISSING_ISSUER</span></a> if the parsed samlp2:AuthnRequest does not have a proper Issuer element,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-INVALID-REQUEST:CAPS" title="LASSO_PROFILE_ERROR_INVALID_REQUEST"><span class="type">LASSO_PROFILE_ERROR_INVALID_REQUEST</span></a> if the parsed message does not validate as a valid
+samlp2:AuthnRequest (SAMLv2) i.e. if there is no Issuer, or mutually exclusive attributes are
+used (ProtocolBinding and AssertionConsumerServiceIndex),
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-INVALID-PROTOCOLPROFILE:CAPS" title="LASSO_PROFILE_ERROR_INVALID_PROTOCOLPROFILE"><span class="type">LASSO_PROFILE_ERROR_INVALID_PROTOCOLPROFILE</span></a> if the protocolProfile (ID-FFv1.2) or the
+protocolBinding (SAMLv2) is unsupported by Lasso,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-UNSUPPORTED-PROFILE:CAPS" title="LASSO_PROFILE_ERROR_UNSUPPORTED_PROFILE"><span class="type">LASSO_PROFILE_ERROR_UNSUPPORTED_PROFILE</span></a> if the protocolProfile (ID-FFv1.2) or the protocolBinding
+(SAMLv2) for the AssertionConsumer is unsupported by this provider implementation as indicated by
+its metadata file,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-UNKNOWN-PROVIDER:CAPS" title="LASSO_PROFILE_ERROR_UNKNOWN_PROVIDER"><span class="type">LASSO_PROFILE_ERROR_UNKNOWN_PROVIDER</span></a>, or
+<a class="link" href="lasso-Error-Codes.html#LASSO-SERVER-ERROR-PROVIDER-NOT-FOUND:CAPS" title="LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND"><span class="type">LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND</span></a> if the metadata for the issuer of the request are absent
+from the <a class="link" href="lasso-LassoServer.html#LassoServer" title="struct LassoServer"><span class="type">LassoServer</span></a> object of this profile,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-DS-ERROR-SIGNATURE-NOT-FOUND:CAPS" title="LASSO_DS_ERROR_SIGNATURE_NOT_FOUND"><span class="type">LASSO_DS_ERROR_SIGNATURE_NOT_FOUND</span></a> if no signature could be found and signature validation is
+forced &amp;<span class="type">151</span>; by the service provider metadata with the AuthnRequestsSigned attribute
+(ID-FFv1.2&amp;SAMLv2), the attribute WantAuthnRequestsSigned in the identity provider metadata file
+(SAMLv2) or as advised by the <a class="link" href="lasso-LassoProfile.html#lasso-profile-set-signature-verify-hint" title="lasso_profile_set_signature_verify_hint ()"><code class="function">lasso_profile_set_signature_verify_hint()</code></a> method),
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-DS-ERROR-SIGNATURE-VERIFICATION-FAILED:CAPS" title="LASSO_DS_ERROR_SIGNATURE_VERIFICATION_FAILED"><span class="type">LASSO_DS_ERROR_SIGNATURE_VERIFICATION_FAILED</span></a> if the signature validation failed on a present
+signature,
+</p></li>
+<li class="listitem"><p>
+<a class="link" href="lasso-Error-Codes.html#LASSO-DS-ERROR-INVALID-SIGNATURE:CAPS" title="LASSO_DS_ERROR_INVALID_SIGNATURE"><span class="type">LASSO_DS_ERROR_INVALID_SIGNATURE</span></a> if the signature was malformed and a signature was present,
+</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-process-authn-response-msg"></a><h3>lasso_login_process_authn_response_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_process_authn_response_msg
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                                <em class="parameter"><code><span class="type">gchar</span> *authn_response_msg</code></em>);</pre>
+<p>Processes received authentication response.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>authn_response_msg</p></td>
+<td class="parameter_description"><p>the authentication response received</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.20.6"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PARAM-ERROR-BAD-TYPE-OR-NULL-OBJ:CAPS" title="LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ"><span class="type">LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ</span></a> if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a>
+object,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PARAM-ERROR-INVALID-VALUE:CAPS" title="LASSO_PARAM_ERROR_INVALID_VALUE"><span class="type">LASSO_PARAM_ERROR_INVALID_VALUE</span></a> if authn_response_msg is NULL,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-SERVER-ERROR-PROVIDER-NOT-FOUND:CAPS" title="LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND"><span class="type">LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND</span></a>, if the issuing
+provider of the assertion is not registered in the <a class="link" href="lasso-LassoServer.html#LassoServer" title="struct LassoServer"><span class="type">LassoServer</span></a> object,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-ISSUER:CAPS" title="LASSO_PROFILE_ERROR_MISSING_ISSUER"><span class="type">LASSO_PROFILE_ERROR_MISSING_ISSUER</span></a> if the parsed samlp2:AuthnRequest does not
+have a proper Issuer element, </p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-STATUS-CODE:CAPS" title="LASSO_PROFILE_ERROR_MISSING_STATUS_CODE"><span class="type">LASSO_PROFILE_ERROR_MISSING_STATUS_CODE</span></a> if the reponse is missing a
+<code class="literal">StatusCode</code> element,</p></li>
+<li class="listitem"><p><span class="type">LASSO_PROFILE_STATUS_NOT_SUCCESS_ERROR</span> if the identity provider returned a
+failure response,</p></li>
+<li class="listitem">
+<p><span class="type">LASSO_PROFILE_ERROR_REQUEST_DENIED</span></p> if the identity provider returned the
+specific status code <code class="literal">RequestDenied</code>,</li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-INVALID-MSG:CAPS" title="LASSO_PROFILE_ERROR_INVALID_MSG"><span class="type">LASSO_PROFILE_ERROR_INVALID_MSG</span></a> if the message is not a <a class="link" href="lasso-LassoSamlpResponse.html#LassoSamlpResponse" title="struct LassoSamlpResponse"><span class="type">LassoSamlpResponse</span></a>
+(ID-FF 1.2) or a <span class="type">LassoSamlp2ResponseMsg</span> (SAML 2.0),</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-UNSUPPORTED-PROFILE:CAPS" title="LASSO_PROFILE_ERROR_UNSUPPORTED_PROFILE"><span class="type">LASSO_PROFILE_ERROR_UNSUPPORTED_PROFILE</span></a>, if the received message format does not
+correspond to a binding supported by this function, the only supported binding by this function
+is HTTP POST,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-SERVER:CAPS" title="LASSO_PROFILE_ERROR_MISSING_SERVER"><span class="type">LASSO_PROFILE_ERROR_MISSING_SERVER</span></a> the server object is needed to sign a message
+and it is missing,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-CANNOT-VERIFY-SIGNATURE:CAPS" title="LASSO_PROFILE_ERROR_CANNOT_VERIFY_SIGNATURE"><span class="type">LASSO_PROFILE_ERROR_CANNOT_VERIFY_SIGNATURE</span></a> if the validation of the signature
+of the message failed, a specific error code is available in
+<code class="literal">login-&gt;parent.signature_status</code></p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-ASSERTION-DOES-NOT-MATCH-REQUEST-ID:CAPS" title="LASSO_LOGIN_ERROR_ASSERTION_DOES_NOT_MATCH_REQUEST_ID"><span class="type">LASSO_LOGIN_ERROR_ASSERTION_DOES_NOT_MATCH_REQUEST_ID</span></a> if the received response
+does not match the saved AuthenticationRequest ID,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-INVALID-ISSUER:CAPS" title="LASSO_PROFILE_ERROR_INVALID_ISSUER"><span class="type">LASSO_PROFILE_ERROR_INVALID_ISSUER</span></a> if the assertion issuer does not match the
+AuthenticationResponse issuer,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-NAME-IDENTIFIER-NOT-FOUND:CAPS" title="LASSO_PROFILE_ERROR_NAME_IDENTIFIER_NOT_FOUND"><span class="type">LASSO_PROFILE_ERROR_NAME_IDENTIFIER_NOT_FOUND</span></a> if not NameID could be found or
+decoded,</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-process-paos-response-msg"></a><h3>lasso_login_process_paos_response_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_process_paos_response_msg (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                                       <em class="parameter"><code><span class="type">gchar</span> *msg</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-process-request-msg"></a><h3>lasso_login_process_request_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_process_request_msg (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                                 <em class="parameter"><code><span class="type">gchar</span> *request_msg</code></em>);</pre>
+<p>Processes received artifact request.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>request_msg</p></td>
+<td class="parameter_description"><p>the artifact request received</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.22.6"></a><h4>Returns</h4>
+<p> 0 on success; or a negative value otherwise.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-process-response-msg"></a><h3>lasso_login_process_response_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_process_response_msg (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                                  <em class="parameter"><code><span class="type">gchar</span> *response_msg</code></em>);</pre>
+<p>Processes received assertion response.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>response_msg</p></td>
+<td class="parameter_description"><p>the assertion response received</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.23.6"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PARAM-ERROR-BAD-TYPE-OR-NULL-OBJ:CAPS" title="LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ"><span class="type">LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ</span></a> if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PARAM-ERROR-INVALID-VALUE:CAPS" title="LASSO_PARAM_ERROR_INVALID_VALUE"><span class="type">LASSO_PARAM_ERROR_INVALID_VALUE</span></a> if response_msg is NULL,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-INVALID-MSG:CAPS" title="LASSO_PROFILE_ERROR_INVALID_MSG"><span class="type">LASSO_PROFILE_ERROR_INVALID_MSG</span></a> if the message is not a <a class="link" href="lasso-LassoSamlpResponse.html#LassoSamlpResponse" title="struct LassoSamlpResponse"><span class="type">LassoSamlpResponse</span></a> (ID-FF 1.2) or a <span class="type">LassoSamlp2ResponseMsg</span> (SAML 2.0),</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-RESPONSE-DOES-NOT-MATCH-REQUEST:CAPS" title="LASSO_PROFILE_ERROR_RESPONSE_DOES_NOT_MATCH_REQUEST"><span class="type">LASSO_PROFILE_ERROR_RESPONSE_DOES_NOT_MATCH_REQUEST</span></a> if the response does not refer to the request or if the response refer to an unknown request and <code class="literal">strict-checking</code> is activated ,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-REQUEST-DENIED:CAPS" title="LASSO_LOGIN_ERROR_REQUEST_DENIED"><span class="type">LASSO_LOGIN_ERROR_REQUEST_DENIED</span></a> the identity provided
+returned a failure status of "RequestDenied"</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-FEDERATION-NOT-FOUND:CAPS" title="LASSO_LOGIN_ERROR_FEDERATION_NOT_FOUND"><span class="type">LASSO_LOGIN_ERROR_FEDERATION_NOT_FOUND</span></a> if creation of a new
+federation was not allowed and none existed,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-UNKNOWN-PRINCIPAL:CAPS" title="LASSO_LOGIN_ERROR_UNKNOWN_PRINCIPAL"><span class="type">LASSO_LOGIN_ERROR_UNKNOWN_PRINCIPAL</span></a> if authentication failed
+or/and if the user cancelled the authentication,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-STATUS-NOT-SUCCESS:CAPS" title="LASSO_LOGIN_ERROR_STATUS_NOT_SUCCESS"><span class="type">LASSO_LOGIN_ERROR_STATUS_NOT_SUCCESS</span></a>, if the response status
+is a failure but we have no more precise error code to report it, you must
+look at the second level status in the response,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-SERVER-ERROR-PROVIDER-NOT-FOUND:CAPS" title="LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND"><span class="type">LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND</span></a>, if the issuing
+provider of the assertion is unknown,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-INVALID-ISSUER:CAPS" title="LASSO_PROFILE_ERROR_INVALID_ISSUER"><span class="type">LASSO_PROFILE_ERROR_INVALID_ISSUER</span></a> the issuer of the
+assertion received, is not the expected one</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-NAME-IDENTIFIER-NOT-FOUND:CAPS" title="LASSO_PROFILE_ERROR_NAME_IDENTIFIER_NOT_FOUND"><span class="type">LASSO_PROFILE_ERROR_NAME_IDENTIFIER_NOT_FOUND</span></a> no statement was fournd, or none statement contains a subject with a name identifier,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-STATUS-CODE:CAPS" title="LASSO_PROFILE_ERROR_MISSING_STATUS_CODE"><span class="type">LASSO_PROFILE_ERROR_MISSING_STATUS_CODE</span></a> if the reponse is
+missing a <code class="literal">StatusCode</code> element,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PROFILE-ERROR-MISSING-ASSERTION:CAPS" title="LASSO_PROFILE_ERROR_MISSING_ASSERTION"><span class="type">LASSO_PROFILE_ERROR_MISSING_ASSERTION</span></a> if the message does
+not contain any assertion.</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-login-validate-request-msg"></a><h3>lasso_login_validate_request_msg ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_login_validate_request_msg (<em class="parameter"><code><a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> *login</code></em>,
+                                  <em class="parameter"><code><span class="type">gboolean</span> authentication_result</code></em>,
+                                  <em class="parameter"><code><span class="type">gboolean</span> is_consent_obtained</code></em>);</pre>
+<p>Initializes a response to the authentication request received.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>login</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>authentication_result</p></td>
+<td class="parameter_description"><p>whether user has authenticated succesfully</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>is_consent_obtained</p></td>
+<td class="parameter_description"><p>whether user consent has been obtained</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.6.24.6"></a><h4>Returns</h4>
+<p> 0 on success; or</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-PARAM-ERROR-BAD-TYPE-OR-NULL-OBJ:CAPS" title="LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ"><span class="type">LASSO_PARAM_ERROR_BAD_TYPE_OR_NULL_OBJ</span></a> if login is not a <a class="link" href="lasso-LassoLogin.html#LassoLogin" title="struct LassoLogin"><span class="type">LassoLogin</span></a> object,</p></li>
+<li class="listitem">
+<p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-REQUEST-DENIED:CAPS" title="LASSO_LOGIN_ERROR_REQUEST_DENIED"><span class="type">LASSO_LOGIN_ERROR_REQUEST_DENIED</span></a></p> if <em class="parameter"><code>authentication_result</code></em> if FALSE,</li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-INVALID-SIGNATURE:CAPS" title="LASSO_LOGIN_ERROR_INVALID_SIGNATURE"><span class="type">LASSO_LOGIN_ERROR_INVALID_SIGNATURE</span></a> if signature validation of the request
+failed,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-UNSIGNED-AUTHN-REQUEST:CAPS" title="LASSO_LOGIN_ERROR_UNSIGNED_AUTHN_REQUEST"><span class="type">LASSO_LOGIN_ERROR_UNSIGNED_AUTHN_REQUEST</span></a> if no signature was present on the
+request,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-FEDERATION-NOT-FOUND:CAPS" title="LASSO_LOGIN_ERROR_FEDERATION_NOT_FOUND"><span class="type">LASSO_LOGIN_ERROR_FEDERATION_NOT_FOUND</span></a> if federation policy is
+<a class="link" href="lasso-Strings-for-ID-FF-1.2.html#LASSO-LIB-NAMEID-POLICY-TYPE-NONE:CAPS" title="LASSO_LIB_NAMEID_POLICY_TYPE_NONE"><span class="type">LASSO_LIB_NAMEID_POLICY_TYPE_NONE</span></a> and no federation was found in the <a class="link" href="lasso-LassoIdentity.html#LassoIdentity" title="struct LassoIdentity"><span class="type">LassoIdentity</span></a> object
+(ID-FF 1.2 case)</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-INVALID-NAMEIDPOLICY:CAPS" title="LASSO_LOGIN_ERROR_INVALID_NAMEIDPOLICY"><span class="type">LASSO_LOGIN_ERROR_INVALID_NAMEIDPOLICY</span></a> if request policy is not one of
+<a class="link" href="lasso-Strings-for-ID-FF-1.2.html#LASSO-LIB-NAMEID-POLICY-TYPE-FEDERATED:CAPS" title="LASSO_LIB_NAMEID_POLICY_TYPE_FEDERATED"><span class="type">LASSO_LIB_NAMEID_POLICY_TYPE_FEDERATED</span></a> or <a class="link" href="lasso-Strings-for-ID-FF-1.2.html#LASSO-LIB-NAMEID-POLICY-TYPE-ANY:CAPS" title="LASSO_LIB_NAMEID_POLICY_TYPE_ANY"><span class="type">LASSO_LIB_NAMEID_POLICY_TYPE_ANY</span></a> (ID-FF 1.2 case) or if no NameID policy was defined or the AllowCreate request flag is FALSE (SAML 2.0 case),</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-LOGIN-ERROR-CONSENT-NOT-OBTAINED:CAPS" title="LASSO_LOGIN_ERROR_CONSENT_NOT_OBTAINED"><span class="type">LASSO_LOGIN_ERROR_CONSENT_NOT_OBTAINED</span></a> if <em class="parameter"><code>is_consent_obtained</code></em> is FALSE and
+conssent was necessary (for example if the request does not communicate that consent was already
+obtained from the user),</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Error-Codes.html#LASSO-SERVER-ERROR-PROVIDER-NOT-FOUND:CAPS" title="LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND"><span class="type">LASSO_SERVER_ERROR_PROVIDER_NOT_FOUND</span></a> if the requesting provider is unknown,</p></li>
+</ul></div>
+<p></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-LassoLogin.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="LassoLogin"></a><h3>struct LassoLogin</h3>
+<pre class="programlisting">struct LassoLogin {
+	LassoProfile parent;
+
+	LassoLoginProtocolProfile protocolProfile;
+	gchar *assertionArtifact;
+};
+</pre>
+<p>Single sign-on profile for the current transaction; possibly an
+assertionArtifact to be used by the service provider in its
+"assertionConsumerServiceURL" and the assertion created or received for the
+principal.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.7.2.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="lasso-LassoProfile.html#LassoProfile" title="struct LassoProfile"><span class="type">LassoProfile</span></a> <em class="structfield"><code><a name="LassoLogin.parent"></a>parent</code></em>;</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">LassoLoginProtocolProfile</span> <em class="structfield"><code><a name="LassoLogin.protocolProfile"></a>protocolProfile</code></em>;</p></td>
+<td class="struct_member_description"><p>the kind of binding used for this authentication request.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="LassoLogin.assertionArtifact"></a>assertionArtifact</code></em>;</p></td>
+<td class="struct_member_description"><p>a string representing the artifact received through an artifact resolution.
+request</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

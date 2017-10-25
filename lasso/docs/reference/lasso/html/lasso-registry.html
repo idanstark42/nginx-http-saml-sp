@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: registry</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="architecture.html" title="Lasso Architecture">
+<link rel="prev" href="lasso-Base-Strings.html" title="Base Strings">
+<link rel="next" href="lasso-LassoMiscTextNode.html" title="LassoMiscTextNode">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-registry.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="architecture.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="lasso-Base-Strings.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-LassoMiscTextNode.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-registry"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-registry.top_of_page"></a>registry</span></h2>
+<p>registry — Class to store a mapping of qualified names (QName) to other qualified names.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-registry.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="lasso-registry.html#LassoRegistryTranslationFunction" title="LassoRegistryTranslationFunction ()">*LassoRegistryTranslationFunction</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-registry.html#lasso-registry-default-add-direct-mapping" title="lasso_registry_default_add_direct_mapping ()">lasso_registry_default_add_direct_mapping</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">lasso_error_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="lasso-registry.html#lasso-registry-default-add-functional-mapping" title="lasso_registry_default_add_functional_mapping ()">lasso_registry_default_add_functional_mapping</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-registry.html#lasso-registry-default-get-mapping" title="lasso_registry_default_get_mapping ()">lasso_registry_default_get_mapping</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-registry.description"></a><h2>Description</h2>
+<p>A qualified name is a name or a string in the context of another name, or namespace.
+This object implement a function of a tuple (namespace, name, namespace) to a name.  For the
+moment there is no need to enumerate all tuples (namespace, name) pair given a base pair, i.e. a
+function from tuple (namespace, name) to a list of tuples (namespace,name).</p>
+<p>We support two kinds of mapping:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>you can give a direct mapping between two QName,</p></li>
+<li class="listitem"><p>or you can give a function that will manage mapping between one namespace and
+another one.</p></li>
+</ul></div>
+<p>For internal use inside lasso we define the following namespaces:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><a class="link" href="lasso-Base-Strings.html#LASSO-LASSO-HREF:CAPS" title="LASSO_LASSO_HREF"><span class="type">LASSO_LASSO_HREF</span></a> and,</p></li>
+<li class="listitem"><p><a class="link" href="lasso-Base-Strings.html#LASSO-PYTHON-HREF:CAPS" title="LASSO_PYTHON_HREF"><span class="type">LASSO_PYTHON_HREF</span></a>.</p></li>
+</ul></div>
+<p>For functional mappings the mapping function must return constant strings created using
+<code class="function">g_intern_string()</code> or using <code class="function">g_type_name()</code>.</p>
+</div>
+<div class="refsect1">
+<a name="lasso-registry.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="LassoRegistryTranslationFunction"></a><h3>LassoRegistryTranslationFunction ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+<span class="c_punctuation">(</span>*LassoRegistryTranslationFunction<span class="c_punctuation">)</span> (<em class="parameter"><code>const <span class="type">char</span> *from_namespace</code></em>,
+                                     <em class="parameter"><code>const <span class="type">char</span> *from_name</code></em>,
+                                     <em class="parameter"><code>const <span class="type">char</span> *to_namespace</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-registry-default-add-direct-mapping"></a><h3>lasso_registry_default_add_direct_mapping ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_registry_default_add_direct_mapping
+                               (<em class="parameter"><code>const <span class="type">char</span> *from_namespace</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *from_name</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *to_namespace</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *to_name</code></em>);</pre>
+<p>Add a new mapping from a QName to a QName.</p>
+<div class="refsect3">
+<a name="id-1.3.2.15.5.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>from_namespace</p></td>
+<td class="parameter_description"><p>the namespace of the mapped QName</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>from_name</p></td>
+<td class="parameter_description"><p>the name of the mapped QName</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>to_namespace</p></td>
+<td class="parameter_description"><p>the namepsace of the mapped to QName</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>to_name</p></td>
+<td class="parameter_description"><p>the name of the mapped to QName</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.15.5.3.6"></a><h4>Returns</h4>
+<p> 0 if successfull, LASSO_REGISTRY_ERROR_KEY_EXISTS if this mapping is already registered,
+LASSO_PARAM_ERROR_INVALID_VALUE if one the argument is invalid.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-registry-default-add-functional-mapping"></a><h3>lasso_registry_default_add_functional_mapping ()</h3>
+<pre class="programlisting"><span class="returnvalue">lasso_error_t</span>
+lasso_registry_default_add_functional_mapping
+                               (<em class="parameter"><code>const <span class="type">char</span> *from_namespace</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *to_namespace</code></em>,
+                                <em class="parameter"><code><a class="link" href="lasso-registry.html#LassoRegistryTranslationFunction" title="LassoRegistryTranslationFunction ()"><span class="type">LassoRegistryTranslationFunction</span></a> translation_function</code></em>);</pre>
+<p><em class="parameter"><code>from_namespace</code></em>
+: URI of the source namespace
+<em class="parameter"><code>to_namespace</code></em>
+: URI of the destination namespace
+<em class="parameter"><code>translation_function</code></em>
+: a function mapping string to string from the first namespace to the second one</p>
+<p>Register a new mapping from from_namesapce to to_namespace using the translation_function into
+the default mapping. This functions is not forced to return a value for any string, it can return
+NULL.</p>
+<div class="refsect3">
+<a name="id-1.3.2.15.5.4.6"></a><h4>Returns</h4>
+<p> 0 if successfull, LASSO_REGISTRY_ERROR_KEY_EXISTS if this mapping is already registered,
+LASSO_PARAM_ERROR_INVALID_VALUE if one the argument is invalid.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-registry-default-get-mapping"></a><h3>lasso_registry_default_get_mapping ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+lasso_registry_default_get_mapping (<em class="parameter"><code>const <span class="type">char</span> *from_namespace</code></em>,
+                                    <em class="parameter"><code>const <span class="type">char</span> *from_name</code></em>,
+                                    <em class="parameter"><code>const <span class="type">char</span> *to_namespace</code></em>);</pre>
+<p>Retrieve the name of the QName in the namespace to_namespace that maps the
+QName from_namespace:from_name.</p>
+<div class="refsect3">
+<a name="id-1.3.2.15.5.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>from_namespace</p></td>
+<td class="parameter_description"><p>the namespace of the mapped QName</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>from_name</p></td>
+<td class="parameter_description"><p>the name of the mapped QName</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>to_namespace</p></td>
+<td class="parameter_description"><p>the namepsace of the mapped to QName</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.15.5.5.6"></a><h4>Returns</h4>
+<p> the name string of the QName or NULL if no mapping exists.</p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-registry.other_details"></a><h2>Types and Values</h2>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

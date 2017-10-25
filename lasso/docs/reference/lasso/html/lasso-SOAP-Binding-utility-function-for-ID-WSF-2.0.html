@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lasso Reference Manual: SOAP Binding utility function for ID-WSF 2.0</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Lasso Reference Manual">
+<link rel="up" href="idwsf2.html" title="ID-WSF 2.0">
+<link rel="prev" href="idwsf2.html" title="ID-WSF 2.0">
+<link rel="next" href="lasso-LassoIdWsf2Discovery.html" title="LassoIdWsf2Discovery">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="idwsf2.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="idwsf2.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="lasso-LassoIdWsf2Discovery.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.top_of_page"></a>SOAP Binding utility function for ID-WSF 2.0</span></h2>
+<p>SOAP Binding utility function for ID-WSF 2.0</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.html#lasso-soap-envelope-sb2-get-provider-id" title="lasso_soap_envelope_sb2_get_provider_id ()">lasso_soap_envelope_sb2_get_provider_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.html#lasso-soap-envelope-sb2-get-redirect-request-url" title="lasso_soap_envelope_sb2_get_redirect_request_url ()">lasso_soap_envelope_sb2_get_redirect_request_url</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoIdWsf2Sb2TargetIdentity.html#LassoIdWsf2Sb2TargetIdentity" title="struct LassoIdWsf2Sb2TargetIdentity"><span class="returnvalue">LassoIdWsf2Sb2TargetIdentity</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.html#lasso-soap-envelope-sb2-get-target-identity-header" title="lasso_soap_envelope_sb2_get_target_identity_header ()">lasso_soap_envelope_sb2_get_target_identity_header</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="lasso-LassoIdWsf2Sb2UserInteractionHeader.html#LassoIdWsf2Sb2UserInteractionHeader" title="struct LassoIdWsf2Sb2UserInteractionHeader"><span class="returnvalue">LassoIdWsf2Sb2UserInteractionHeader</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.html#lasso-soap-envelope-get-sb2-user-interaction-header" title="lasso_soap_envelope_get_sb2_user_interaction_header ()">lasso_soap_envelope_get_sb2_user_interaction_header</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lasso-soap-envelope-sb2-get-provider-id"></a><h3>lasso_soap_envelope_sb2_get_provider_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *
+lasso_soap_envelope_sb2_get_provider_id
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+<p>Return the providerID contained in the sb2:Sender header.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.5.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.5.2.6"></a><h4>Returns</h4>
+<p> the providerID string or NULL if no sb2:Sender header is present.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-sb2-get-redirect-request-url"></a><h3>lasso_soap_envelope_sb2_get_redirect_request_url ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+lasso_soap_envelope_sb2_get_redirect_request_url
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+<p>Return the redirect request URL from the sb2:RedirectRequest SOAP Fault detail.</p>
+<p>The WSC MUST verify that this URL belong to the WSP. You can do this by comparing the domain
+with the one in the <em class="parameter"><code>LassoProfile.msg_url</code></em> field</p>
+<p>The WSC MUST redirect the User Agent to this URL with a GET or POST request. It MUST add a
+parameter named ReturnToURL giving the URL where the WSP will send the User Agent after the
+interaction. It MAY add an IDP parameter indicating to the WSP how to authenticate the principal
+if no preexisting session with the User Agent exists</p>
+<p>The WSP must check that the ReturnToURL belon to the WSP, by using the providerID URL for example.</p>
+<p>After the interaction the WSC must redirect the User Agent to the ReturnToURL URL adding a parameter named ResendMessage. If ResendMessage is 0 or false, it means that the principal refused to continue the process. Any other value means that the prinicpal accepted and so the WSC can try again its request.</p>
+<p>In order to succeed the request need to refer to the SOAP Fault response containing the RedirectRequest element. See <a class="link" href="lasso-LassoSoapEnvelope.html#lasso-soap-envelope-get-relates-to" title="lasso_soap_envelope_get_relates_to ()"><code class="function">lasso_soap_envelope_get_relates_to()</code></a>, and <a class="link" href="lasso-LassoWsAddrAttributedURI.html#LassoWsAddrAttributedURI" title="struct LassoWsAddrAttributedURI"><span class="type">LassoWsAddrAttributedURI</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.5.3.10"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.5.3.11"></a><h4>Returns</h4>
+<p> the redirect URL string or NULL if no sb2:RedirectRequest detail is present. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-sb2-get-target-identity-header"></a><h3>lasso_soap_envelope_sb2_get_target_identity_header ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoIdWsf2Sb2TargetIdentity.html#LassoIdWsf2Sb2TargetIdentity" title="struct LassoIdWsf2Sb2TargetIdentity"><span class="returnvalue">LassoIdWsf2Sb2TargetIdentity</span></a> *
+lasso_soap_envelope_sb2_get_target_identity_header
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>);</pre>
+<p>Return the first sb2:TargetIdentity header.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.5.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>soap_envelope</p></td>
+<td class="parameter_description"><p>a <a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.5.4.6"></a><h4>Returns</h4>
+<p> the first <a class="link" href="lasso-LassoIdWsf2Sb2TargetIdentity.html#LassoIdWsf2Sb2TargetIdentity" title="struct LassoIdWsf2Sb2TargetIdentity"><span class="type">LassoIdWsf2Sb2TargetIdentity</span></a> object found in the
+headers of the <em class="parameter"><code>soap_envelope</code></em>
+, or NULL if none is found. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lasso-soap-envelope-get-sb2-user-interaction-header"></a><h3>lasso_soap_envelope_get_sb2_user_interaction_header ()</h3>
+<pre class="programlisting"><a class="link" href="lasso-LassoIdWsf2Sb2UserInteractionHeader.html#LassoIdWsf2Sb2UserInteractionHeader" title="struct LassoIdWsf2Sb2UserInteractionHeader"><span class="returnvalue">LassoIdWsf2Sb2UserInteractionHeader</span></a> *
+lasso_soap_envelope_get_sb2_user_interaction_header
+                               (<em class="parameter"><code><a class="link" href="lasso-LassoSoapEnvelope.html#LassoSoapEnvelope" title="struct LassoSoapEnvelope"><span class="type">LassoSoapEnvelope</span></a> *soap_envelope</code></em>,
+                                <em class="parameter"><code><span class="type">gboolean</span> create</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="lasso-SOAP-Binding-utility-function-for-ID-WSF-2.0.other_details"></a><h2>Types and Values</h2>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>
