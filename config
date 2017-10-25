@@ -8,3 +8,6 @@ HTTP_MODULES="$HTTP_MODULES \
 
 NGX_ADDON_SRCS="$NGX_ADDON_SRCS \
 		$ngx_addon_dir/ngx_http_saml_sp_module.c"
+
+NGX_ADDON_DEPS="$NGX_ADDON_DEPS \
+		$ngx_addon_dir/lasso/lasso.h"
