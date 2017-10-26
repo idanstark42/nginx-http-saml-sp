@@ -14,7 +14,7 @@
 #include <ngx_http.h>
 
 /* Lasso includes */ 
-#include <lasso/lasso.h>
+#include <lasso/lasso/lasso.h>
 #include <stdio.h>
 
 /* Functions definitions */
